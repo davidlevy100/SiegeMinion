@@ -1,0 +1,2740 @@
+{
+    "baron": {
+        "buffedPlayers": [],
+        "buffTimer": 0,
+        "gold": 0,
+        "killer": 0,
+        "spawnCountdown": 0,
+        "state": "spawning",
+        "team": 0
+    },
+    "elder": {
+        "buffedPlayers": [],
+        "buffTimer": 0,
+        "killer": 0,
+        "spawnCountdown": 0,
+        "state": "spawning",
+        "team": 0
+    },
+    "riftHerald": {
+        "killerTeamID": 0,
+        "killer": 0,
+        "sequenceIndex": 0
+    },
+    "inhibitors": {
+        "top_100": null,
+        "mid_100": null,
+        "bot_100": null,
+        "top_200": null,
+        "mid_200": null,
+        "bot_200": null
+    },
+    "queued_dragon_info": {
+        "nextDragonName": "",
+        "nextDragonSpawnTime": 0,
+        "sequenceIndex": 0
+    },
+    "towers": {
+        "blue_turret_kills": 0,
+        "red_turret_kills": 0
+    },
+    "champion_kill_special": {
+        "killType": "",
+        "killer": 0,
+        "killStreakLength": 0,
+        "sequenceIndex": 0
+    },
+    "lastDragonKiller": 0,
+    "gameID": 0,
+    "gameName": "",
+    "gameOver": false,
+    "gameTime": 0,
+    "participants": [
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 1,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 100,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 2,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 100,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 3,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 100,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 4,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 100,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 5,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 100,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 6,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 200,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 7,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 200,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 8,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 200,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 9,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 200,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        },
+        {
+            "XP": 0,
+            "abilityPower": 0,
+            "accountID": 0,
+            "alive": true,
+            "armor": 0,
+            "armorPenetration": 0,
+            "armorPenetrationPercent": 0,
+            "armorPenetrationPercentBonus": 0,
+            "attackDamage": 0,
+            "attackSpeed": 0,
+            "ccReduction": 0,
+            "championName": "default",
+            "cooldownReduction": 0,
+            "currentGold": 500,
+            "goldPerSecond": 0,
+            "health": 1,
+            "healthMax": 1,
+            "healthRegen": 0,
+            "level": 1,
+            "lifeSteal": 0,
+            "magicPenetration": 0,
+            "magicPenetrationPercent": 0,
+            "magicPenetrationPercentBonus": 0,
+            "magicResist": 0,
+            "participantID": 10,
+            "playerName": "",
+            "position": {
+                "x": 560,
+                "z": 581
+            },
+            "primaryAbilityResource": 0,
+            "primaryAbilityResourceMax": 0,
+            "primaryAbilityResourceRegen": 0,
+            "respawnTimer": 0,
+            "shutdownValue": 0,
+            "spellVamp": 0,
+            "stats": [
+                {
+                    "name": "MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                    "value": 0
+                },
+                {
+                    "name": "CHAMPIONS_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "NUM_DEATHS",
+                    "value": 0
+                },
+                {
+                    "name": "ASSISTS",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK0_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK1_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK2_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK3_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK4_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR1",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR2",
+                    "value": 0
+                },
+                {
+                    "name": "PERK5_VAR3",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_PLACED",
+                    "value": 0
+                },
+                {
+                    "name": "WARD_KILLED",
+                    "value": 0
+                },
+                {
+                    "name": "VISION_SCORE",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "PHYSICAL_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "MAGIC_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TRUE_DAMAGE_TAKEN",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                    "value": 0
+                },
+                {
+                    "name": "TOTAL_HEAL_ON_TEAMMATES",
+                    "value": 0
+                },
+                {
+                    "name": "TIME_CCING_OTHERS",
+                    "value": 0
+                }
+            ],
+            "summonerSpell1CooldownRemaining": 15,
+            "summonerSpell1Name": "default",
+            "summonerSpell2CooldownRemaining": 15,
+            "summonerSpell2Name": "default",
+            "teamID": 200,
+            "totalGold": 500,
+            "ultimateCooldownRemaining": 0,
+            "ultimateName": "default"
+        }
+    ],
+    "platformID": "",
+    "playbackID": 1,
+    "rfc001Scope": "riot.lol.mgs.sx",
+    "rfc190Scope": "test.unk1.unk.lolgame.legs",
+    "rfc460Hostname": "0.0.0.0",
+    "rfc460Timestamp": "2020-03-08T23:12:06.908Z",
+    "rfc461Schema": "stats_update",
+    "sequenceIndex": -1,
+    "teams": [
+        {
+            "assists": 0,
+            "baronKills": 0,
+            "baronChampionsKills": 0,
+            "baronGold": 0,
+            "baronGoldDiffTotal": 0,
+            "baronTowers": 0,
+            "baronInhibs": 0,
+            "championsKills": 0,
+            "deaths": 0,
+            "dragons": [],
+            "dragonKills": 0,
+            "elderKills": 0,
+            "inhibKills": 0,
+            "teamID": 100,
+            "totalGold": 2500,
+            "towerKills": 0
+        },
+        {
+            "assists": 0,
+            "baronKills": 0,
+            "baronChampionsKills": 0,
+            "baronGold": 0,
+            "baronGoldDiffTotal": 0,
+            "baronTowers": 0,
+            "baronInhibs": 0,
+            "championsKills": 0,
+            "deaths": 0,
+            "dragons": [],
+            "dragonKills": 0,
+            "elderKills": 0,
+            "inhibKills": 0,
+            "teamID": 200,
+            "totalGold": 2500,
+            "towerKills": 0
+        }
+    ]
+}

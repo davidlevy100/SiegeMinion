@@ -1,0 +1,603 @@
+#:kivy 1.11.1
+
+<XPLevelSideSlabScreen>:
+    name: 'XP + Level'
+
+    GridLayout:
+        # Window level 1
+        cols: 1
+        spacing: 10
+
+        canvas.before:
+            Color:
+                rgba: 0.0, 0.0, 0.0, 0.25
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        GridLayout:
+            cols: 5
+            padding: 5
+
+            Widget:
+
+            GridLayout:
+                #Side Slab
+                cols: 1
+                spacing: 2
+                #size_hint_x: 5.0
+
+                GridLayout:
+                    rows: 1
+                    size_hint_y: 0.5
+                    BlackLabel:
+                        text: app.xp_level_side_slab.active_title
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_1
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_1
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_1
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_1
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_1
+                            percent: app.xp_level_side_slab.percent_1
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_2
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_2
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_2
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_2
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_2
+                            percent: app.xp_level_side_slab.percent_2
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_3
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_3
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_3
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_3
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_3
+                            percent: app.xp_level_side_slab.percent_3
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_4
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_4
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_4
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_4
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_4
+                            percent: app.xp_level_side_slab.percent_4
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_5
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_5
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_5
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_5
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_5
+                            percent: app.xp_level_side_slab.percent_5
+
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_6
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_6
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_6
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_6
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_6
+                            percent: app.xp_level_side_slab.percent_6
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_7
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_7
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_7
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_7
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_7
+                            percent: app.xp_level_side_slab.percent_7
+
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_8
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_8
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_8
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_8
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_8
+                            percent: app.xp_level_side_slab.percent_8
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_9
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_9
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_9
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_9
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_9
+                            percent: app.xp_level_side_slab.percent_9
+
+                
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 0.25
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 0.15
+
+                        ChampionImage:
+                            asset_name: app.xp_level_side_slab.champ_10
+
+                    GridLayout:
+                        cols: 1
+                        padding: 0, 2
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.xp_level_side_slab.player_name_10
+                                text_size: self.size
+                                halign: 'left'
+                                valign: 'middle'
+
+                            GridLayout:
+                                cols: 1
+                                padding: 2, 0                       
+
+                                Label:
+                                    text: app.xp_level_side_slab.level_10
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                Label:
+                                    text: app.xp_level_side_slab.value_10
+                                    text_size: self.size
+                                    color: 0.6, 0.6, 0.6, 1.0
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                        HorizontalTeamBar:
+                            size_hint_y: 0.25
+                            teamID: app.xp_level_side_slab.bar_teamID_10
+                            percent: app.xp_level_side_slab.percent_10
+
+
+            Widget:
+                
+
+        GridLayout:
+            name: 'Footer'
+            rows: 1
+            size_hint_y: 0.06
+            padding: 5
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Widget:
+
+            Button:
+                text: "Take"
+                on_press: app.xp_level_side_slab.set_active(True)
+
+            Widget:
+
+            Button:
+                text: "Take Out"
+                on_press: app.xp_level_side_slab.set_active(False)
+
+            Widget:

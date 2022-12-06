@@ -1,0 +1,16 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Team Assets Folder",
+        "desc": "Team Assets Folder",
+        "section": "Teams",
+        "key": "folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Team Logo",
+        "desc": "Default image",
+        "section": "Teams",
+        "key": "default_image"
+    }
+]

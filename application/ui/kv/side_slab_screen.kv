@@ -1,0 +1,47 @@
+#:kivy 1.11.1
+
+<SideSlabScreen>:
+    name: 'Side Slab'
+    id: side_slab_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+        spacing: 10
+
+        #Type Bar
+        GridLayout:
+            rows: 1
+            padding: 5
+            spacing: 5
+            size_hint_y: 0.065
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            GridLayout:
+                rows: 1
+                size_hint_x: 0.5
+
+                Label:
+                    text: "Side Slab:"
+
+
+            SiegeSpinner:
+                text: side_slab_manager.current
+                values: ["Gold", "Vision Score", "XP + Level"]
+                on_text: side_slab_manager.current = self.text
+
+        #Screenmanager
+        SideSlabScreenManager:
+            id: side_slab_manager
+            name: 'side_slab_manager'
+            game_reset: app.game_reset
+
+            GoldSideSlabScreen:
+            XPLevelSideSlabScreen:
+            VisionSideSlabScreen:

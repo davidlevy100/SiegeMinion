@@ -1,0 +1,62 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "Caster Runes Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "Caster Runes",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Caster Runes Show",
+        "desc": "Name of Trio show to use",
+        "section": "Caster Runes",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Caster Runes Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "Caster Runes",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Caster Runes Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "Caster Runes",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "Caster Runes Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "Caster Runes",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Caster Runes",
+        "key": "auto_slack"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "Caster Runes",
+        "key": "auto_trio"
+    },
+    {
+        "type": "string",
+        "title": "Slack Channels",
+        "desc": "Post Images to these Slack Channels.  Separate with commas (i.e. channel-one, channel-two)",
+        "section": "Caster Runes",
+        "key": "slack_channels"
+    }
+]

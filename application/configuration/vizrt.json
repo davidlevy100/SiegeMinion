@@ -1,0 +1,249 @@
+[   
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable VizRT Communication",
+        "section": "vizrt",
+        "key": "enabled"
+    },
+    {
+        "type": "options",
+        "title": "Viz Engine Layer",
+        "desc": "Viz Engine Layer, defaults to MAIN_SCENE.",
+        "section": "vizrt",
+        "key": "layer",
+        "options": ["MAIN_SCENE", "FRONT_SCENE", "BACK_SCENE"]
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 1"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled1"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip1"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port1"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 2"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled2"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip2"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port2"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 3"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled3"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip3"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port3"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 4"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled4"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip4"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port4"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 5"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled5"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip5"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port5"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 6"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled6"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip6"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port6"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 7"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled7"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip7"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port7"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "Viz Engine 8"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable this Viz engine",
+        "section": "vizrt",
+        "key": "enabled8"
+    },
+    {
+        "type": "string",
+        "title": "Viz Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "vizrt",
+        "key": "ip8"
+    },
+    {
+        "type": "numeric",
+        "title": "Viz Engine Port",
+        "desc": "i.e. 6100",
+        "section": "vizrt",
+        "key": "tcp_port8"
+    }
+]

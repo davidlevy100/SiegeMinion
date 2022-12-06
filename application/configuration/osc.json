@@ -1,0 +1,727 @@
+[   
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable OSC Communication",
+        "section": "OSC",
+        "key": "enabled"
+    },
+    {
+        "type": "bool",
+        "title": "Send Champ Select Data",
+        "desc": "requires restart",
+        "section": "OSC",
+        "key": "champ_select_enabled"
+    },
+    {
+        "type": "bool",
+        "title": "Send In-Game Data",
+        "desc": "requires restart",
+        "section": "OSC",
+        "key": "in_game_enabled"
+    },
+    {
+        "type": "options",
+        "title": "Transmission Type",
+        "desc": "use Unicast or Multicast UDP",
+        "section": "OSC",
+        "key": "transmission_type",
+        "options": ["Unicast", "Multicast"]
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 1"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1, must use range 224.0.0.0 to 239.255.255.255 for multicast",
+        "section": "OSC",
+        "key": "enabled1"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip1"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port1"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 2"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled2"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip2"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port2"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 3"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled3"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip3"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port3"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 4"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled4"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip4"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port4"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 5"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled5"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip5"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port5"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 6"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled6"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip6"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port6"
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 7"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled7"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip7"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port7"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 8"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled8"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip8"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port8"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 9"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled9"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip9"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port9"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 10"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled10"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip10"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port10"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 11"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled11"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip11"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port11"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 12"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled12"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip12"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port12"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 13"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled13"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip13"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port13"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 14"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled14"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip14"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port14"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 15"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled15"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip15"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port15"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 16"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled16"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip16"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port16"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 17"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled17"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip17"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port17"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 18"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled18"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip18"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port18"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 19"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled19"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip19"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port19"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 20"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled20"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip20"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port20"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 21"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled21"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip21"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port21"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 22"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled22"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip22"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port22"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 23"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled23"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip23"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port23"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "title",
+        "title": "OSC Engine 24"
+    },
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "enabled24"
+    },
+    {
+        "type": "string",
+        "title": "OSC Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "OSC",
+        "key": "ip24"
+    },
+    {
+        "type": "numeric",
+        "title": "OSC Engine Port",
+        "desc": "i.e. 6100",
+        "section": "OSC",
+        "key": "port24"
+    }
+]

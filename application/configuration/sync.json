@@ -1,0 +1,30 @@
+[
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable Sync Server Communication, otherwise use manual sync",
+        "section": "Sync",
+        "key": "enabled"
+    },
+    {
+        "type": "string",
+        "title": "Esports Sync Server url",
+        "desc": "Address of Esports Sync Server",
+        "section": "Sync",
+        "key": "url"
+    },
+    {
+        "type": "numeric",
+        "title": "Polling Interval",
+        "desc": "How long to pause before polling the Esports Server again, in seconds",
+        "section": "Sync",
+        "key": "poll_interval"
+    },
+    {
+        "type": "numeric",
+        "title": "Sync Offset (Auto Mode Only)",
+        "desc": "Offset to allow for network lag, in milliseconds (1000ms = 1 sec)",
+        "section": "Sync",
+        "key": "sync_offset"
+    }
+]

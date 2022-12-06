@@ -1,0 +1,1026 @@
+#:kivy 1.11.1
+
+<OverlayScreen>:
+    name: 'overlay_screen'
+    id: overlay_screen
+
+    GridLayout:
+        # Window level 1
+        rows: 3
+        padding: 5
+        spacing: 10
+
+        GridLayout:
+            cols: 3
+            size_hint_y: 0.1
+            spacing: 10
+            
+            #Elder / Next Dragon
+            DragonLayout:
+            
+            # Top Bar
+            TeamColorGridLayout:
+                rows: 1
+                padding: 5
+                spacing: 30
+                size_hint_x: 3.0
+
+                teamID: 0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.25
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                GridLayout:
+                    cols: 1
+                    size_hint_x: 0.25
+                    
+                    #Tricode
+                    GridLayout:
+                        rows: 1
+
+                        Label:
+                            text: app.top_bar.tricode_left
+
+                    #Win or Record
+                    WinRecordLayout:
+                        name: "left_win_record"
+                        id: left_win_record
+                        side: "left"
+
+                GridLayout:
+                    cols: 1
+                    size_hint_x: 0.25
+
+                    #Blue Towers
+                    GridLayout:
+                        rows: 1
+
+                        TowerImage:
+
+                        Label:
+                            text: app.top_bar.towers_left
+
+                    # Adjust
+                    GridLayout:
+                        rows: 1
+                        size_hint_y: 0.8
+
+                        Button:
+                            text: "-"
+                            on_press: app.top_bar.adjust_tower_score("left", -1)
+
+                        Label:
+                            text: "{0}".format(app.top_bar.towers_left_mutator)
+
+                        Button:
+                            text: "+"
+                            on_press: app.top_bar.adjust_tower_score("left", 1)
+
+
+                GridLayout:
+                    cols: 1
+
+                    GridLayout:
+                        rows: 1
+                        spacing: 30
+
+                        #Blue Gold
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GoldImage:
+
+                            Label:
+                                text: app.top_bar.gold_left
+
+                        #Blue Kills
+                        GridLayout:
+                            rows: 1
+
+                            KillImage:
+
+                            Label:
+                                text: app.top_bar.kills_left
+
+                    #Blue Dragons
+                    GridLayout:
+                        rows: 1
+
+                        #Blue Gold Difference
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            Label:
+                                text: app.top_bar.gold_diff_left
+
+                        GridLayout:
+                            rows: 1
+                            size_hint_x: 0.5
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_left_4
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_left_3
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_left_2
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_left_1
+
+                # Clock
+                GridLayout:
+                    cols: 1
+                    size_hint_x: 0.5
+                    spacing: 5
+
+                    Label:
+                        text: app.top_bar.clock
+                        valign: 'top'
+                        size: self.texture_size
+                        font_size: '30sp'
+
+
+                GridLayout:
+                    cols: 1
+
+                    GridLayout:
+                        rows: 1
+                        spacing: 30
+
+
+                        #Red Kills
+                        GridLayout:
+                            rows: 1
+
+                            KillImage:
+
+                            Label:
+                                text: app.top_bar.kills_right
+
+
+                        #Red Gold
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GoldImage:
+
+                            Label:
+                                text: app.top_bar.gold_right
+
+
+                    #Red Dragons
+                    GridLayout:
+                        rows: 1
+
+                        GridLayout:
+                            rows: 1
+                            size_hint_x: 0.5
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_right_1
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_right_2
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_right_3
+
+                            DragonImage:
+                                dragon_type: app.top_bar.dragon_right_4
+
+                        #Red Gold Diff
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            Label:
+                                text: app.top_bar.gold_diff_right
+
+                
+
+                GridLayout:
+                    cols: 1
+                    size_hint_x: 0.25
+
+                    #Blue Towers
+                    GridLayout:
+                        rows: 1
+
+                        TowerImage:
+
+                        Label:
+                            text: app.top_bar.towers_right
+
+                    # Adjust
+                    GridLayout:
+                        rows: 1
+                        size_hint_y: 0.8
+
+                        Button:
+                            text: "-"
+                            on_press: app.top_bar.adjust_tower_score("right", -1)
+
+                        Label:
+                            text: "{0}".format(app.top_bar.towers_right_mutator)
+
+                        Button:
+                            text: "+"
+                            on_press: app.top_bar.adjust_tower_score("right", 1)
+                
+                GridLayout:
+                    cols: 1
+                    size_hint_x: 0.25
+
+                    #Tricode
+                    GridLayout:
+                        rows: 1
+
+                        Label:
+                            text: app.top_bar.tricode_right
+
+                    #Win or Record
+                    WinRecordLayout:
+                        name: "right_win_record"
+                        id: right_win_record
+                        side: "right"
+
+
+            #Baron
+            TeamColorGridLayout:
+                rows: 1
+                teamID: app.baron_power_play.teamID
+                padding: 5
+                
+                GridLayout:
+                    rows: 1
+
+                    Label:
+                        text: app.baron_power_play.respawn_timer_string
+
+                    Label:
+                        text: app.baron_power_play.buff_timer_string
+
+                    Label:
+                        text: app.baron_power_play.gold_string
+
+                GridLayout:
+                    rows:1
+                    size_hint_x: 0.5
+                    BaronImage:
+
+        GridLayout:
+            rows: 1
+            spacing: 10
+            size_hint_y: 0.06
+
+            GridLayout:
+                rows: 1
+
+                canvas.before:
+                    Color:
+                        rgba: 0.31, 0.54, 0.73, 1.0
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: app.elder_dragon.tricode_left
+
+                    
+
+            GridLayout:
+                rows: 1
+                size_hint_x: 3.0
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                GridLayout:
+                    rows: 1
+                    size_hint_x: 0.5
+
+                    Label:
+                        text: "Graphic:"
+
+
+                SiegeSpinner:
+                    text: overlay_manager.current
+                    values: ["Champ Select", "Lower 3rds", "Side Slab", "Still Graphics"]
+                    on_text: overlay_manager.current = self.text
+
+            GridLayout:
+                rows: 1
+
+                canvas.before:
+                    Color:
+                        rgba: 0.67, 0.26, 0.28, 1.0
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: app.elder_dragon.tricode_right
+
+        GridLayout:
+            cols: 3
+            spacing: 10
+
+            #Blue Team / Blue Inhibs
+            GridLayout:
+                rows: 2
+                spacing: 10
+
+                # Blue Players
+                GridLayout:
+                    cols: 1
+                    spacing: 5
+                    size_hint_y: 3
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player1.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player1.spell2
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'left' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player1.pick_champion
+                                color: app.overlay_players.player1.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player1.level)
+                                size_hint: 0.3, 0.3
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player1.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player1.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player1.primary_ability_resource_percent
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player2.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player2.spell2
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'left' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player2.pick_champion
+                                color: app.overlay_players.player2.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player2.level)
+                                size_hint: 0.3, 0.3
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player2.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player2.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player2.primary_ability_resource_percent
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player3.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player3.spell2
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'left' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player3.pick_champion
+                                color: app.overlay_players.player3.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player3.level)
+                                size_hint: 0.3, 0.3
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player3.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player3.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player3.primary_ability_resource_percent
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player4.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player4.spell2
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'left' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player4.pick_champion
+                                color: app.overlay_players.player4.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player4.level)
+                                size_hint: 0.3, 0.3
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player4.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player4.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player4.primary_ability_resource_percent
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player5.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player5.spell2
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'left' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player5.pick_champion
+                                color: app.overlay_players.player5.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player5.level)
+                                size_hint: 0.3, 0.3
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player5.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player5.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player5.primary_ability_resource_percent
+
+
+                #Blue Inhibitors
+                GridLayout:
+                    cols: 1
+                    spacing: 5
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+                        padding: 5
+
+                        InhibImage:
+
+                        GridLayout:
+                            rows:1
+
+                            Label:
+                                text: app.blue_top_inhib.timer_string
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Top"
+                                on_press: app.blue_top_inhib.manual_override(self.state, 100)
+                                state: "down" if app.blue_top_inhib.manual else "normal"
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+                        padding: 5
+
+                        InhibImage:
+
+                        GridLayout:
+                            rows:1
+
+                            Label:
+                                text: app.blue_mid_inhib.timer_string
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Mid"
+                                on_press: app.blue_mid_inhib.manual_override(self.state, 100)
+                                state: "down" if app.blue_mid_inhib.manual else "normal"
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 100
+                        padding: 5
+
+                        InhibImage:
+
+                        GridLayout:
+                            rows:1
+
+                            Label:
+                                text: app.blue_bot_inhib.timer_string
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Bot"
+                                on_press: app.blue_bot_inhib.manual_override(self.state, 100)
+                                state: "down" if app.blue_bot_inhib.manual else "normal"
+
+            #Overlay Screen Manager / Screen Selector
+            GridLayout:
+                rows: 1
+                size_hint_x: 3.0
+
+                #Screenmanager
+                OverlayScreenManager:
+                    id: overlay_manager
+                    name: 'overlay_manager'
+                    game_reset: app.game_reset
+
+                    ChampSelectScreen:
+                    L3Screen:
+                    SideSlabScreen:
+                    StillScreen:
+                    
+
+
+            #Red Team / Red Inhibs
+            GridLayout:
+                rows: 2
+                spacing: 10
+                
+                # Red Team
+                GridLayout:
+                    cols: 1
+                    spacing: 5
+                    size_hint_y: 3
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player6.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player6.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player6.primary_ability_resource_percent
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'right' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player6.pick_champion
+                                color: app.overlay_players.player6.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player6.level)
+                                size_hint: 0.3, 0.3
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player6.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player6.spell2
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player7.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player7.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player7.primary_ability_resource_percent
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'right' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player7.pick_champion
+                                color: app.overlay_players.player7.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player7.level)
+                                size_hint: 0.3, 0.3
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player7.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player7.spell2
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player8.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player8.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player8.primary_ability_resource_percent
+
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'right' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player8.pick_champion
+                                color: app.overlay_players.player8.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player8.level)
+                                size_hint: 0.3, 0.3
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player8.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player8.spell2
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player9.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player9.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player9.primary_ability_resource_percent
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'right' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player9.pick_champion
+                                color: app.overlay_players.player9.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player9.level)
+                                size_hint: 0.3, 0.3
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player9.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player9.spell2
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+
+                        #Name, Health and Mana
+                        GridLayout:
+                            cols: 1
+
+                            BlackLabel:
+                                text: app.overlay_players.player10.name
+
+                            #Health and Mana
+                            GridLayout:
+                                rows: 2
+                                size_hint_y: 2.0
+                                padding: 5
+                                spacing: 5
+
+                                HealthBar:
+                                    percent: app.overlay_players.player10.health_percent
+
+                                ManaBar:
+                                    percent: app.overlay_players.player10.primary_ability_resource_percent
+
+                        #Champ Image
+                        AnchorLayout:
+                            size_hint_x: 0.48
+                            anchor_x: 'right' 
+                            anchor_y: 'bottom'
+
+                            OverlayImage:
+                                asset: app.overlay_players.player10.pick_champion
+                                color: app.overlay_players.player10.status_color
+
+                            BlackLabel:
+                                text: str(app.overlay_players.player10.level)
+                                size_hint: 0.3, 0.3
+
+                        
+
+                        #Summoner Spells
+                        GridLayout:
+                            cols: 1
+                            size_hint_x: 0.25
+
+                            OverlayImage:
+                                asset: app.overlay_players.player10.spell1
+
+                            OverlayImage:
+                                asset: app.overlay_players.player10.spell2
+
+        
+                #Inhibitors
+                GridLayout:
+                    cols: 1
+                    spacing: 5
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+                        padding: 5
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Top"
+                                on_press: app.red_top_inhib.manual_override(self.state, 200)
+                                state: "down" if app.red_top_inhib.manual else "normal"
+                
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: app.red_top_inhib.timer_string
+
+                        InhibImage:
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+                        padding: 5
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Mid"
+                                on_press: app.red_mid_inhib.manual_override(self.state, 200)
+                                state: "down" if app.red_mid_inhib.manual else "normal"
+                
+                        GridLayout:
+                            rows:1
+
+                            Label:
+                                text: app.red_mid_inhib.timer_string
+
+                        InhibImage:
+
+
+                    TeamColorGridLayout:
+                        rows: 1
+                        teamID: 200
+                        padding: 5
+
+                        GridLayout:
+                            rows: 1
+                        
+                            ToggleButton:
+                                text: "Bot"
+                                on_press: app.red_bot_inhib.manual_override(self.state, 200)
+                                state: "down" if app.red_bot_inhib.manual else "normal"
+                
+                        GridLayout:
+                            rows:1
+
+                            Label:
+                                text: app.red_bot_inhib.timer_string
+
+                        InhibImage:

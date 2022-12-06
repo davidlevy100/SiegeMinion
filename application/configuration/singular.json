@@ -1,0 +1,149 @@
+[
+    {
+        "type": "string",
+        "title": "Singular User Name",
+        "desc": "Singular User Name",
+        "section": "Singular",
+        "key": "user_name"
+    },
+    {
+        "type": "singular_password",
+        "title": "Singular Password",
+        "desc": "Required",
+        "section": "Singular",
+        "key": "password"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Normal Team Logo",
+        "desc": "Default image, must be located in normal team image folder",
+        "section": "Singular",
+        "key": "default_normal_team_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default White Team Logo",
+        "desc": "Default image, must be located in white team image folder",
+        "section": "Singular",
+        "key": "default_white_team_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Player Image",
+        "desc": "Default image, must be located in player image folder",
+        "section": "Singular",
+        "key": "default_player_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Champion Icon Image",
+        "desc": "Default image, must be located in champion icon folder",
+        "section": "Singular",
+        "key": "default_champion_icon_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Champion Splash Image",
+        "desc": "Default image, must be located in champion splash image folder",
+        "section": "Singular",
+        "key": "default_champion_splash_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Item Image",
+        "desc": "Default image, must be located in item image folder",
+        "section": "Singular",
+        "key": "default_item_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Rune Image",
+        "desc": "Default image, must be located in rune image folder",
+        "section": "Singular",
+        "key": "default_rune_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Summoner Spell Image",
+        "desc": "Default image, must be located in summoner spell image folder",
+        "section": "Singular",
+        "key": "default_summoner_image"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Game Icon Image",
+        "desc": "Default image, must be located in game icon folder",
+        "section": "Singular",
+        "key": "default_game_icon_image"
+    },
+    {
+        "type": "string",
+        "title": "Singular Team Colors Datanode",
+        "desc": "Singular Team Colors Datanode",
+        "section": "Singular",
+        "key": "team_colors_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Bar Graph L3 Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "bar_graph_l3_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Baron Power Play Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "baron_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Elder Dragon Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "elder_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Left Inhibitors Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "left_inhibitors_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Right Inhibitors Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "right_inhibitors_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Side Slab Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "side_slab_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Top Bar Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "top_bar_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Overlay Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "overlay_datanode"
+    },
+    {
+        "type": "numeric",
+        "title": "Bottom Bar Datanode",
+        "desc": "Integer",
+        "section": "Singular",
+        "key": "bottom_bar_datanode"
+    }
+]

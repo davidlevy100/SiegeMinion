@@ -1,0 +1,16 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Rune Assets Folder",
+        "desc": "Rune Assets Folder",
+        "section": "Runes",
+        "key": "folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Rune Image",
+        "desc": "Default image",
+        "section": "Runes",
+        "key": "default_image"
+    }
+]

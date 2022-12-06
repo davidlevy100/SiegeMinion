@@ -1,0 +1,69 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "Team Pick Order Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "Team Pick Order",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Team Pick Order Show",
+        "desc": "Name of Trio show to use",
+        "section": "Team Pick Order",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Team Pick Order Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "Team Pick Order",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Team Pick Order Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "Team Pick Order",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "Team Pick Order Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "Team Pick Order",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "Team Pick Order",
+        "key": "auto_trio"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Team Pick Order",
+        "key": "auto_slack"
+    },
+    {
+        "type": "string",
+        "title": "Slack Channels",
+        "desc": "Post Images to these Slack Channels.  Separate with commas (i.e. channel-one, channel-two)",
+        "section": "Team Pick Order",
+        "key": "slack_channels"
+    },
+    {
+        "type": "string",
+        "title": "Default Title",
+        "desc": "Use this title for the graphic.  Use $left_tricode and $right_tricode as variables i.e. $left_tricode VS $right_tricode",
+        "section": "Team Pick Order",
+        "key": "title"
+    }
+]

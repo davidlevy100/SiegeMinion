@@ -1,0 +1,326 @@
+#:kivy 1.11.1
+
+<RootLayout>:
+    id: main_window
+    cols: 1
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 0.5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: main_window.background_image
+
+    GridLayout:
+        name: 'Header'
+        padding: 5
+        spacing: 20
+        rows: 1
+        size_hint_y: 0.06
+
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        #Engine Control
+        GridLayout:
+            rows: 1
+            size_hint_x: 0.1
+
+            DataButtonLayout:
+                id: vizrt
+                event_dispatcher: app.vizrt
+
+                canvas.before:
+                    Color:
+                        rgba: self.status_color
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+
+        #LiveStats
+        GridLayout:
+            rows: 1
+            spacing: 10
+
+            GridLayout:
+                rows:1
+                spacing: 5
+                size_hint_x: 0.8
+
+                GameFinderButton:
+                    id: game_finder
+                    game_reset: app.game_reset
+                    disabled: app.connected
+
+                GameFinderTextInput:
+                    id: platform_game_id_field
+                    text: game_finder.platform_game_id
+                    font_size: self.size[1] * 0.8
+                    disabled: app.connected
+
+                DataButtonLayout:
+                    id: livestats
+                    event_dispatcher: app.livestats_poller
+
+                    canvas.before:
+                        Color:
+                            rgba: self.status_color
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+            GridLayout:
+                rows: 1
+                spacing: 10
+
+
+                Button:
+                    text: "Auto" if app.sync_poller.enabled == True else "Man"
+                    on_press: app.sync_poller.toggle_enabled()
+                    size_hint_x: 0.5
+
+
+                Button:
+                    text: "Play" if app.livestats_history.paused else "Pause"
+                    on_press: app.livestats_history.pause_updates()
+                    size_hint_x: 0.5
+
+
+                GridLayout:
+                    rows: 1
+
+                    DelayInput:
+                        id: delay_field
+                        padding: 6, 3
+                        font_size: self.size[1] * 0.7
+                        disabled: app.sync_poller.enabled
+
+                    Button:
+                        text: 'Delay'
+                        on_press: delay_field.update_delay()
+                        disabled: app.sync_poller.enabled
+                        
+
+                GridLayout:
+                    rows: 1
+
+                    GotoTimeInput:
+                        id: goto_time_field
+                        padding: 6, 3
+                        font_size: self.size[1] * 0.7
+                        disabled: app.sync_poller.enabled
+
+                    Button:
+                        text: 'Jump'
+                        on_press: goto_time_field.goto_time()
+                        disabled: app.sync_poller.enabled
+
+                GridLayout:
+                    rows: 1
+
+                    Button:
+                        text: 'Bump-'
+                        on_press: app.livestats_history.bump_time(-1000)
+                        disabled: app.sync_poller.enabled
+
+                    Button:
+                        text: 'Bump+'
+                        on_press: app.livestats_history.bump_time(1000)
+                        disabled: app.sync_poller.enabled
+
+
+        #App Control
+        GridLayout:
+            rows: 1
+            size_hint_x: .3
+
+            Button:
+                text: 'Settings'
+                on_release: app.open_settings()
+                disabled: app.connected
+
+            Button:
+                text: 'Reset'
+                on_release: app.initialize()
+                background_color: 1, 1, 0, 1
+                disabled: app.connected
+                
+            Button:
+                text: 'Exit'
+                on_release: app.stop()
+                background_color: 1,0,0,1
+                disabled: app.connected        
+
+    MainScreenManager:
+        id: main_manager
+        name: 'main_manager'
+        game_reset: app.game_reset
+
+        OverlayScreen:
+
+
+    GridLayout:
+        name: 'bottom row'
+        rows: 1
+        size_hint_y: 0.08
+        padding: 5
+        spacing: 10
+
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+        GridLayout:
+            cols: 2
+        
+            GridLayout:
+                cols: 1
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+                    Label:
+                        size_hint_x: 0.25
+                        text: "Date"
+
+                    TextInput:
+                        id: date_input
+                        text: app.bottom_bar.date
+                        hint_text: "Week/Day"
+                        multiline: False
+                        write_tab: False
+                        padding: 4, 0
+                        font_size: self.size[1] * 0.8
+
+                GridLayout:
+                    rows: 1
+                    spacing: 5
+
+
+                    Label:
+                        size_hint_x: 0.25
+                        text: "Patch"
+
+                    TextInput:
+                        id: patch_input
+                        text: app.bottom_bar.patch
+                        hint_text: "Patch"
+                        multiline: False
+                        write_tab: False
+                        padding: 4, 0
+                        font_size: self.size[1] * 0.8
+
+            GridLayout:
+                rows: 1
+                padding: 0, 5
+
+                size_hint_x: 0.5
+
+                Button:
+                    text: "Update"
+                    on_press: app.bottom_bar.set_info(date_input.text, patch_input.text, "")
+
+
+        GridLayout:
+            rows: 1
+            size_hint_x: 3.0
+
+            Label:
+                text: "Sponsors"
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor1"
+                target: app.sponsor_1
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor2"
+                target: app.sponsor_2
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor3"
+                target: app.sponsor_3
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor4"
+                target: app.sponsor_4
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor5"
+                target: app.sponsor_5
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor6"
+                target: app.sponsor_6
+
+            SponsorLayout:
+                section: "Sponsors"
+                prefix: "sponsor7"
+                target: app.sponsor_7
+
+
+            #Baron Power Play
+            TeamColorGridLayout:
+                rows: 1
+                teamID: app.baron_power_play.teamID
+                padding: 5, 0
+                size_hint_x: 2.0
+
+                BaronButton:
+                    halign: "center"
+
+
+            DragonSoulButton:
+                halign: "center"
+
+            #Mythic Item
+            TeamColorGridLayout:
+                rows: 1
+                teamID: app.mythic_item.teamID
+                padding: 5, 0
+                size_hint_x: 2.0
+
+                MythicItemButton:
+                    halign: "center"
+
+                OverlayImage:
+                    asset: app.mythic_item.mythic_item
+
+            
+
+            
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Game Length"
+
+            ClockLabel:
+                input_time: app.livestats_history.server_time
+
+            Label:
+                text: "Observer Delay"
+
+            ClockLabel:
+                input_time: app.sync_poller.server_delay
+
+
+        

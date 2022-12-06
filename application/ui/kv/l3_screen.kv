@@ -1,0 +1,51 @@
+#:kivy 1.11.1
+
+<L3Screen>:
+    name: 'Lower 3rds'
+    id: l3_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+        spacing: 10
+
+        #Type Bar
+        GridLayout:
+            rows: 1
+            padding: 5
+            spacing: 5
+            size_hint_y: 0.065
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            GridLayout:
+                rows: 1
+                size_hint_x: 0.5
+
+                Label:
+                    text: "Lower 3rd:"
+
+
+            SiegeSpinner:
+                text: l3_manager.current
+                values: ["Damage Bar Chart", "Gold Bar Chart", "Live Gold Area Chart", "Whole Game Gold Area Chart", "Player Matchup", "Player Stats", "Player Runes"]
+                on_text: l3_manager.current = self.text
+
+        #Screenmanager
+        L3ScreenManager:
+            id: l3_manager
+            name: 'l3_manager'
+            game_reset: app.game_reset
+
+            DamageBarChartL3Screen:
+            GoldBarChartL3Screen:
+            LiveGoldAreaChartL3Screen:
+            WholeGameGoldAreaChartL3Screen:
+            PlayerMatchupL3Screen:
+            PlayerStatsL3Screen:
+            PlayerRunesL3Screen:

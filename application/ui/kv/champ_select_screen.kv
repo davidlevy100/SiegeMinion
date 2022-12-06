@@ -1,0 +1,159 @@
+#:kivy 1.11.1
+
+<ChampSelectScreen>:
+    name: "Champ Select"
+    id: champ_select_screen
+
+    GridLayout:
+        # Window level 1
+        cols: 1
+        spacing: 10
+
+        #Body
+        GridLayout:
+            cols: 2
+            spacing: 10
+
+            TeamColorGridLayout:
+                cols: 1
+                teamID: 100
+                padding: 0, 0, 5, 0
+                spacing: 5
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant1
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant2
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant3
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant4
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant5
+
+            TeamColorGridLayout:
+                cols: 1
+                teamID: 200
+                padding: 0, 0, 5, 0
+                spacing: 5
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant6
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant7
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant8
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant9
+
+                ChampSelectTabbedPanel:
+                    participant: app.lcu_champ_select.participant10
+
+
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.33
+
+
+            GridLayout:
+                rows: 1
+                spacing: 10
+
+                TeamColorGridLayout:
+                    rows: 1
+                    teamID: 100
+                    padding: 0, 0, 10, 0
+
+                    Label:
+                        text: "Bans"
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant1.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant2.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant3.ban_champion
+
+                    Widget:
+                        size_hint_x: 0.25
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant4.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant5.ban_champion
+
+
+                TeamColorGridLayout:
+                    rows: 1
+                    teamID: 200
+                    padding: 10, 0, 0, 0
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant10.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant9.ban_champion
+
+                    Widget:
+                        size_hint_x: 0.25
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant8.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant7.ban_champion
+
+                    OverlayImage:
+                        asset: app.lcu_champ_select.participant6.ban_champion
+
+                    Label:
+                        text: "Bans"
+
+
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 0, 5
+                size_hint_y: 0.5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                DataButtonLayout:
+                    id: lcu_client
+                    event_dispatcher: app.lcu_poller
+
+                    canvas.before:
+                        Color:
+                            rgba: self.status_color
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                Button:
+                    text: "Reset Champ Select"
+                    on_press: app.lcu_champ_select.reset_lcu()
+
+                ToggleButton:
+                    text: "Take Out" if app.lcu_champ_select.active else "Take In"
+                    on_press: app.lcu_champ_select.toggle_active()
+                    state: "down" if app.lcu_champ_select.active else "normal"

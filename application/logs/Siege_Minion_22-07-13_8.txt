@@ -1,0 +1,51 @@
+[INFO   ] Logger: Record log in T:\git\siege-minion-2021\application\logs\Siege_Minion_22-07-13_8.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "T:\git\siege-minion-2021\env\lib\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "T:\git\siege-minion-2021\env\Scripts\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.6.0 - Build 27.20.100.9365'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) UHD Graphics'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 - Build 27.20.100.9365'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Disconnected
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\main.py", line 516, in <module>
+[WARNING] stderr:     SiegeMinion().run()
+[WARNING] stderr:   File "T:\git\siege-minion-2021\env\lib\site-packages\kivy\app.py", line 954, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "T:\git\siege-minion-2021\env\lib\site-packages\kivy\app.py", line 924, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\main.py", line 214, in build
+[WARNING] stderr:     self.build_data()
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\main.py", line 337, in build_data
+[WARNING] stderr:     self.next_dragon = NextDragon(elder_dragon=self.elder_dragon)
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\data\events\current\overlay\next_dragon.py", line 63, in __init__
+[WARNING] stderr:     super().__init__(**kwargs)
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\data\events\data_event_dispatch.py", line 17, in __init__
+[WARNING] stderr:     super().__init__(**kwargs)
+[WARNING] stderr:   File "kivy\_event.pyx", line 262, in kivy._event.EventDispatcher.__init__
+[WARNING] stderr:   File "kivy\properties.pyx", line 520, in kivy.properties.Property.__set__
+[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "T:\git\siege-minion-2021\application\data\events\current\overlay\next_dragon.py", line 77, in on_elder_dragon
+[WARNING] stderr:     self.elder_dragon.bind(active=self.setter('elder_active'))
+[WARNING] stderr:   File "kivy\_event.pyx", line 452, in kivy._event.EventDispatcher.bind
+[WARNING] stderr: KeyError: 'active'

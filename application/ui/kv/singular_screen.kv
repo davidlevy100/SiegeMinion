@@ -1,0 +1,28 @@
+#:kivy 1.11.1
+
+<SingularScreen>:
+    name: 'singular_screen'
+    id: singular_screen
+
+    GridLayout:
+        # Window level 1
+        id: champ_select
+        cols:1
+
+        GridLayout:
+            cols: 1
+
+
+        GridLayout:
+            # footer
+            rows: 1
+            size_hint_y: .06
+            padding: 300, 5, 300, 0
+            spacing: 300
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size

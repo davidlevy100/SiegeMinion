@@ -1,0 +1,55 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "PGB Ticker/Flipper Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "PGB Ticker/Flipper",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "PGB Ticker/Flipper Show",
+        "desc": "Name of Trio show to use",
+        "section": "PGB Ticker/Flipper",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "PGB Ticker/Flipper Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "PGB Ticker/Flipper",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "PGB Ticker/Flipper Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "PGB Ticker/Flipper",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "PGB Ticker/Flipper Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "PGB Ticker/Flipper",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "PGB Ticker/Flipper",
+        "key": "auto_slack"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "PGB Ticker/Flipper",
+        "key": "auto_trio"
+    }
+]

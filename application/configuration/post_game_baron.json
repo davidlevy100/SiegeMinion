@@ -1,0 +1,76 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Baron Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "Post-Game Baron",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Baron Show",
+        "desc": "Name of Trio show to use",
+        "section": "Post-Game Baron",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Baron Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "Post-Game Baron",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Baron Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "Post-Game Baron",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "Post-Game Baron Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "Post-Game Baron",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Post-Game Baron",
+        "key": "auto_slack"
+    },
+    {
+        "type": "string",
+        "title": "Slack Channels",
+        "desc": "Post Images to these Slack Channels.  Separate with commas (i.e. channel-one, channel-two)",
+        "section": "Post-Game Baron",
+        "key": "slack_channels"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "Post-Game Baron",
+        "key": "auto_trio"
+    },
+    {
+        "type": "string",
+        "title": "Default Title",
+        "desc": "Use this title for the graphic",
+        "section": "Post-Game Baron",
+        "key": "title"
+    },
+    {
+        "type": "string",
+        "title": "Subtitle",
+        "desc": "Use this subtitle for the graphic",
+        "section": "Post-Game Baron",
+        "key": "subtitle"
+    }
+]

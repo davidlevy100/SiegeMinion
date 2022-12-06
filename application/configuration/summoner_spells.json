@@ -1,0 +1,16 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Summoner Spell Assets Folder",
+        "desc": "Summoner Spell Assets Folder",
+        "section": "Summoner Spells",
+        "key": "folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Summoner Spell Image",
+        "desc": "Default image",
+        "section": "Summoner Spells",
+        "key": "default_image"
+    }
+]

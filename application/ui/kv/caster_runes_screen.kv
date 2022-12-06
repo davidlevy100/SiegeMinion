@@ -1,0 +1,62 @@
+#:kivy 1.11.1
+
+<CasterRunesScreen>:
+    name: "Caster Runes"
+    id: caster_runes_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+
+        #Body
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            Widget:
+
+            Widget:
+
+            Widget:
+
+    
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.08
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.25
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+
+                Button:
+
+                Widget:
+
+                Button:
+
+                Widget:
+
+                Button:
+
+                Widget:

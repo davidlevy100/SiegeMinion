@@ -1,0 +1,83 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Breakdown Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "Post-Game Breakdown",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Breakdown Show",
+        "desc": "Name of Trio show to use",
+        "section": "Post-Game Breakdown",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Breakdown Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "Post-Game Breakdown",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Post-Game Breakdown Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "Post-Game Breakdown",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "Post-Game Breakdown Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "Post-Game Breakdown",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Post-Game Breakdown",
+        "key": "auto_slack"
+    },
+    {
+        "type": "string",
+        "title": "Slack Channels",
+        "desc": "Post Images to these Slack Channels.  Separate with commas (i.e. channel-one, channel-two)",
+        "section": "Post-Game Breakdown",
+        "key": "slack_channels"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "Post-Game Breakdown",
+        "key": "auto_trio"
+    },
+    {
+        "type": "string",
+        "title": "Default Title",
+        "desc": "Use this title for the graphic",
+        "section": "Post-Game Breakdown",
+        "key": "title"
+    },
+    {
+        "type": "string",
+        "title": "Subtitle",
+        "desc": "Use this subtitle for the graphic",
+        "section": "Post-Game Breakdown",
+        "key": "subtitle"
+    },
+    {
+        "type": "numeric",
+        "title": "Gold Graph X tick Width",
+        "desc": "Column Offset that sets how far apart the X ticks are, measured at 100 minutes (float).",
+        "section": "Post-Game Breakdown",
+        "key": "graph_x_tick_width"
+    }
+]

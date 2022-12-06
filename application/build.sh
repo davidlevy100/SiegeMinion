@@ -1,0 +1,1 @@
+python -m PyInstaller build.spec --workpath "../build" --distpath "../dist" --noconfirm --clean

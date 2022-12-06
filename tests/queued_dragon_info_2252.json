@@ -1,0 +1,16 @@
+{
+    "gameID": 2570190,
+    "gameName": "inhouse",
+    "gameTime": 1257886,
+    "nextDragonName": "hextech",
+    "nextDragonSpawnTime": 1558,
+    "platformID": "ESPORTSTMNT01",
+    "playbackID": 1,
+    "rfc001Scope": "riot.lol.mgs.sx",
+    "rfc190Scope": "test.unk1.unk.lolgame.legs",
+    "rfc460Hostname": "0.0.0.0",
+    "rfc460Timestamp": "2021-11-22T20:25:51.594Z",
+    "rfc461Schema": "queued_dragon_info",
+    "sequenceIndex": 2252,
+    "stageID": 1
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Player Assets Folder",
+        "desc": "Player Assets Folder",
+        "section": "Players",
+        "key": "folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Player Image",
+        "desc": "Default image",
+        "section": "Players",
+        "key": "default_image"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "type": "numeric",
+        "title": "Data Node Number",
+        "desc": "ID Number of data node to update",
+        "section": "Team Comp",
+        "key": "datanode"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Singular Automatically",
+        "desc": "If On, will automatically send to Singular at first opportunity",
+        "section": "Team Comp",
+        "key": "auto_singular"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Team Comp",
+        "key": "auto_slack"
+    }
+]

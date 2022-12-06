@@ -1,0 +1,37 @@
+[
+    {
+        "type": "string",
+        "title": "Livestats URL Address",
+        "desc": "Base IP address of Livestats server",
+        "section": "Livestats",
+        "key": "base_url"
+    },
+    {
+        "type": "password",
+        "title": "Livestats Api Key",
+        "desc": "Required",
+        "section": "Livestats",
+        "key": "api_key"
+    },
+    {
+        "type": "numeric",
+        "title": "Livestats Polling Interval",
+        "desc": "How often to ping Livestats server, in seconds",
+        "section": "Livestats",
+        "key": "polling_interval"
+    },
+    {
+        "type": "numeric",
+        "title": "Livestats Delay (Manual Mode Only)",
+        "desc": "Delay livestats data to match observer delay, in milliseconds",
+        "section": "Livestats",
+        "key": "delay"
+    },
+    {
+        "type": "numeric",
+        "title": "Livestats Correction Factor (Manual Mode Only)",
+        "desc": "Correction factor (float) for livestats delay times",
+        "section": "Livestats",
+        "key": "correction_factor"
+    }
+]

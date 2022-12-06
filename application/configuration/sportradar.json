@@ -1,0 +1,30 @@
+[
+    {
+        "type": "string",
+        "title": "Sportradar URL Address",
+        "desc": "Base IP address of Sportradar Reports",
+        "section": "Sportradar",
+        "key": "base_url"
+    },
+    {
+        "type": "password",
+        "title": "Sportradar Api Key",
+        "desc": "Required",
+        "section": "Sportradar",
+        "key": "api_key"
+    },
+    {
+        "type": "string",
+        "title": "Champion Stats Report",
+        "desc": "UUID for Champion Stats Report (10 player games only for a single split)",
+        "section": "Sportradar",
+        "key": "champion_stats"
+    },
+    {
+        "type": "numeric",
+        "title": "Champion Stats time",
+        "desc": "How long to display champion stats, in seconds.  Requires restart",
+        "section": "Sportradar",
+        "key": "champion_stats_time"
+    }
+]

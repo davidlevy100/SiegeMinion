@@ -1,0 +1,9 @@
+[
+    {
+        "type": "ddragon_options",
+        "title": "Data Dragon Version",
+        "desc": "Should match Game Client Version, (i.e 9.12 or 9.12.223.444)",
+        "section": "Data Dragon",
+        "key": "game_version"
+    }
+]

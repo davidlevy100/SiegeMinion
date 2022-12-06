@@ -1,0 +1,30 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Champion Icon Assets Folder",
+        "desc": "Champion Icon Assets Folder",
+        "section": "Champions",
+        "key": "icon_folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Champion Icon Image",
+        "desc": "Default image",
+        "section": "Champions",
+        "key": "default_icon_image"
+    },
+    {
+        "type": "singular_folder_options",
+        "title": "Champion Splash Assets Folder",
+        "desc": "Champion Splash Assets Folder",
+        "section": "Champions",
+        "key": "splash_folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Champion Splash Image",
+        "desc": "Default image",
+        "section": "Champions",
+        "key": "default_splash_image"
+    }
+]

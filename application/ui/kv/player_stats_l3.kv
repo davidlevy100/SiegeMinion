@@ -1,0 +1,252 @@
+#:kivy 1.11.1
+
+<PlayerStatsL3Screen>:
+    name: "Player Stats"
+    id: player_stats_l3_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+
+        #Body
+        GridLayout:
+            cols: 1
+            spacing: 10
+            padding: 0, 10
+
+            #Preview L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 8.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                GridLayout:
+                    rows: 1
+                    size_hint_y: 0.5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 0.5
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    Label:
+                        text: "Preview"
+
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.player_stats_l3.preview_title
+                
+                GridLayout:
+                    rows: 2
+                    size_hint_y: 4.0
+                    padding: 2
+                    spacing: 2
+
+                    #Left Player
+                    GridLayout:
+                        rows: 1
+                        size_hint_y: 0.25
+
+
+                        SiegeSpinner:
+                            text: app.player_stats_l3.preview_player_name
+                            values:  app.player_stats_l3.available_players
+                            on_text:  app.player_stats_l3.select_player(self.text)
+
+                        Widget:
+
+                        SiegeSpinner:
+                            text: app.player_stats_l3.preview_cat1
+                            values:  app.player_stats_l3.available_categories
+                            on_text: app.player_stats_l3.select_category(self.text, 1)
+                        
+                        SiegeSpinner:
+                            text: app.player_stats_l3.preview_cat2
+                            values:  app.player_stats_l3.available_categories
+                            on_text: app.player_stats_l3.select_category(self.text, 2)
+
+                        SiegeSpinner:
+                            text: app.player_stats_l3.preview_cat3
+                            values:  app.player_stats_l3.available_categories
+                            on_text: app.player_stats_l3.select_category(self.text, 3)
+
+                        SiegeSpinner:
+                            text: app.player_stats_l3.preview_cat4
+                            values:  app.player_stats_l3.available_categories
+                            on_text: app.player_stats_l3.select_category(self.text, 4)
+
+                    
+                    #Categories and Stats
+                    GridLayout:
+                        rows: 1
+
+                        Widget:
+
+                        Widget:
+
+                        Label:
+                            text: app.player_stats_l3.preview_stat1
+                        
+                        Label:
+                            text: app.player_stats_l3.preview_stat2
+
+                        Label:
+                            text: app.player_stats_l3.preview_stat3
+
+                        Label:
+                            text: app.player_stats_l3.preview_stat4
+
+
+            #Active L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 8.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+
+                GridLayout:
+                    rows: 1
+                    size_hint_y: 0.5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 0.5
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    Label:
+                        text: "Live"
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.player_stats_l3.active_title
+                
+                GridLayout:
+                    rows: 2
+                    size_hint_y: 4.0
+
+                    #BluePlayer
+                    GridLayout:
+                        rows: 1
+                        size_hint_y: 0.25
+
+                        Label:
+                            text: app.player_stats_l3.active_player_name
+
+                        Widget:
+
+                        Label:
+                            text: app.player_stats_l3.active_cat1
+                        
+                        Label:
+                            text: app.player_stats_l3.active_cat2
+
+                        Label:
+                            text: app.player_stats_l3.active_cat3
+
+                        Label:
+                            text: app.player_stats_l3.active_cat4
+
+                    
+                    #Categories and Stats
+                    GridLayout:
+                        rows: 1
+
+                        Widget:
+
+                        Widget:
+
+                        Label:
+                            text: app.player_stats_l3.active_stat1
+                        
+                        Label:
+                            text: app.player_stats_l3.active_stat2
+
+                        Label:
+                            text: app.player_stats_l3.active_stat3
+
+                        Label:
+                            text: app.player_stats_l3.active_stat4
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.08
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.25
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+
+                Button:
+                    text: "Take"
+                    on_press: app.player_stats_l3.set_active(True)
+                    disabled: app.player_stats_l3.active
+
+                Widget:
+
+                Button:
+                    text: "Take Out"
+                    on_press: app.player_stats_l3.set_active(False)
+
+                Widget:

@@ -1,0 +1,78 @@
+[INFO   ] Logger: Record log in C:\Users\User\Desktop\SiegeMinion_6_0_6_withCS_fixes\logs\Siege_Minion_21-02-25_6.txt
+[INFO   ] Kivy: v1.11.1
+[INFO   ] Kivy: Installed at "C:\Users\User\Desktop\SiegeMinion_6_0_6_withCS_fixes\kivy\__init__.pyc"
+[INFO   ] Python: v3.7.7 (tags/v3.7.7:d7c567b08f, Mar 10 2020, 09:44:33) [MSC v.1900 32 bit (Intel)]
+[INFO   ] Python: Interpreter at "C:\Users\User\Desktop\SiegeMinion_6_0_6_withCS_fixes\SiegeMinion 6.0.6.exe"
+[INFO   ] Factory: 184 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_gif (img_pil, img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.5.0 - Build 23.20.16.4973'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) HD Graphics 630'>
+[INFO   ] GL: OpenGL parsed version: 4, 5
+[INFO   ] GL: Shading version <b'4.50 - Build 23.20.16.4973'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Disconnected
+[INFO   ] Disconnected: 01:45:39 PM
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: Pentakill has been reset
+[INFO   ] Event: 01:45:39 PM Resetting Siege Minion
+[INFO   ] GL: NPOT texture support is available
+[INFO   ] Overlay Screen Change: Champ Select
+[INFO   ] L3 Screen Change: Damage Bar Chart
+[INFO   ] Side Slab Screen Change: Gold
+[INFO   ] Main Screen Change: overlay_screen
+[INFO   ] Base: Start application main loop
+[INFO   ] Data Poller Connected: 01:45:48 PM
+[INFO   ] Slack Post: 01:45:51 PM https://slack.com/api/chat.postMessage?channel=lec-siege-minion-info&text=graphics+test%7CESPORTSTMNT04_1530128%7C11.4.360.513&blocks=%5B%7B%22type%22%3A+%22divider%22%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Connected+to+game+on+%3C%21date%5E1614257151%5E%7Bdate%7D+at+%7Btime%7D%7CThu+Feb+25+12%3A45%3A51+2021+UTC%3E%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Name%3A+%60graphics+test%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Platform_GameID%3A+%60ESPORTSTMNT04_1530128%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Version%3A+11.4.360.513%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22DDragon+Version%3A+11.4.1%5Cr%5Cn%3Afistbump%3A%22%7D%5D%7D%5D, ({'ok': True, 'channel': 'CMDBHDUA2', 'ts': '1614257150.007400', 'message': {'type': 'message', 'subtype': 'bot_message', 'text': 'graphics test|ESPORTSTMNT04_1530128|11.4.360.513', 'ts': '1614257150.007400', 'username': 'LEC Siege Minion', 'bot_id': 'BMB6YN24Q', 'blocks': [{'type': 'divider', 'block_id': 'NuL'}, {'type': 'context', 'block_id': '+AUMH', 'elements': [{'type': 'mrkdwn', 'text': 'Connected to game on <!date^1614257151^{date} at {time}|Thu Feb 25 12:45:51 2021 UTC>\n', 'verbatim': False}]}, {'type': 'context', 'block_id': '1z+kq', 'elements': [{'type': 'mrkdwn', 'text': 'Game Name: `graphics test`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'jpUrH', 'elements': [{'type': 'mrkdwn', 'text': 'Platform_GameID: `ESPORTSTMNT04_1530128`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'DmBmr', 'elements': [{'type': 'mrkdwn', 'text': 'Game Version: 11.4.360.513\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'hqgn', 'elements': [{'type': 'mrkdwn', 'text': 'DDragon Version: 11.4.1\n:fistbump:', 'verbatim': False}]}]}},)
+[INFO   ] Slack Post: 01:45:54 PM https://slack.com/api/files.upload?channels=lec-siege-minion-info, ({'ok': True, 'file': {'id': 'F01PBSJ6DTM', 'created': 1614257151, 'timestamp': 1614257151, 'name': 'Caster Runes.png', 'title': 'Caster Runes', 'mimetype': 'image/png', 'filetype': 'png', 'pretty_type': 'PNG', 'user': 'WLZPF26CT', 'editable': False, 'size': 1821881, 'mode': 'hosted', 'is_external': False, 'external_type': '', 'is_public': True, 'public_url_shared': False, 'display_as_bot': False, 'username': '', 'url_private': 'https://files.slack.com/files-pri/T2B9DMETS-F01PBSJ6DTM/caster_runes.png', 'url_private_download': 'https://files.slack.com/files-pri/T2B9DMETS-F01PBSJ6DTM/download/caster_runes.png', 'thumb_64': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_64.png', 'thumb_80': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_80.png', 'thumb_360': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_360.png', 'thumb_360_w': 360, 'thumb_360_h': 203, 'thumb_480': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_480.png', 'thumb_480_w': 480, 'thumb_480_h': 270, 'thumb_160': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_160.png', 'thumb_720': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_720.png', 'thumb_720_w': 720, 'thumb_720_h': 405, 'thumb_800': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_800.png', 'thumb_800_w': 800, 'thumb_800_h': 450, 'thumb_960': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_960.png', 'thumb_960_w': 960, 'thumb_960_h': 540, 'thumb_1024': 'https://files.slack.com/files-tmb/T2B9DMETS-F01PBSJ6DTM-96efc5a799/caster_runes_1024.png', 'thumb_1024_w': 1024, 'thumb_1024_h': 576, 'original_w': 1920, 'original_h': 1080, 'thumb_tiny': 'AwAbADCsQpODkUmRGSUIzjvinc56j/GmyZ7gdOxqiUQAA9Tig47HNKMnooNIwI6gCgolJEjAuwzjtijCdsmljzngDp3NKd2fvL+HakNDuMj5T160yTHbPT3pw/1gHbND/wBKNCSvx3zSHHbP40uSOhpCxPU0xkyYzzu6ds0vfhD9aWP7wpuTvIycZqblJH//2Q==', 'permalink': 'https://riotgames.enterprise.slack.com/files/WLZPF26CT/F01PBSJ6DTM/caster_runes.png', 'permalink_public': 'https://slack-files.com/T2B9DMETS-F01PBSJ6DTM-2bd0e6d16f', 'comments_count': 0, 'is_starred': False, 'shares': {'public': {'CMDBHDUA2': [{'reply_users': [], 'reply_users_count': 0, 'reply_count': 0, 'ts': '1614257153.007500', 'channel_name': 'lec-siege-minion-info', 'team_id': 'T08NPASCQ', 'share_user_id': 'WLZPF26CT'}]}}, 'channels': ['CMDBHDUA2'], 'groups': [], 'ims': [], 'has_rich_preview': False}},)
+[INFO   ] Disconnected
+[INFO   ] Overlay Screen Change: Side Slab
+[INFO   ] Side Slab Screen Change: XP + Level
+[INFO   ] Overlay Screen Change: Lower 3rds
+[INFO   ] L3 Screen Change: Live Gold Area Chart
+[INFO   ] L3 Screen Change: Whole Game Gold Area Chart
+[INFO   ] L3 Screen Change: Live Gold Area Chart
+[INFO   ] Disconnected: 01:50:32 PM
+[INFO   ] Clipboard: Provider: winctypes
+[INFO   ] Data Poller Connected: 01:51:07 PM
+[INFO   ] Base: Leaving application in progress...
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "main.py", line 445, in <module>
+[WARNING] stderr:     SiegeMinion().run()
+[WARNING] stderr:   File "kivy\app.py", line 855, in run
+[WARNING] stderr:   File "kivy\base.py", line 504, in runTouchApp
+[WARNING] stderr:   File "kivy\core\window\window_sdl2.py", line 747, in mainloop
+[WARNING] stderr:   File "kivy\core\window\window_sdl2.py", line 479, in _mainloop
+[WARNING] stderr:   File "kivy\base.py", line 339, in idle
+[WARNING] stderr:   File "kivy\clock.py", line 591, in tick
+[WARNING] stderr:   File "kivy\_clock.pyx", line 384, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy\_clock.pyx", line 414, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy\_clock.pyx", line 412, in kivy._clock.CyClockBase._process_events
+[WARNING] stderr:   File "kivy\_clock.pyx", line 167, in kivy._clock.ClockEvent.tick
+[WARNING] stderr:   File "data\livestats\history.py", line 184, in update_time
+[WARNING] stderr:     self.update_current_stats(self.local_time)
+[WARNING] stderr:   File "data\livestats\history.py", line 196, in update_current_stats
+[WARNING] stderr:     self.current_stats_update = value
+[WARNING] stderr:   File "kivy\properties.pyx", line 497, in kivy.properties.Property.__set__
+[WARNING] stderr:   File "kivy\properties.pyx", line 948, in kivy.properties.DictProperty.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 544, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 599, in kivy.properties.Property.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1214, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1120, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 724, in kivy._event.EventDispatcher.__proxy_setter
+[WARNING] stderr:   File "kivy\properties.pyx", line 948, in kivy.properties.DictProperty.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 544, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 599, in kivy.properties.Property.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1214, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1120, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "data\events\current\top_bar.py", line 108, in on_current_stats_update
+[WARNING] stderr:     new_dragons[j] = this_dragon
+[WARNING] stderr: IndexError: list assignment index out of range

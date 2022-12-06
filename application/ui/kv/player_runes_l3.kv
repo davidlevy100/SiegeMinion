@@ -1,0 +1,238 @@
+#:kivy 1.11.1
+
+<PlayerRunesL3Screen>:
+    name: "Player Runes"
+    id: player_Runes_l3_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+
+        #Body
+        GridLayout:
+            cols: 1
+            spacing: 10
+            padding: 0, 10
+
+            #Preview L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 8.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                GridLayout:
+                    rows: 1
+                    size_hint_y: 0.5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 0.5
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    Label:
+                        text: "Preview"
+
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.player_runes_l3.preview_title
+                
+                GridLayout:
+                    rows: 2
+                    size_hint_y: 4.0
+                    padding: 2
+                    spacing: 2
+
+                    #Player
+                    GridLayout:
+                        rows: 1
+
+                        GridLayout:
+                            cols: 1
+                            SiegeSpinner:
+                                text: app.player_runes_l3.preview_player_name
+                                values:  app.player_runes_l3.available_players
+                                on_text:  app.player_runes_l3.select_player(self.text)
+                            
+                            Widget:
+
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_primary_tree
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_keystone
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_rune1
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_rune2
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_rune3
+
+                        
+                    
+                    #Secondary Runes
+                    GridLayout:
+                        rows: 1
+
+                        Widget:
+
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_secondary_tree
+
+                        Widget:
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_rune4
+                        OverlayImage:
+                            asset: app.player_runes_l3.preview_rune5
+                        Widget:
+
+
+            #Active L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 8.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+
+                GridLayout:
+                    rows: 1
+                    size_hint_y: 0.5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0.5, 0.5, 0.5, 0.5
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    Label:
+                        text: "Live"
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.player_runes_l3.active_title
+                
+                GridLayout:
+                    rows: 2
+                    size_hint_y: 4.0
+
+                    #Player
+                    GridLayout:
+                        rows: 1
+
+                        GridLayout:
+                            cols: 1
+                            Label:
+                                text: app.player_runes_l3.active_player_name
+                            
+                            Widget:
+
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_primary_tree
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_keystone
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_rune1
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_rune2
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_rune3
+
+                        
+                    
+                    #Secondary Runes
+                    GridLayout:
+                        rows: 1
+
+                        Widget:
+
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_secondary_tree
+
+                        Widget:
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_rune4
+                        OverlayImage:
+                            asset: app.player_runes_l3.active_rune5
+                        Widget:
+
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.08
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.25
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+
+                Button:
+                    text: "Take"
+                    on_press: app.player_runes_l3.set_active(True)
+                    disabled: app.player_runes_l3.active
+
+                Widget:
+
+                Button:
+                    text: "Take Out"
+                    on_press: app.player_runes_l3.set_active(False)
+
+                Widget:

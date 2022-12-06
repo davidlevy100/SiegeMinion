@@ -1,0 +1,46 @@
+{
+    "interfaceAll": {
+        "description": "Display all of the user interface",
+        "type": "boolean"
+    },
+    "interfaceAnnounce": {
+        "description": "Display game announcements (center of the window)",
+        "type": "boolean"
+    },
+    "interfaceChat": {
+        "description": "Display the chat window",
+        "type": "boolean"
+    },
+    "interfaceFrames": {
+        "description": "Display the champion frames (sides of the window)",
+        "type": "boolean"
+    },
+    "interfaceMinimap": {
+        "description": "Display the game minimap (bottom right corner)",
+        "type": "boolean"
+    },
+    "interfaceQuests": {
+        "description": "Display quests",
+        "type": "boolean"
+    },
+    "interfaceReplay": {
+        "description": "Display the replay HUD with camera options",
+        "type": "boolean"
+    },
+    "interfaceScore": {
+        "description": "Display the replay score interface (top of the window)",
+        "type": "boolean"
+    },
+    "interfaceScoreboard": {
+        "description": "Display the replay scoreboard (bottom of the window)",
+        "type": "boolean"
+    },
+    "interfaceTarget": {
+        "description": "Display the target selection window",
+        "type": "boolean"
+    },
+    "interfaceTimeline": {
+        "description": "Display the replay timeline (bottom of the window)",
+        "type": "boolean"
+    }
+}

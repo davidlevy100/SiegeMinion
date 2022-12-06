@@ -1,0 +1,227 @@
+[
+    {
+        "type": "title",
+        "title": "Overlay"
+    },
+    {
+        "type": "string",
+        "title": "Patch",
+        "desc": "Patch Number of Game",
+        "section": "User Game Data",
+        "key": "patch"
+    },
+    {
+        "type": "string",
+        "title": "Week/Day",
+        "desc": "Week/Date of game, (i.e.: 'W1D1')",
+        "section": "User Game Data",
+        "key": "date"
+    },
+    {
+        "type": "options",
+        "title": "Show Team Record or Wins",
+        "desc": "Use team record or wins in the top bar",
+        "section": "User Game Data",
+        "key": "win_or_record",
+        "options": ["Record", "Wins"]
+    },
+    {
+        "type": "numeric",
+        "title": "Item Callout Delay",
+        "desc": "Minimum time between Item Callouts",
+        "section": "User Game Data",
+        "key": "item_callout_delay"
+    },
+    {
+        "type": "title",
+        "title": "Champ Select"
+    },
+    {
+        "type": "string",
+        "title": "Champ Select Stats Subline",
+        "desc": "Source info for Champ Select Stats",
+        "section": "User Game Data",
+        "key": "cs_stats_subline"
+    },
+    {
+        "type": "title",
+        "title": "Lower 3rds"
+    },
+    {
+        "type": "string",
+        "title": "Default L3 Title",
+        "desc": "Title when no Lower 3rds are visible, typically name of tournament or stage",
+        "section": "User Game Data",
+        "key": "default_title"
+    },
+    {
+        "type": "title",
+        "title": "Damage Bar Chart"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Damage Bar Chart L3 Title",
+        "desc": "Default Title for Damage Chart",
+        "section": "User Game Data",
+        "key": "damage_chart_l3_title"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Whole Game Damage Bar Chart L3 Title",
+        "desc": "Default Title for Damage Chart in Whole Game Mode",
+        "section": "User Game Data",
+        "key": "damage_chart_l3_whole_game_title"
+    },
+    {
+        "type": "numeric",
+        "title": "Default Time Window",
+        "desc": "Default to last X seconds",
+        "section": "User Game Data",
+        "key": "damage_chart_l3_time_window"
+    },
+    {
+        "type": "title",
+        "title": "Gold Bar Chart"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Gold Bar Chart L3 Title",
+        "desc": "Default Title for Gold Chart",
+        "section": "User Game Data",
+        "key": "gold_bar_chart_l3_title"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Gold Bar Chart L3 Title",
+        "desc": "Default Title for Gold Chart",
+        "section": "User Game Data",
+        "key": "gold_bar_chart_l3_whole_game_title"
+    },
+    {
+        "type": "numeric",
+        "title": "Default Time Window",
+        "desc": "Default to last X seconds",
+        "section": "User Game Data",
+        "key": "gold_bar_chart_l3_time_window"
+    },
+    {
+        "type": "title",
+        "title": "Gold Area Charts"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Live Gold Area Chart L3 Title",
+        "desc": "Default Title for Live Gold Area Chart",
+        "section": "User Game Data",
+        "key": "live_gold_area_chart_l3_title"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Whole Game Gold Area Chart L3 Title",
+        "desc": "Default Title for Whole Game Gold Area Chart",
+        "section": "User Game Data",
+        "key": "whole_game_gold_area_chart_l3_title"
+    },
+    {
+        "type": "title",
+        "title": "Player Matchup L3"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Player Matchup L3 Title",
+        "desc": "Default Title for Player Matchup L3.  Use $left_player and $right_player as variables i.e. $left_player vs $right_player or $LEFT_PLAYER VS $RIGHT_PLAYER",
+        "section": "User Game Data",
+        "key": "player_matchup_l3_title"
+    },
+    {
+        "type": "title",
+        "title": "Player Stats L3"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Player Stats L3 Title",
+        "desc": "Default Title for Player Stats L3.  Use $player as variable i.e. $player Stats",
+        "section": "User Game Data",
+        "key": "player_stats_l3_title"
+    },
+    {
+        "type": "title",
+        "title": "Player Runes L3"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Player Runes L3 Title",
+        "desc": "Default Title for Player Runes L3.  Use $player as variable i.e. $player Runes",
+        "section": "User Game Data",
+        "key": "player_runes_l3_title"
+    },
+    {
+        "type": "title",
+        "title": "Side Slabs"
+    },
+    {
+        "type": "utf8_string",
+        "title": "Gold Side Slab Title",
+        "desc": "Default Title for Gold Side Slab",
+        "section": "User Game Data",
+        "key": "gold_side_slab_title"
+    },
+    {
+        "type": "title",
+        "title": "Special Baron Announcement"
+    },
+    {
+        "type": "numeric",
+        "title": "Special Baron Announcement Duration",
+        "desc": "How long to play Special Baron Announcement animation",
+        "section": "User Game Data",
+        "key": "special_baron_announce_duration"
+    },
+    {
+        "type": "title",
+        "title": "Dragon Soul"
+    },
+    {
+        "type": "numeric",
+        "title": "Dragon Soul Duration",
+        "desc": "How long to play Dragon Soul animation",
+        "section": "User Game Data",
+        "key": "dragon_soul_duration"
+    },
+    {
+        "type": "title",
+        "title": "Mythic Items"
+    },
+    {
+        "type": "numeric",
+        "title": "Mythic Item Duration",
+        "desc": "How long to play Mythic Item animation",
+        "section": "User Game Data",
+        "key": "mythic_item_duration"
+    },
+    {
+        "type": "title",
+        "title": "Special Modes"
+    },
+    {
+        "type": "bool",
+        "title": "Test mode",
+        "desc": "Use pre-stored data.  Requires Restart",
+        "section": "User Game Data",
+        "key": "test_mode"
+    },
+    {
+        "type": "bool",
+        "title": "Record mode",
+        "desc": "Record Champ Select Data.  Requires Restart",
+        "section": "User Game Data",
+        "key": "record_mode"
+    },
+    {
+        "type": "bool",
+        "title": "Champ Select Dev Mode",
+        "desc": "Use a pre-set password and port for Champ Select (developer / 9090).  Requires Restart",
+        "section": "User Game Data",
+        "key": "dev_mode"
+    }
+]

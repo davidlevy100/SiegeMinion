@@ -1,0 +1,429 @@
+#:kivy 1.11.1
+
+<DamageBarChartL3Screen>:
+    name: "Damage Bar Chart"
+    id: damage_bar_chart_l3_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+
+        #Body
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            Widget:
+
+            #L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 4.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.damage_bar_chart_l3.active_title
+
+
+                # L3 Times
+                GridLayout:
+                    rows: 1
+                    padding: 30, 5
+                    spacing: 50
+
+                    GridLayout:
+                        rows: 1
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: "Start Time"
+
+
+                        TimeTextInput:
+                            id: start_time
+                            padding: 6, 1
+                            font_size: self.size[1] * 0.7
+                            disabled: app.damage_bar_chart_l3.active
+                            milliseconds: app.damage_bar_chart_l3.start_time
+
+
+                    GridLayout:
+                        rows: 1
+
+                        GridLayout:
+                            rows: 1
+
+                            Label:
+                                text: "End Time"
+
+
+                            TimeTextInput:
+                                id: end_time
+                                padding: 6, 1
+                                font_size: self.size[1] * 0.7
+                                disabled: app.damage_bar_chart_l3.active
+                                milliseconds: app.damage_bar_chart_l3.end_time
+
+
+                    GridLayout:
+                        rows: 1
+                        size_hint_x: 1.0
+
+                        Button:
+                            text: "Teamfight"
+                            on_press: app.damage_bar_chart_l3.set_time(start_time.milliseconds, end_time.milliseconds)
+                            disabled: app.damage_bar_chart_l3.active
+
+                        Button:
+                            text: "Whole Game"
+                            on_press: app.damage_bar_chart_l3.set_whole_game()
+                            disabled: app.damage_bar_chart_l3.active
+
+                
+                Widget:
+
+
+                # L3 Blue/Red Columns
+                GridLayout:
+                    cols: 2
+                    padding: 5
+                    spacing: 5
+                    size_hint_y: 6.0
+
+                    #Blue Column
+                    GridLayout:
+                        cols: 1
+                        spacing: 5
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_1
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_1
+                                    text_size: self.size
+                                    halign: 'left'
+                                    valign: 'middle'
+
+                                HorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 100
+                                    percent: app.damage_bar_chart_l3.percent_1
+
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_2
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_2
+                                    text_size: self.size
+                                    halign: 'left'
+                                    valign: 'middle'
+
+                                HorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 100
+                                    percent: app.damage_bar_chart_l3.percent_2
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_3
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_3
+                                    text_size: self.size
+                                    halign: 'left'
+                                    valign: 'middle'
+
+                                HorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 100
+                                    percent: app.damage_bar_chart_l3.percent_3
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_4
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_4
+                                    text_size: self.size
+                                    halign: 'left'
+                                    valign: 'middle'
+
+                                HorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 100
+                                    percent: app.damage_bar_chart_l3.percent_4
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_5
+                                    text_size: self.size
+                                    halign: 'left'
+                                    valign: 'middle'
+
+                                HorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 100
+                                    percent: app.damage_bar_chart_l3.percent_5
+
+                    #Red Column
+                    GridLayout:
+                        cols: 1
+                        spacing: 5
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_6
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                RightHorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 200
+                                    percent: app.damage_bar_chart_l3.percent_6
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_6
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_7
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                RightHorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 200
+                                    percent: app.damage_bar_chart_l3.percent_7
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_7
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_8
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                RightHorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 200
+                                    percent: app.damage_bar_chart_l3.percent_8
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_8
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_9
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                RightHorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 200
+                                    percent: app.damage_bar_chart_l3.percent_9
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_9
+
+                        GridLayout:
+                            rows: 1
+                            spacing: 5
+
+                            GridLayout:
+                                cols: 1
+                                padding: 0, 2
+
+                                Label:
+                                    text: app.damage_bar_chart_l3.value_10
+                                    text_size: self.size
+                                    halign: 'right'
+                                    valign: 'middle'
+
+                                RightHorizontalTeamBar:
+                                    size_hint_y: 0.5
+                                    teamID: 200
+                                    percent: app.damage_bar_chart_l3.percent_10
+
+                            GridLayout:
+                                rows: 1
+                                size_hint_x: 0.25
+
+                                ChampionImage:
+                                    asset_name: app.damage_bar_chart_l3.champ_10
+
+            Widget:
+
+    
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.08
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.25
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+
+                Button:
+                    text: "Take"
+                    on_press: app.damage_bar_chart_l3.set_active(True)
+                    disabled: not app.damage_bar_chart_l3.ready
+
+                Widget:
+
+                Button:
+                    text: "Take Out"
+                    on_press: app.damage_bar_chart_l3.set_active(False)
+
+                Widget:

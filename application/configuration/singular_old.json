@@ -1,0 +1,16 @@
+[
+    {
+        "type": "string",
+        "title": "Singular User Name",
+        "desc": "Singular User Name",
+        "section": "Singular",
+        "key": "user_name"
+    },
+    {
+        "type": "singular_password",
+        "title": "Singular Password",
+        "desc": "Required",
+        "section": "Singular",
+        "key": "password"
+    }
+]

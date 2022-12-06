@@ -1,0 +1,23 @@
+[
+    {
+        "type": "bool",
+        "title": "Enabled",
+        "desc": "Enable Observer UI Server Communication, otherwise use manual Observer UI",
+        "section": "Observer UI",
+        "key": "enabled"
+    },
+    {
+        "type": "string",
+        "title": "Esports Observer UI Server url",
+        "desc": "Address of Esports Observer UI Server",
+        "section": "Observer UI",
+        "key": "url"
+    },
+    {
+        "type": "numeric",
+        "title": "Polling Interval",
+        "desc": "How long to pause before polling the Esports Server again, in seconds",
+        "section": "Observer UI",
+        "key": "poll_interval"
+    }
+]

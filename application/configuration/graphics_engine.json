@@ -1,0 +1,86 @@
+[
+    {
+        "type": "string",
+        "title": "Graphics Engine IP Address",
+        "desc": "i.e. 127.0.0.1",
+        "section": "Graphics Engine",
+        "key": "ip"
+    },
+    {
+        "type": "numeric",
+        "title": "Graphics Engine Port",
+        "desc": "i.e. 6100",
+        "section": "Graphics Engine",
+        "key": "tcp_port"
+    },
+    {
+        "type": "string",
+        "title": "Player Image Path Prefix",
+        "desc": "Full file or server path of the Player image folder -- assumes players will be in a subfolder named by team Tricode",
+        "section": "Graphics Engine",
+        "key": "player_image_path"
+    },
+    {
+        "type": "string",
+        "title": "Default Player Image",
+        "desc": "Default image, must be located in default path above",
+        "section": "Graphics Engine",
+        "key": "default_player_image"
+    },
+    {
+        "type": "string",
+        "title": "Champion Image Path Prefix",
+        "desc": "Full file or server path of the Champions image folder",
+        "section": "Graphics Engine",
+        "key": "champion_image_path"
+    },
+    {
+        "type": "string",
+        "title": "Default Champion Image",
+        "desc": "Default image, must be located in default path above",
+        "section": "Graphics Engine",
+        "key": "default_champion_image"
+    },
+    {
+        "type": "string",
+        "title": "Items Image Path Prefix",
+        "desc": "Full file or server path of the Items image folder",
+        "section": "Graphics Engine",
+        "key": "item_image_path"
+    },
+    {
+        "type": "string",
+        "title": "Default Item Image",
+        "desc": "Default image, must be located in default path above",
+        "section": "Graphics Engine",
+        "key": "default_item_image"
+    },
+    {
+        "type": "string",
+        "title": "Rune Image Path Prefix",
+        "desc": "Full file or server path of the Runes image folder",
+        "section": "Graphics Engine",
+        "key": "rune_image_path"
+    },
+    {
+        "type": "string",
+        "title": "Default Rune Image",
+        "desc": "Default image, must be located in default path above",
+        "section": "Graphics Engine",
+        "key": "default_rune_image"
+    },
+    {
+        "type": "string",
+        "title": "Summoner Spell Image Path Prefix",
+        "desc": "Full file or server path of the Summoner Spells image folder",
+        "section": "Graphics Engine",
+        "key": "summoner_spell_image_path"
+    },
+    {
+        "type": "string",
+        "title": "Default Summoner Spell Image",
+        "desc": "Default image, must be located in default path above",
+        "section": "Graphics Engine",
+        "key": "default_summoner_image"
+    }
+]

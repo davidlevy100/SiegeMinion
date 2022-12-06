@@ -1,0 +1,34 @@
+#:kivy 1.11.1
+
+<StillScreen>:
+    name: 'Still Graphics'
+    id: still_screen
+
+    GridLayout:
+        # Window level 1
+        cols: 3
+        padding: 10
+        spacing: 10
+
+        VizcrankWidget:
+            source: app.caster_runes_sender
+        VizcrankWidget:
+            source: app.post_game_baron_sender
+        VizcrankWidget:
+            source: app.post_game_breakdown_sender
+        VizcrankWidget:
+            source: app.post_game_gold_sender
+        VizcrankWidget:
+            source: app.post_game_objectives_sender
+        VizcrankWidget:
+            source: app.post_game_summary_sender
+        VizcrankWidget:
+            source: app.team_pick_order_sender
+        Widget:
+        Widget:
+        Widget:
+        Widget:
+        Widget:
+        Widget:
+        Widget:
+        Widget:

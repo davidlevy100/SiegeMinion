@@ -1,0 +1,16 @@
+[
+    {
+        "type": "password",
+        "title": "Slack API Token",
+        "desc": "Slack API Token",
+        "section": "Slack",
+        "key": "api_token"
+    },
+    {
+        "type": "string",
+        "title": "Default Slack Channel",
+        "desc": "Always send Slack messages and images to this channel",
+        "section": "Slack",
+        "key": "slack_channels"
+    }
+]

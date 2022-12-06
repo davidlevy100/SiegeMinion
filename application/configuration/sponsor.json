@@ -1,0 +1,142 @@
+[
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor1_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor1_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor2_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor2_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor3_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor3_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor4_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor4_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor5_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor5_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor6_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor6_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor7_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor7_duration"
+    },
+    {
+        "type": "title",
+        "title": ""
+    },
+    {
+        "type": "string",
+        "title": "Sponsor Name",
+        "desc": "String",
+        "section": "Sponsors",
+        "key": "sponsor8_name"
+    },
+    {
+        "type": "numeric",
+        "title": "Sponsor Duration",
+        "desc": "Duration in seconds",
+        "section": "Sponsors",
+        "key": "sponsor8_duration"
+    }
+]

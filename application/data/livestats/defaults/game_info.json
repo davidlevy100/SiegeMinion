@@ -1,0 +1,296 @@
+{
+    "gameID": -1,
+    "gameName": "",
+    "gameVersion": "",
+    "participants": [
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 1,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 100
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 2,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 100
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 3,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 100
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 4,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 100
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 5,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 100
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 6,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 200
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 7,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 200
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 8,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 200
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 9,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 200
+        },
+        {
+            "abGroup": "Everything",
+            "accountID": -1,
+            "championName": "default",
+            "hashedIP": "",
+            "keystoneID": -1,
+            "participantID": 10,
+            "perks": [
+                {
+                    "perkIds": [
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1,
+                        -1
+                    ],
+                    "perkStyle": -1,
+                    "perkSubStyle": -1
+                }
+            ],
+            "summonerLevel": 30,
+            "summonerName": "",
+            "teamID": 200
+        }
+    ],
+    "platformID": "ESPORTSTMNT06",
+    "playbackID": 1,
+    "rfc001Scope": "riot.lol.mgs.sx",
+    "rfc190Scope": "test.unk1.unk.lolgame.legs",
+    "rfc460Hostname": "0.0.0.0",
+    "rfc460Timestamp": "2020-03-08T23:11:45.580Z",
+    "rfc461Schema": "game_info",
+    "sequenceIndex": 0,
+    "statsUpdateInterval": 1000
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "type": "singular_folder_options",
+        "title": "Item Assets Folder",
+        "desc": "Item Assets Folder",
+        "section": "Items",
+        "key": "folder"
+    },
+    {
+        "type": "singular_options",
+        "title": "Default Item Image",
+        "desc": "Default image",
+        "section": "Items",
+        "key": "default_image"
+    }
+]

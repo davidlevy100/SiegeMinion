@@ -1,0 +1,142 @@
+#:kivy 1.11.1
+
+<LiveGoldAreaChartL3Screen>:
+    name: "Live Gold Area Chart"
+    id: live_gold_area_chart_l3_screen
+
+    GridLayout:
+        # Window level 1
+        cols:1
+
+        #Body
+        GridLayout:
+            cols: 1
+            spacing: 5
+
+            Widget:
+
+            #L3
+            GridLayout:
+                cols: 1
+                size_hint_y: 4.0
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                #L3 Title
+                GridLayout:
+                    rows: 1
+                    padding: 5
+                    spacing: 5
+                    size_hint_y: 0.25
+
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 0, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+
+                    Label:
+                        text: app.live_gold_area_chart_l3.active_title
+
+
+                # L3 Times
+                GridLayout:
+                    rows:1
+                    padding: 30, 5
+                    spacing: 50
+                    size_hint_y: 0.5
+
+                    GridLayout:
+                        cols: 1
+
+                        Label:
+                            text: "Start Time"
+
+                        ClockLabel:
+                            input_time: app.live_gold_area_chart_l3.start_time
+
+                    GridLayout:
+                        cols: 1
+
+                        Label:
+                            text: "End Time"
+
+                        Label:
+                            text: app.top_bar.clock
+
+
+                    GridLayout:
+                        cols: 1
+
+                        Label:
+                            text: "Set Duration"
+
+                        GridLayout:
+                            rows: 1
+                            size_hint_x: 0.5
+
+                            ToggleButton:
+                                text: "5 Minutes"
+                                group: "l3_area_times"
+                                on_press: app.live_gold_area_chart_l3.set_mode(self.text)
+                                state: "down" if app.live_gold_area_chart_l3.mode == self.text else "normal"
+                                disabled: app.live_gold_area_chart_l3.active
+
+                            ToggleButton:
+                                text: "10 Minutes"
+                                group: "l3_area_times"
+                                on_press: app.live_gold_area_chart_l3.set_mode(self.text)
+                                state: "down" if app.live_gold_area_chart_l3.mode == self.text else "normal"
+                                disabled: app.live_gold_area_chart_l3.active
+                    
+                Widget:
+                    
+
+            Widget:
+
+        #Footer
+        GridLayout:
+            cols: 1
+            spacing: 5
+            size_hint_y: 0.08
+
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.25
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+            GridLayout:
+                rows: 1
+                spacing: 5
+                padding: 5
+
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Widget:
+
+                Button:
+                    text: "Take"
+                    on_press: app.live_gold_area_chart_l3.set_active(True)
+
+                Widget:
+
+                Button:
+                    text: "Take Out"
+                    on_press: app.live_gold_area_chart_l3.set_active(False)
+
+                Widget:

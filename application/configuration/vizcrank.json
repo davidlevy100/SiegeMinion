@@ -1,0 +1,23 @@
+[
+    {
+        "type": "string",
+        "title": "Vizcrank IP Address",
+        "desc": "Address for the VizRT Still Graphics Service (Vizcrank)",
+        "section": "Vizcrank",
+        "key": "ip"
+    },
+    {
+        "type": "numeric",
+        "title": "Vizcrank Port",
+        "desc": "i.e. 9001",
+        "section": "Vizcrank",
+        "key": "port"
+    },
+    {
+        "type": "string",
+        "title": "Vizcrank Channels",
+        "desc": "Comma-Separated List of possible named Viz Engines (i.e. VIZ1, VIZ2, ...)",
+        "section": "Vizcrank",
+        "key": "channels"
+    }
+]
