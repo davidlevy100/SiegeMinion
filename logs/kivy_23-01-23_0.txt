@@ -1,0 +1,37 @@
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\logs\kivy_23-01-23_0.txt
+[WARNING] Config: Upgrading configuration in progress.
+[WARNING] Config: Older configuration version detected (0 instead of 24)
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\git\SiegeMinion\env\lib\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\git\SiegeMinion\env\Scripts\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.6.0 - Build 30.0.101.1404'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) UHD Graphics'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 - Build 30.0.101.1404'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 35, in <module>
+[WARNING] stderr:     from data.livestats.history import LivestatsHistory
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\livestats\history.py", line 20, in <module>
+[WARNING] stderr:     DEFAULT_STATS_UPDATE = get_default_stats_update()
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\livestats\defaults\stats_update.py", line 8, in get_default_stats_update
+[WARNING] stderr:     with path.open(mode='r') as f:
+[WARNING] stderr:   File "C:\Users\levyd\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
+[WARNING] stderr:     return self._accessor.open(self, mode, buffering, encoding, errors,
+[WARNING] stderr: FileNotFoundError: [Errno 2] No such file or directory: 'C:\\git\\SiegeMinion\\data\\livestats\\defaults\\stats_update.json'
