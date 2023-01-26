@@ -1,0 +1,20 @@
+{
+    "events": [
+        {
+            "gameID": 2430746,
+            "gameName": "108206581964974047|game1",
+            "gameTime": 1869944,
+            "platformID": "ESPORTSTMNT04",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2022-07-03T21:56:44.410Z",
+            "rfc461Schema": "game_end",
+            "sequenceIndex": 6897,
+            "stageID": 1,
+            "wallTime": 1656885404402,
+            "winningTeam": 200
+        }
+    ]
+}

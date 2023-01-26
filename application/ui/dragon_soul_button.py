@@ -39,9 +39,9 @@ class DragonSoulButton(ActivatorButton):
     def on_dragon_soul(self, *args):
 
         if self.dragon_soul == "default":
-            self.text = "Dragon\r\nSoul"
+            self.text = "Dragon\nSoul"
         else:
-            self.text = f"{self.dragon_soul.title()}\r\nSoul"
+            self.text = f"{self.dragon_soul.title()}\nSoul"
 
 
     def activate(self, *args):

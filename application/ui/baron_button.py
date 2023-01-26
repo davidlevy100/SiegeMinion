@@ -29,10 +29,10 @@ class BaronButton(ActivatorButton):
     def on_baron_stolen(self, *args):
 
         if self.baron_stolen:
-            self.text = "Baron\nStolen"
+            self.text = "Baron\nSteal"
 
         else:
-            self.text = "Baron\nPower Play"
+            self.text = "Baron\nBuff"
 
 
     def activate(self, *args):
