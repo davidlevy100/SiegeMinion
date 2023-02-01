@@ -678,6 +678,8 @@ class DataDragon(EventDispatcher):
             "Enchantment: Cinderhulk",
             "Enchantment: Runic Echoes",
             "Enchantment: Bloodrazor",
+            "Evenshroud",
+            "Radiant Virtue",
             "Skirmisher's Sabre",
             "Stalker's Blade",
             "Harrowing Crescent",
