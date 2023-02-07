@@ -24,20 +24,31 @@
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Text: Provider: sdl2
 [INFO   ] Disconnected
+<<<<<<< HEAD
 [INFO   ] Disconnected: 08:34:52 PM
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Special Kill: has been reset
 [INFO   ] Event: 08:34:52 PM Resetting Siege Minion
+=======
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 06:49:20 PM Resetting Siege Minion
+>>>>>>> 623
 [INFO   ] GL: NPOT texture support is available
 [INFO   ] Overlay Screen Change: Champ Select
 [INFO   ] L3 Screen Change: Damage Bar Chart
 [INFO   ] Side Slab Screen Change: Gold
 [INFO   ] Main Screen Change: overlay_screen
 [INFO   ] Base: Start application main loop
+<<<<<<< HEAD
 [INFO   ] OSC Event: Creating Unicast OSC Client sending to 10.109.236.61:10000
 [INFO   ] OSC Event: Creating Unicast OSC Client sending to 10.109.236.73:10000
 [INFO   ] OSC Event: Creating Unicast OSC Client sending to 10.109.236.74:10000
 [INFO   ] OSC Event: Creating Unicast OSC Client sending to 10.109.236.75:10000
 [INFO   ] OSC Event: Creating Unicast OSC Client sending to 10.109.236.76:10000
+=======
+[INFO   ] Data Poller Connected: 06:51:36 PM
+>>>>>>> 623
 [INFO   ] Base: Leaving application in progress...

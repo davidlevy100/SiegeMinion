@@ -27,13 +27,18 @@
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Special Kill: has been reset
+<<<<<<< HEAD
 [INFO   ] Event: 08:35:38 PM Resetting Siege Minion
+=======
+[INFO   ] Event: 07:46:49 PM Resetting Siege Minion
+>>>>>>> 623
 [INFO   ] GL: NPOT texture support is available
 [INFO   ] Overlay Screen Change: Champ Select
 [INFO   ] L3 Screen Change: Damage Bar Chart
 [INFO   ] Side Slab Screen Change: Gold
 [INFO   ] Main Screen Change: overlay_screen
 [INFO   ] Base: Start application main loop
+<<<<<<< HEAD
 [INFO   ] Settings Change: Section Sponsors | Key sponsor1_name | Value 
 [INFO   ] Settings Change: Section Data Dragon | Key game_version | Value 12.23.1
 [INFO   ] Data Dragon: updated Summoner spell info to requested version: 12.23.1
@@ -1486,10 +1491,55 @@
 [INFO   ] Game Event: 08:36:49 PM Blue base top turret destroyed at gametime: 00:30:29
 [INFO   ] Game Event: 08:36:49 PM Blue top inhibitor destroyed at gametime: 00:30:34
 [INFO   ] Game Event: 08:36:49 PM Blue nexus mid turret destroyed at gametime: 00:30:46
+=======
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 07:46:56 PM Resetting Siege Minion
+[INFO   ] Data Poller Connected: 07:46:58 PM
+[INFO   ] Game Paused: 07:46:59 PM at gametime: 00:00:14
+[INFO   ] Slack Post: 07:46:59 PM https://slack.com/api/chat.postMessage?channel=%23tm-siege-minion-development&text=109466537707316992%7Cgame1%7CESPORTSTMNT06_2767073%7C13.1.487.8994&blocks=%5B%7B%22type%22%3A+%22divider%22%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Connected+to+game+on+%3C%21date%5E1675212418%5E%7Bdate%7D+at+%7Btime%7D%7CWed+Feb++1+00%3A46%3A58+2023+UTC%3E%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Name%3A+%60109466537707316992%7Cgame1%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Platform_GameID%3A+%60ESPORTSTMNT06_2767073%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Version%3A+13.1.487.8994%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22DDragon+Version%3A+13.1.1%5Cr%5Cn%3Afistbump%3A%22%7D%5D%7D%5D, ({'ok': True, 'channel': 'C01PJPRT1NH', 'ts': '1675212419.675359', 'message': {'type': 'message', 'subtype': 'bot_message', 'text': '109466537707316992|game1|ESPORTSTMNT06_2767073|13.1.487.8994', 'ts': '1675212419.675359', 'username': 'LCS Siege Minion', 'bot_id': 'BLTNJJ8A1', 'app_id': 'ALT5J1GR2', 'blocks': [{'type': 'divider', 'block_id': 'WVwk'}, {'type': 'context', 'block_id': 'D/iX', 'elements': [{'type': 'mrkdwn', 'text': 'Connected to game on <!date^1675212418^{date} at {time}|Wed Feb  1 00:46:58 2023 UTC>\n', 'verbatim': False}]}, {'type': 'context', 'block_id': '5=a/', 'elements': [{'type': 'mrkdwn', 'text': 'Game Name: `109466537707316992|game1`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'eol', 'elements': [{'type': 'mrkdwn', 'text': 'Platform_GameID: `ESPORTSTMNT06_2767073`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'jTE', 'elements': [{'type': 'mrkdwn', 'text': 'Game Version: 13.1.487.8994\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'SQXll', 'elements': [{'type': 'mrkdwn', 'text': 'DDragon Version: 13.1.1\n:fistbump:', 'verbatim': False}]}]}},)
+[INFO   ] Special Kill: firstBlood of length 0 by participant #5 at gametime: 5:36
+[INFO   ] Game Paused: 07:47:00 PM at gametime: 00:05:41
+[INFO   ] Rift Herald Kill: by team 200 at gametime: 8:48
+[INFO   ] Disconnected
+[INFO   ] Rift Herald Kill: by team 200 at gametime: 15:45
+[INFO   ] Game Event: 07:47:05 PM Blue outer bot turret destroyed at gametime: 00:16:34
+[INFO   ] Game Event: 07:47:06 PM Blue outer top turret destroyed at gametime: 00:18:20
+[INFO   ] Baron Kill: at gametime: 21:34
+[INFO   ] Game Event: 07:47:08 PM Blue outer mid turret destroyed at gametime: 00:23:13
+[INFO   ] Baron Buff End: Buff timer ended at gametime: 24:35
+[INFO   ] Game Event: 07:47:09 PM Blue inner mid turret destroyed at gametime: 00:25:09
+[INFO   ] Game Event: 07:47:09 PM Blue inner bot turret destroyed at gametime: 00:25:18
+[INFO   ] Special Kill: multi of length 2 by participant #7 at gametime: 25:30
+[INFO   ] Special Kill: multi of length 2 by participant #1 at gametime: 25:36
+[INFO   ] Game Event: 07:47:09 PM Blue base bot turret destroyed at gametime: 00:26:01
+[INFO   ] Game Event: 07:47:09 PM Blue bot inhibitor destroyed at gametime: 00:26:08
+[INFO   ] Item Callout: XL Targamas built Harrowing Crescent at gametime: 10:01
+[INFO   ] Item Callout: G2 Mikyx built Frostfang at gametime: 10:01
+[INFO   ] Baron Kill: at gametime: 28:12
+[INFO   ] Game Event: 07:47:11 PM Blue inner top turret destroyed at gametime: 00:29:11
+[INFO   ] Item Callout: Siege Minion announced Harrowing Crescent at gametime: 10:02
+[INFO   ] Item Callout: Siege Minion announced Frostfang at gametime: 10:02
+[INFO   ] Game Event: 07:47:11 PM Blue base top turret destroyed at gametime: 00:29:36
+[INFO   ] Game Event: 07:47:11 PM Blue top inhibitor destroyed at gametime: 00:29:47
+[INFO   ] Game Event: 07:47:11 PM Blue base mid turret destroyed at gametime: 00:29:54
+[INFO   ] Game Event: 07:47:11 PM Blue mid inhibitor destroyed at gametime: 00:30:03
+[INFO   ] Game Event: 07:47:11 PM Blue nexus mid turret destroyed at gametime: 00:30:06
+[INFO   ] Game Event: 07:47:11 PM Blue nexus mid turret destroyed at gametime: 00:30:14
+[INFO   ] Elder Kill: at gametime: 28:53
+[INFO   ] Game Event: 07:47:12 PM Blue base mid turret destroyed at gametime: 00:30:10
+[INFO   ] Game Event: 07:47:12 PM Blue mid inhibitor destroyed at gametime: 00:30:15
+[INFO   ] Game Event: 07:47:12 PM Blue inner top turret destroyed at gametime: 00:30:19
+[INFO   ] Game Event: 07:47:12 PM Blue base top turret destroyed at gametime: 00:30:29
+[INFO   ] Game Event: 07:47:12 PM Blue top inhibitor destroyed at gametime: 00:30:34
+[INFO   ] Game Event: 07:47:12 PM Blue nexus mid turret destroyed at gametime: 00:30:46
+>>>>>>> 623
 [INFO   ] Special Kill: multi of length 2 by participant #9 at gametime: 30:53
 [INFO   ] Special Kill: multi of length 3 by participant #9 at gametime: 30:56
 [INFO   ] Special Kill: multi of length 4 by participant #9 at gametime: 31:01
 [INFO   ] Special Kill: ace of length 0 by participant #9 at gametime: 31:01
+<<<<<<< HEAD
 [INFO   ] Game Event: 08:36:49 PM Blue nexus mid turret destroyed at gametime: 00:31:02
 [INFO   ] Disconnected: 08:36:49 PM
 [INFO   ] Item Callout: XL Xerxe built Divine Sunderer at gametime: 30:00
@@ -1582,9 +1632,25 @@
 [INFO   ] Item Callout: C9 Berserker built Infinity Edge at gametime: 30:46
 [INFO   ] Item Callout: Siege Minion announced Infinity Edge at gametime: 30:47
 [INFO   ] Special Baron Announce Event: 08:37:39 PM 
+=======
+[INFO   ] Game Event: 07:47:12 PM Blue nexus mid turret destroyed at gametime: 00:31:02
+[INFO   ] Disconnected: 07:47:13 PM
+[INFO   ] Item Callout: G2 Yike built Umbral Glaive at gametime: 10:05
+[INFO   ] Overlay Screen Change: Lower 3rds
+[INFO   ] Item Callout: Siege Minion announced Umbral Glaive at gametime: 10:06
+[INFO   ] Overlay Screen Change: Side Slab
+[INFO   ] Overlay Screen Change: Lower 3rds
+[INFO   ] L3 Screen Change: Live Gold Area Chart
+>>>>>>> 623
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Special Kill: has been reset
+<<<<<<< HEAD
 [INFO   ] Event: 08:37:50 PM Resetting Siege Minion
+=======
+[INFO   ] L3 Screen Change: Damage Bar Chart
+[INFO   ] Overlay Screen Change: Champ Select
+[INFO   ] Event: 07:47:38 PM Resetting Siege Minion
+>>>>>>> 623
 [INFO   ] Base: Leaving application in progress...

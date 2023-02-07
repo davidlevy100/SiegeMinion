@@ -1,0 +1,93 @@
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-01-31_2.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\git\SiegeMinion\env\lib\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\git\SiegeMinion\env\Scripts\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.6.0 - Build 30.0.101.1404'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) UHD Graphics'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 - Build 30.0.101.1404'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 07:59:24 PM Resetting Siege Minion
+[INFO   ] GL: NPOT texture support is available
+[INFO   ] Overlay Screen Change: Champ Select
+[INFO   ] L3 Screen Change: Damage Bar Chart
+[INFO   ] Side Slab Screen Change: Gold
+[INFO   ] Main Screen Change: overlay_screen
+[INFO   ] Base: Start application main loop
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 07:59:31 PM Resetting Siege Minion
+[INFO   ] Data Poller Connected: 07:59:36 PM
+[INFO   ] Game Paused: 07:59:36 PM at gametime: 00:00:14
+[INFO   ] Slack Post: 07:59:37 PM https://slack.com/api/chat.postMessage?channel=%23tm-siege-minion-development&text=109466537707316992%7Cgame1%7CESPORTSTMNT06_2767073%7C13.1.487.8994&blocks=%5B%7B%22type%22%3A+%22divider%22%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Connected+to+game+on+%3C%21date%5E1675213176%5E%7Bdate%7D+at+%7Btime%7D%7CWed+Feb++1+00%3A59%3A36+2023+UTC%3E%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Name%3A+%60109466537707316992%7Cgame1%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Platform_GameID%3A+%60ESPORTSTMNT06_2767073%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Version%3A+13.1.487.8994%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22DDragon+Version%3A+13.1.1%5Cr%5Cn%3Afistbump%3A%22%7D%5D%7D%5D, ({'ok': True, 'channel': 'C01PJPRT1NH', 'ts': '1675213176.877259', 'message': {'type': 'message', 'subtype': 'bot_message', 'text': '109466537707316992|game1|ESPORTSTMNT06_2767073|13.1.487.8994', 'ts': '1675213176.877259', 'username': 'LCS Siege Minion', 'bot_id': 'BLTNJJ8A1', 'app_id': 'ALT5J1GR2', 'blocks': [{'type': 'divider', 'block_id': 'FEGE'}, {'type': 'context', 'block_id': 'Sx+', 'elements': [{'type': 'mrkdwn', 'text': 'Connected to game on <!date^1675213176^{date} at {time}|Wed Feb  1 00:59:36 2023 UTC>\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'PuZ', 'elements': [{'type': 'mrkdwn', 'text': 'Game Name: `109466537707316992|game1`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'c4a2K', 'elements': [{'type': 'mrkdwn', 'text': 'Platform_GameID: `ESPORTSTMNT06_2767073`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'Dxi', 'elements': [{'type': 'mrkdwn', 'text': 'Game Version: 13.1.487.8994\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'G2+dL', 'elements': [{'type': 'mrkdwn', 'text': 'DDragon Version: 13.1.1\n:fistbump:', 'verbatim': False}]}]}},)
+[INFO   ] Special Kill: firstBlood of length 0 by participant #5 at gametime: 5:36
+[INFO   ] Game Paused: 07:59:38 PM at gametime: 00:05:41
+[INFO   ] Rift Herald Kill: by team 200 at gametime: 8:48
+[INFO   ] Rift Herald Kill: by team 200 at gametime: 15:45
+[INFO   ] Disconnected
+[INFO   ] Game Event: 07:59:42 PM Blue outer bot turret destroyed at gametime: 00:16:34
+[INFO   ] Item Callout: XL Targamas built Harrowing Crescent at gametime: 10:01
+[INFO   ] Item Callout: G2 Mikyx built Frostfang at gametime: 10:01
+[INFO   ] Game Event: 07:59:43 PM Blue outer top turret destroyed at gametime: 00:18:20
+[INFO   ] Item Callout: Siege Minion announced Harrowing Crescent at gametime: 10:02
+[INFO   ] Item Callout: Siege Minion announced Frostfang at gametime: 10:02
+[INFO   ] Baron Kill: at gametime: 21:34
+[INFO   ] Game Event: 07:59:45 PM Blue outer mid turret destroyed at gametime: 00:23:13
+[INFO   ] Baron Buff End: Buff timer ended at gametime: 24:35
+[INFO   ] Game Event: 07:59:46 PM Blue inner mid turret destroyed at gametime: 00:25:09
+[INFO   ] Game Event: 07:59:46 PM Blue inner bot turret destroyed at gametime: 00:25:18
+[INFO   ] Special Kill: multi of length 2 by participant #7 at gametime: 25:30
+[INFO   ] Special Kill: multi of length 2 by participant #1 at gametime: 25:36
+[INFO   ] Game Event: 07:59:47 PM Blue base bot turret destroyed at gametime: 00:26:01
+[INFO   ] Game Event: 07:59:47 PM Blue bot inhibitor destroyed at gametime: 00:26:08
+[INFO   ] Item Callout: G2 Yike built Umbral Glaive at gametime: 10:05
+[INFO   ] Baron Kill: at gametime: 28:12
+[INFO   ] Item Callout: Siege Minion announced Umbral Glaive at gametime: 10:06
+[INFO   ] Game Event: 07:59:48 PM Blue inner top turret destroyed at gametime: 00:29:11
+[INFO   ] Game Event: 07:59:48 PM Blue base top turret destroyed at gametime: 00:29:36
+[INFO   ] Game Event: 07:59:48 PM Blue top inhibitor destroyed at gametime: 00:29:47
+[INFO   ] Game Event: 07:59:48 PM Blue base mid turret destroyed at gametime: 00:29:54
+[INFO   ] Game Event: 07:59:49 PM Blue mid inhibitor destroyed at gametime: 00:30:03
+[INFO   ] Game Event: 07:59:49 PM Blue nexus mid turret destroyed at gametime: 00:30:06
+[INFO   ] Game Event: 07:59:49 PM Blue nexus mid turret destroyed at gametime: 00:30:14
+[INFO   ] Elder Kill: at gametime: 28:53
+[INFO   ] Game Event: 07:59:49 PM Blue base mid turret destroyed at gametime: 00:30:10
+[INFO   ] Game Event: 07:59:49 PM Blue mid inhibitor destroyed at gametime: 00:30:15
+[INFO   ] Game Event: 07:59:49 PM Blue inner top turret destroyed at gametime: 00:30:19
+[INFO   ] Game Event: 07:59:50 PM Blue base top turret destroyed at gametime: 00:30:29
+[INFO   ] Game Event: 07:59:50 PM Blue top inhibitor destroyed at gametime: 00:30:34
+[INFO   ] Game Event: 07:59:50 PM Blue nexus mid turret destroyed at gametime: 00:30:46
+[INFO   ] Special Kill: multi of length 2 by participant #9 at gametime: 30:53
+[INFO   ] Special Kill: multi of length 3 by participant #9 at gametime: 30:56
+[INFO   ] Special Kill: multi of length 4 by participant #9 at gametime: 31:01
+[INFO   ] Special Kill: ace of length 0 by participant #9 at gametime: 31:01
+[INFO   ] Game Event: 07:59:50 PM Blue nexus mid turret destroyed at gametime: 00:31:02
+[INFO   ] Disconnected: 07:59:50 PM
+[INFO   ] Overlay Screen Change: Lower 3rds
+[INFO   ] L3 Screen Change: Live Gold Area Chart
+[INFO   ] L3 Screen Change: Player Runes
+[INFO   ] L3 Screen Change: Player Matchup
+[INFO   ] L3 Screen Change: Whole Game Gold Area Chart
+[INFO   ] L3 Screen Change: Gold Bar Chart
+[INFO   ] Base: Leaving application in progress...
