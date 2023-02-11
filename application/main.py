@@ -242,6 +242,8 @@ class SiegeMinion(App):
             'VizRT': 'vizrt.json',
             'VizRT Still Graphics': 'vizcrank.json',
             'Caster Runes': 'caster_runes.json',
+            'Item Build L3': 'item_build_L3.json',
+            'Pause L3': 'pause_L3.json',
             'Post-Game Baron': 'post_game_baron.json',
             'Post-Game Breakdown': 'post_game_breakdown.json',
             'Post-Game Gold': 'post_game_gold.json',
