@@ -1,33 +1,16 @@
 {
     "events": [
         {
-<<<<<<< HEAD
-            "gameID": 2430746,
-            "gameName": "108206581964974047|game1",
-            "gameTime": 1869944,
-            "platformID": "ESPORTSTMNT04",
-=======
             "gameID": 2768454,
             "gameName": "109466537707382566|game1",
             "gameTime": 1953524,
             "maxCooldown": 4000,
             "participant": 1,
             "platformID": "ESPORTSTMNT06",
->>>>>>> 623
             "playbackID": 1,
             "rfc001Scope": "riot.lol.mgs.sx",
             "rfc190Scope": "test.unk1.unk.lolgame.legs",
             "rfc460Hostname": "0.0.0.0",
-<<<<<<< HEAD
-            "rfc460Timestamp": "2022-07-03T21:56:44.410Z",
-            "rfc461Schema": "game_end",
-            "sequenceIndex": 6897,
-            "stageID": 1,
-            "wallTime": 1656885404402,
-            "winningTeam": 200
-        }
-    ]
-=======
             "rfc460Timestamp": "2023-01-28T19:52:59.920Z",
             "rfc461Schema": "skill_used",
             "sequenceIndex": 6896,
@@ -38387,5 +38370,4 @@
         }
     ],
     "nextPageToken": "eyJnYW1lSWQiOiJFU1BPUlRTVE1OVDA2OjI3Njg0NTQiLCJhZnRlciI6eyJwbGF5YmFja0lkIjoxLCJzZXF1ZW5jZUlkIjo2OTQ1fX0="
->>>>>>> 623
 }
