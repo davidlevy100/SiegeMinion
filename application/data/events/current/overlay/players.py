@@ -124,6 +124,7 @@ class OverlayPlayer(DataEventDispatcher):
     status_color = kp.ListProperty([1,1,1,1])
 
     level = kp.NumericProperty(0)
+    XP = kp.NumericProperty(0)
 
     health = kp.NumericProperty(0)
     health_max = kp.NumericProperty(1)
@@ -204,6 +205,7 @@ class OverlayPlayer(DataEventDispatcher):
         self.spell1 = self.app.data_dragon.get_asset("summoner_spell", "default")
         self.spell2 = self.app.data_dragon.get_asset("summoner_spell", "default")
         self.level = 0
+        self.XP = 0
 
         self.health = 0
         self.health_max = 1
@@ -283,6 +285,9 @@ class OverlayPlayer(DataEventDispatcher):
                 if "level" in this_participant:
                     self.level = this_participant["level"]
 
+                if "XP" in this_participant:
+                    self.XP = this_participant["XP"]
+
                 if ("health" in this_participant and
                     "healthMax" in this_participant and
                     "primaryAbilityResource" in this_participant and
@@ -307,14 +312,16 @@ class OverlayPlayer(DataEventDispatcher):
             self.schedule_frames(my_frames)
 
 
-    def schedule_frames(self, frames: list[dict]) -> None:
+    def schedule_frames(self, frames: list[dict[str, float]]) -> None:
         
         for thisFrame in frames:
+
             if ("timestamp" in thisFrame and
                 thisFrame["timestamp"] > (self.stat_time / 1000)
             ):
                 timedelta = thisFrame["timestamp"] - (self.stat_time / 1000)
-                Clock.schedule_once(partial(self.frame_update, thisFrame), timedelta)
+                if timedelta < 1.0:
+                    Clock.schedule_once(partial(self.frame_update, thisFrame), timedelta)
 
 
     def get_my_frames(self, high_frequency_data: list[dict]) -> list[dict]:
@@ -322,8 +329,10 @@ class OverlayPlayer(DataEventDispatcher):
         result = None
 
         for thisObject in high_frequency_data:
-            if thisObject[id] == self.participant_ID:
-                return thisObject
+            if (thisObject["id"] == self.participant_ID and 
+                "frames" in thisObject
+            ):
+                return thisObject["frames"]
             
         return result
     
@@ -331,17 +340,23 @@ class OverlayPlayer(DataEventDispatcher):
     def frame_update(self, frame: dict[str, float], *largs) -> None:
 
         if "XP" in frame:
-            pass
+            self.XP = frame["XP"]
 
         if "health" in frame:
             self.health = frame["health"]
-            self.health_percent = self.health / self.health_max
+
+            if self.health > 0:
+                self.health_percent = self.health / self.health_max
+            else:
+                self.health_percent = 0
 
         if "primaryAbilityResource" in frame:
             self.primary_ability_resource = frame["primaryAbilityResource"]
-            self.primary_ability_resource_percent = self.primary_ability_resource / self.primary_ability_resource_max
 
-
+            if self.primary_ability_resource > 0:
+                self.primary_ability_resource_percent = self.primary_ability_resource / self.primary_ability_resource_max
+            else:
+                self.primary_ability_resource_percent = 0
 
 
     def get_my_participant(self, participants, *args):
