@@ -1,9 +1,11 @@
 from math import sqrt
+from functools import partial
 
 from collections import deque
 
 import kivy.properties as kp
 from kivy.logger import Logger
+from kivy.clock import Clock
 
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
@@ -111,6 +113,7 @@ class OverlayPlayer(DataEventDispatcher):
 
     game_info_event = kp.DictProperty()
     current_stats_update = kp.DictProperty()
+    current_plus_one = kp.DictProperty()
 
     # Variables to Initialize
     tricode = kp.StringProperty("")
@@ -160,6 +163,10 @@ class OverlayPlayer(DataEventDispatcher):
         self.app.livestats_history.bind(
             current_stats_update=self.setter('current_stats_update')
         )
+        self.app.livestats_history.bind(
+            current_plus_one=self.setter('current_plus_one')
+        )
+        
 
         self.inventory = Inventory(
             team_ID=self.team_ID,
@@ -291,6 +298,50 @@ class OverlayPlayer(DataEventDispatcher):
                     self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))                
                 
                 self.stats = this_participant
+
+
+    def on_current_plus_one(self, *args):
+
+        if "high_frequency_data" in self.current_plus_one:
+            my_frames = self.get_my_frames(self.current_plus_one["high_frequency_data"])
+            self.schedule_frames(my_frames)
+
+
+    def schedule_frames(self, frames: list[dict]) -> None:
+        
+        for thisFrame in frames:
+            if ("timestamp" in thisFrame and
+                thisFrame["timestamp"] > (self.stat_time / 1000)
+            ):
+                timedelta = thisFrame["timestamp"] - (self.stat_time / 1000)
+                Clock.schedule_once(partial(self.frame_update, thisFrame), timedelta)
+
+
+    def get_my_frames(self, high_frequency_data: list[dict]) -> list[dict]:
+
+        result = None
+
+        for thisObject in high_frequency_data:
+            if thisObject[id] == self.participant_ID:
+                return thisObject
+            
+        return result
+    
+
+    def frame_update(self, frame: dict[str, float], *largs) -> None:
+
+        if "XP" in frame:
+            pass
+
+        if "health" in frame:
+            self.health = frame["health"]
+            self.health_percent = self.health / self.health_max
+
+        if "primaryAbilityResource" in frame:
+            self.primary_ability_resource = frame["primaryAbilityResource"]
+            self.primary_ability_resource_percent = self.primary_ability_resource / self.primary_ability_resource_max
+
+
 
 
     def get_my_participant(self, participants, *args):
