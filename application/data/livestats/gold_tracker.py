@@ -49,7 +49,15 @@ class GoldTracker(DataEventDispatcher):
         """
 
         if game_time in self.gold_history:
-            return self.gold_history[game_time]
+            gold = self.gold_history[game_time]
+            # Ensure the dict contains the keys we care about
+            if "blue_gold" not in gold:
+                gold["blue_gold"] = 0
+            if "red_gold" not in gold:
+                gold["red_gold"] = 0
+            if "gold_diff" not in gold:
+                gold["gold_diff"] = 0
+            return gold
 
         return {
             "blue_gold": 0,
