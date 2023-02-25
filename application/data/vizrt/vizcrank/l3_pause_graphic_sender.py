@@ -103,6 +103,7 @@ class L3PauseGraphicSender(VizcrankSender):
         self.safe_set_field(game_data, "0231", gold["red_gold"])
 
         # Team data
+        # TODO this may be wrong because latest stats update probably doesn't correlate to pause game time
         if len(self.latest_stats_update["teams"]) == 2:
             blue_team = self.latest_stats_update["teams"][0]
             red_team = self.latest_stats_update["teams"][1]
