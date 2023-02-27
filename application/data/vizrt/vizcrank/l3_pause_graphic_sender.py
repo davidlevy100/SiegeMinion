@@ -18,11 +18,7 @@ class L3PauseGraphicSender(VizcrankSender):
     viz_logo_blue = kp.StringProperty()
     viz_logo_red = kp.StringProperty()
 
-    blue_turret_kill_quantity = kp.NumericProperty(0)
-    red_turret_kill_quantity = kp.NumericProperty(0)
-
     latest_stats_update = kp.DictProperty()
-
     pause_started_event = kp.DictProperty({})
 
     def __init__(self, **kwargs):
@@ -31,17 +27,11 @@ class L3PauseGraphicSender(VizcrankSender):
         self.app.live_data.bind(pause_started_event=self.setter('pause_started_event'))
         self.app.live_data.bind(latest_stats_update=self.setter('latest_stats_update'))
 
-        self.blue_turret_kill_quantity = self.app.livestats_history.towers.blue_turret_kill_quantity
-        self.red_turret_kill_quantity = self.app.livestats_history.towers.red_turret_kill_quantity
-        # Do we need to bind here, or can we just get the livestats_history data when we send the still?
-        self.app.livestats_history.towers.bind(blue_turret_kill_quantity=self.baron.blue_baron_team.setter("blue_turret_kill_quantity"))
-        self.app.livestats_history.towers.bind(red_turret_kill_quantity=self.baron.red_baron_team.setter("red_turret_kill_quantity"))
-
         self.viz_logo_blue = self.app.viz_mutator.viz_logo_left
-        self.app.viz_mutator.bind(viz_logo_blue=self.setter('viz_logo_blue'))
+        self.app.viz_mutator.bind(viz_logo_left=self.setter('viz_logo_blue'))
 
         self.viz_logo_red = self.app.viz_mutator.viz_logo_right
-        self.app.viz_mutator.bind(viz_logo_red=self.setter('viz_logo_red'))
+        self.app.viz_mutator.bind(viz_logo_right=self.setter('viz_logo_red'))
 
         # Config Keys
         self.section = "L3 Pause Graphic"
@@ -88,10 +78,10 @@ class L3PauseGraphicSender(VizcrankSender):
         self.safe_set_field(game_data, "0200", self.viz_logo_red)
 
         # Blue Towers
-        self.safe_set_field(game_data, "0121", self.blue_turret_kill_quantity)
+        self.safe_set_field(game_data, "0121", self.app.livestats_history.towers.blue_turret_kill_quantity)
 
         # Red Towers
-        self.safe_set_field(game_data, "0221", self.red_turret_kill_quantity)
+        self.safe_set_field(game_data, "0221", self.app.livestats_history.towers.red_turret_kill_quantity)
 
         # Gold
         gold = self.app.gold_tracker.get_gold_at_game_time(game_time)
