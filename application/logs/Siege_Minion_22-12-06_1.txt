@@ -1,0 +1,50 @@
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_22-12-06_1.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\git\SiegeMinion\env\lib\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\git\SiegeMinion\env\Scripts\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.6.0 - Build 30.0.101.1404'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) UHD Graphics'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 - Build 30.0.101.1404'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Disconnected
+[INFO   ] Disconnected: 04:05:57 PM
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 04:05:57 PM Resetting Siege Minion
+[INFO   ] GL: NPOT texture support is available
+[INFO   ] Overlay Screen Change: Champ Select
+[INFO   ] L3 Screen Change: Damage Bar Chart
+[INFO   ] Side Slab Screen Change: Gold
+[INFO   ] Main Screen Change: overlay_screen
+[INFO   ] Base: Start application main loop
+[INFO   ] Data Poller Connected: 04:06:10 PM
+[INFO   ] Slack Post: 04:06:11 PM https://slack.com/api/chat.postMessage?channel=%23tm-siege-minion-development&text=108286049960238053%7Cgame4%7CESPORTSTMNT05_2980831%7C12.12.453.7699&blocks=%5B%7B%22type%22%3A+%22divider%22%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Connected+to+game+on+%3C%21date%5E1670360771%5E%7Bdate%7D+at+%7Btime%7D%7CTue+Dec++6+21%3A06%3A11+2022+UTC%3E%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Name%3A+%60108286049960238053%7Cgame4%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Platform_GameID%3A+%60ESPORTSTMNT05_2980831%60%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22Game+Version%3A+12.12.453.7699%5Cr%5Cn%22%7D%5D%7D%2C+%7B%22type%22%3A+%22context%22%2C+%22elements%22%3A+%5B%7B%22type%22%3A+%22mrkdwn%22%2C+%22text%22%3A+%22DDragon+Version%3A+12.23.1%5Cr%5Cn%3Afistbump%3A%22%7D%5D%7D%5D, ({'ok': True, 'channel': 'C01PJPRT1NH', 'ts': '1670360771.458249', 'message': {'type': 'message', 'subtype': 'bot_message', 'text': '108286049960238053|game4|ESPORTSTMNT05_2980831|12.12.453.7699', 'ts': '1670360771.458249', 'username': 'LCS Siege Minion', 'bot_id': 'BLTNJJ8A1', 'app_id': 'ALT5J1GR2', 'blocks': [{'type': 'divider', 'block_id': 'QNL'}, {'type': 'context', 'block_id': 'BDX', 'elements': [{'type': 'mrkdwn', 'text': 'Connected to game on <!date^1670360771^{date} at {time}|Tue Dec  6 21:06:11 2022 UTC>\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'NXS', 'elements': [{'type': 'mrkdwn', 'text': 'Game Name: `108286049960238053|game4`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'rAkSd', 'elements': [{'type': 'mrkdwn', 'text': 'Platform_GameID: `ESPORTSTMNT05_2980831`\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'F5xY', 'elements': [{'type': 'mrkdwn', 'text': 'Game Version: 12.12.453.7699\n', 'verbatim': False}]}, {'type': 'context', 'block_id': 'RLA', 'elements': [{'type': 'mrkdwn', 'text': 'DDragon Version: 12.23.1\n:fistbump:', 'verbatim': False}]}]}},)
+[INFO   ] Game Paused: 04:06:12 PM at gametime: 00:00:03
+[INFO   ] Disconnected
+[INFO   ] Special Kill: firstBlood of length 0 by participant #9 at gametime: 3:52
+[INFO   ] Disconnected: 04:06:42 PM
+[INFO   ] Disconnected: 04:06:44 PM
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[INFO   ] Event: 04:06:44 PM Resetting Siege Minion
+[INFO   ] Base: Leaving application in progress...
