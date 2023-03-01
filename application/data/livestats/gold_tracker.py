@@ -41,29 +41,5 @@ class GoldTracker(DataEventDispatcher):
                 "gold_diff": gold_diff
             }
 
-    def get_gold_at_game_time(self, game_time):
-        """Provides a safe way to get the gold details at a given game time
-
-        Returns gold dict if found, otherwise returns same dict with all values set to 0
-        Expects game_time as a time in ms, matching live stats game time
-        """
-
-        if game_time in self.gold_history:
-            gold = self.gold_history[game_time]
-            # Ensure the dict contains the keys we care about
-            if "blue_gold" not in gold:
-                gold["blue_gold"] = 0
-            if "red_gold" not in gold:
-                gold["red_gold"] = 0
-            if "gold_diff" not in gold:
-                gold["gold_diff"] = 0
-            return gold
-
-        return {
-            "blue_gold": 0,
-            "red_gold": 0,
-            "gold_diff": 0
-        }
-
     def on_game_reset(self, *args):
         self.gold_history.clear()

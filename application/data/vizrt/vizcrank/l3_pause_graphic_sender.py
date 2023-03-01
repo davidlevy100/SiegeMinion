@@ -83,64 +83,47 @@ class L3PauseGraphicSender(VizcrankSender):
         # Red Towers
         self.safe_set_field(game_data, "0221", self.app.livestats_history.towers.red_turret_kill_quantity)
 
-        # Gold
-        gold = self.app.gold_tracker.get_gold_at_game_time(game_time)
+        # Dragons
+        blue_on_off_fields = ["0150", "0160", "0170", "0180"]
+        blue_image_fields = ["0151", "0161", "0171", "0181"]
+        red_on_off_fields = ["0250", "0260", "0270", "0280"]
+        red_image_fields = ["0251", "0261", "0271", "0281"]
 
-        # Blue gold
-        self.safe_set_field(game_data, "0221", gold["blue_gold"])
-
-        # Red Gold
-        self.safe_set_field(game_data, "0231", gold["red_gold"])
+        blue_dragons = self.app.livestats_history.blue_dragons
+        red_dragons = self.app.livestats_history.red_dragons
+        for idx in range(4):
+                blue_on_off_field = blue_on_off_fields[idx]
+                blue_image_field = blue_image_fields[idx]
+                has_blue_dragon = idx < len(blue_dragons)
+                self.safe_set_field(game_data, blue_on_off_field, 1 if has_blue_dragon else 0)
+                self.safe_set_field(game_data, blue_image_field, blue_dragons[idx] if has_blue_dragon else "_Placeholder")
+                
+                red_on_off_field = red_on_off_fields[idx]
+                red_image_field = red_image_fields[idx]
+                has_red_dragon = idx < len(red_dragons)
+                self.safe_set_field(game_data, red_on_off_field, 1 if has_red_dragon else 0)
+                self.safe_set_field(game_data, red_image_field, red_dragons[idx] if has_red_dragon else "_Placeholder")
 
         # Team data
-        # TODO this may be wrong because latest stats update probably doesn't correlate to pause game time
         if len(self.latest_stats_update["teams"]) == 2:
             blue_team = self.latest_stats_update["teams"][0]
             red_team = self.latest_stats_update["teams"][1]
 
             # Kills
-            blue_field = "0141"
-            red_field = "0241"
-
-            if "championKills" in blue_team:
-                self.safe_set_field(game_data, blue_field, blue_team["championKills"])
-
-            if "championKills" in red_team:
-                self.safe_set_field(game_data, red_field, red_team["championKills"])
-
-            # Dragons
-            blue_dragons = []
-            red_dragons = []
-            # copied from post_game_breakdown_sender
-            # confused where it comes from because I don't see a dragons array in the stats_update "teams" section
-            for dragon in blue_team["dragons"]:
-                blue_dragons.append(DRAGON_NAME_MAP.get(dragon, "_Placeholder"))
-
-            for dragon in red_team["dragons"]:
-                red_dragons.append(DRAGON_NAME_MAP.get(dragon, "_Placeholder"))
-
-            # Blue Dragons
-            blue_on_off_fields = ["0150", "0160", "0170", "0180"]
-            blue_image_fields = ["0151", "0161", "0171", "0181"]
-            for idx in range(4):
-                on_off_field = blue_on_off_fields[idx]
-                image_field = blue_image_fields[idx]
-                has_dragon = idx < len(blue_dragons)
-                self.safe_set_field(game_data, on_off_field, 1 if has_dragon else 0)
-                self.safe_set_field(game_data, image_field, blue_dragons[idx] if has_dragon else "_Placeholder")
-
-            # Red Dragons
-            red_on_off_fields = ["0250", "0260", "0270", "0280"]
-            red_image_fields = ["0251", "0261", "0271", "0281"]
-            for idx in range(4):
-                on_off_field = red_on_off_fields[idx]
-                image_field = red_image_fields[idx]
-                has_dragon = idx < len(red_dragons)
-                self.safe_set_field(game_data, on_off_field, 1 if has_dragon else 0)
-                self.safe_set_field(game_data, image_field, red_dragons[idx] if has_dragon else "_Placeholder")
+            blue_kills_field = "0141"
+            red_kills_field = "0241"
+            self.safe_set_field(game_data, blue_kills_field, blue_team["championKills"] if "championKills" in blue_team else 0)
+            self.safe_set_field(game_data, red_kills_field, red_team["championKills"] if "championKills" in red_team else 0)
+                
+            # Gold
+            blue_gold_field = "0221"
+            red_gold_field = "0231"
+            self.safe_set_field(game_data, blue_gold_field, blue_team["totalGold"] if "totalGold" in blue_team else 0)
+            self.safe_set_field(game_data, red_gold_field, red_team["totalGold"] if "totalGold" in red_team else 0)
 
         return game_data
 
     def safe_set_field(self, game_data, field, value):
+        """ helper function to verify the field is present and then set the value in it """
         if self.has_field(field=field, fields=game_data["fields"], key="value"):
             game_data["fields"][field]["value"] = value
