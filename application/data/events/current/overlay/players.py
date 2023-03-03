@@ -121,6 +121,8 @@ class OverlayPlayer(DataEventDispatcher):
     pick_champion = kp.DictProperty()
 
     alive = kp.BooleanProperty(True)
+    respawnTimer = kp.NumericProperty(0)
+
     status_color = kp.ListProperty([1,1,1,1])
 
     level = kp.NumericProperty(0)
@@ -135,10 +137,22 @@ class OverlayPlayer(DataEventDispatcher):
     primary_ability_resource_percent = kp.NumericProperty(0)
 
     spell1 = kp.DictProperty()
+    summonerSpell1CooldownRemaining = kp.NumericProperty(0)
+    summonerSpell1CooldownMax = kp.NumericProperty(1)
+    summonerSpell1CooldownPercent = kp.NumericProperty(0)
+
     spell2 = kp.DictProperty()
+    summonerSpell2CooldownRemaining = kp.NumericProperty(0)
+    summonerSpell2CooldownMax = kp.NumericProperty(1)
+    summonerSpell2CooldownPercent = kp.NumericProperty(0)
 
     stats = kp.DictProperty()
     stat_time = kp.NumericProperty(0)
+
+    ultimate = kp.DictProperty()
+    ultimateCooldownRemaining = kp.NumericProperty(0)
+    ultimateCooldownMax = kp.NumericProperty(1)
+    ultimateCooldownPercent = kp.NumericProperty(0)
 
 
     #Runes
@@ -202,8 +216,19 @@ class OverlayPlayer(DataEventDispatcher):
         self.name = ""
         self.pick_champion = self.app.data_dragon.get_asset("champion", "default")
         self.alive = True
+        self.respawnTimer = 0
+        
         self.spell1 = self.app.data_dragon.get_asset("summoner_spell", "default")
+        self.summonerSpell1CooldownRemaining = 0
+        self.summonerSpell1CooldownMax = 1
+        self.summonerSpell1CooldownPercent = 0
+
+        
         self.spell2 = self.app.data_dragon.get_asset("summoner_spell", "default")
+        self.summonerSpell2CooldownRemaining = 0
+        self.summonerSpell2CooldownMax = 1
+        self.summonerSpell2CooldownPercent = 0
+
         self.level = 0
         self.XP = 0
 
@@ -224,6 +249,10 @@ class OverlayPlayer(DataEventDispatcher):
         self.rune3 = self.app.data_dragon.get_asset("rune", "default")
         self.rune4 = self.app.data_dragon.get_asset("rune", "default")
         self.rune5 = self.app.data_dragon.get_asset("rune", "default")
+
+        self.ultimateCooldownRemaining = 0
+        self.ultimateCooldownMax = 1
+        self.ultimateCooldownPercent = 0
 
 
     def on_game_info_event(self, *args):
