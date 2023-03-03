@@ -22,8 +22,7 @@ class AllPlayersOSCSender(DataEventDispatcher):
 
 class PlayerOSCSender(DataEventDispatcher):
 
-    alive = kp.BooleanProperty(True)
-    respawnTimer = kp.NumericProperty(0)
+    
 
     local_time = kp.NumericProperty(0)
     participant_ID = kp.NumericProperty()
@@ -34,6 +33,8 @@ class PlayerOSCSender(DataEventDispatcher):
     pick_champion = kp.DictProperty()
 
     alive = kp.BooleanProperty(True)
+    respawnTimer = kp.NumericProperty(0)
+    
     level = kp.NumericProperty(0)
 
     health = kp.NumericProperty(0)
