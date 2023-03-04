@@ -22,8 +22,6 @@ class AllPlayersOSCSender(DataEventDispatcher):
 
 class PlayerOSCSender(DataEventDispatcher):
 
-    
-
     local_time = kp.NumericProperty(0)
     participant_ID = kp.NumericProperty()
     source = kp.ObjectProperty()
@@ -31,6 +29,7 @@ class PlayerOSCSender(DataEventDispatcher):
     tricode = kp.StringProperty("")
     name = kp.StringProperty("")
     pick_champion = kp.DictProperty()
+    championName = kp.StringProperty("")
 
     alive = kp.BooleanProperty(True)
     respawnTimer = kp.NumericProperty(0)
@@ -102,13 +101,96 @@ class PlayerOSCSender(DataEventDispatcher):
         self.source.bind(secondary_tree=self.setter('secondary_tree'))
 
 
-    def on_alive(self, *args):
+    def send_name(self):
+
+        index = self.participant_ID
 
         output = {
-            f"/PlayerState/Player{self.participant_ID}": int(self.alive)
+            f"/Overlay/Player{index}/name": f"{self.tricode} {self.name}"
         }
 
         self.send_data(**output)
+
+
+    def on_championName(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/champion": self.championName
+        }
+
+        self.send_data(**output)
+
+
+    def on_alive(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/PlayerState/Player{index}": int(self.alive),
+            f"/Overlay/Player{index}/alive": int(self.alive)
+        }
+
+        self.send_data(**output)
+
+    
+    def on_respawnTimer(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/respawnTimer": self.respawnTimer
+        }
+
+        self.send_data(**output)
+
+
+    def on_level(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/level": self.level
+        }
+
+        self.send_data(**output)
+
+
+    def on_health(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/health": self.health
+        }
+
+        self.send_data(**output)
+
+
+    def on_health_max(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/healthMax": self.health_max
+        }
+
+        self.send_data(**output)
+
+
+    def on_primary_ability_resource(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/primaryAbilityResource": self.primary_ability_resource
+        }
+
+        self.send_data(**output)
+
+
+
 
 
     def on_local_time(self, *args):

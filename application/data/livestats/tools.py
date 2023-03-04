@@ -10,14 +10,16 @@ def format_player_attribute(key, value):
 
 
 
-def parse_name(name):
+def parse_name(name: str) -> tuple[str, str]:
 
     """Given name as a String, 
     returns 3 letter-tricode and a Player Name
+    
+    returns empty string and name if it can't find tricode
 
-    Returns None, name if unsuccessful """
+    """
 
-    tricode = None
+    tricode = ""
     player_name = name
 
     name_array = name.split(" ")

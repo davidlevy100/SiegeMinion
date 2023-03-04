@@ -182,6 +182,7 @@ class SiegeMinion(App):
     connected = kp.BooleanProperty(False)
     platform_game_id = kp.StringProperty("")
     game_reset = kp.StringProperty("")
+    resetting = kp.BooleanProperty(False)
 
     #Screen Managers State
     current_main_screen = kp.StringProperty()
@@ -207,7 +208,12 @@ class SiegeMinion(App):
 
     def on_current_still_screen(self, *args):
         Logger.info(f"Still Screen Change: {args[1]}")
-    
+
+    def on_connected(self, *args):
+        self.resetting = False
+
+    def on_game_reset(self, *args):
+        self.resetting = True
 
     def build(self):
         self.settings_cls = DynamicSettingsWithSidebar

@@ -1,4 +1,4 @@
-[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-02-07_0.txt
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-03-03_0.txt
 [INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
 [INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
 [INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
@@ -27,7 +27,7 @@
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Special Kill: has been reset
-[INFO   ] Event: 10:39:31 AM Resetting Siege Minion
+[INFO   ] Event: 06:38:49 PM Resetting Siege Minion
 [INFO   ] GL: NPOT texture support is available
 [INFO   ] Overlay Screen Change: Champ Select
 [INFO   ] L3 Screen Change: Damage Bar Chart
