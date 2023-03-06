@@ -50,7 +50,7 @@ class PlayerOSCSender(DataEventDispatcher):
     summonerSpell2CooldownRemaining = kp.NumericProperty(0)
     summonerSpell2CooldownMax = kp.NumericProperty(1)
 
-    ultimate = kp.DictProperty()
+    ultimateName = kp.StringProperty("")
     ultimateCooldownRemaining = kp.NumericProperty(0)
     ultimateCooldownMax = kp.NumericProperty(1)
 
@@ -93,7 +93,7 @@ class PlayerOSCSender(DataEventDispatcher):
         self.source.bind(summonerSpell2CooldownRemaining=self.setter('summonerSpell2CooldownRemaining'))
         self.source.bind(summonerSpell2CooldownMax=self.setter('summonerSpell2CooldownMax'))
 
-        self.source.bind(ultimate=self.setter('ultimate'))
+        self.source.bind(ultimateName=self.setter('ultimateName'))
         self.source.bind(ultimateCooldownRemaining=self.setter('ultimateCooldownRemaining'))
         self.source.bind(ultimateCooldownMax=self.setter('ultimateCooldownMax'))
 
@@ -190,8 +190,157 @@ class PlayerOSCSender(DataEventDispatcher):
         self.send_data(**output)
 
 
+    def on_primary_ability_resource_max(self, *args):
 
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/primaryAbilityResourceMax": self.primary_ability_resource_max
+        }
+
+        self.send_data(**output)
+
+    
+    def on_spell1(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell1Name": self.spell1["internal_name"]
+        }
+
+        self.send_data(**output)
+
+
+    def on_summonerSpell1CooldownRemaining(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell1CooldownRemaining": self.summonerSpell1CooldownRemaining
+        }
+
+        self.send_data(**output)
+
+
+    def on_summonerSpell1CooldownMax(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell1CooldownMax": self.summonerSpell1CooldownMax
+        }
+
+        self.send_data(**output)
+
+
+    def on_spell2(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell2Name": self.spell2["internal_name"]
+        }
+
+        self.send_data(**output)
+
+
+    def on_summonerSpell2CooldownRemaining(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell2CooldownRemaining": self.summonerSpell2CooldownRemaining
+        }
+
+        self.send_data(**output)
+
+
+    def on_summonerSpell2CooldownMax(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/summonerSpell2CooldownMax": self.summonerSpell2CooldownMax
+        }
+
+        self.send_data(**output)
+
+
+    def on_ultimateName(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/ultimateName": self.ultimateName
+        }
+
+        self.send_data(**output)
+
+
+    def on_ultimateCooldownRemaining(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/ultimateCooldownRemaining": self.ultimateCooldownRemaining
+        }
+
+        self.send_data(**output)
+
+
+    def on_ultimateCooldownMax(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/ultimateCooldownMax": self.ultimateCooldownMax
+        }
+
+        self.send_data(**output)
+
+
+    def on_primary_tree(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/primaryTree": self.primary_tree["internal_name"]
+        }
+
+        self.send_data(**output)
+
+
+    def on_keystone(self, *args):
+
+        index = self.participant_ID
+
+        output = {
+            f"/Overlay/Player{index}/keystone": self.keystone["internal_name"]
+        }
+
+        self.send_data(**output)
 
 
     def on_local_time(self, *args):
+        
+        self.send_name()
+        self.on_championName()
         self.on_alive()
+        self.on_respawnTimer()
+        self.on_level()
+        self.on_health()
+        self.on_health_max()
+        self.on_primary_ability_resource()
+        self.on_primary_ability_resource_max()
+        self.on_spell1()
+        self.on_summonerSpell1CooldownRemaining()
+        self.on_summonerSpell1CooldownMax()
+        self.on_spell2()
+        self.on_summonerSpell2CooldownRemaining()
+        self.on_summonerSpell2CooldownMax()
+        self.on_ultimateName()
+        self.on_ultimateCooldownRemaining()
+        self.on_ultimateCooldownMax()
+        self.on_primary_tree()
+        self.on_keystone()
