@@ -32,20 +32,25 @@ class ItemBuildL3Sender(VizcrankSender):
         self.app.overlay_players.bind(player_map=self.setter('player_map'))
         self.app.overlay_players.bind(sorted_players=self.setter('sorted_players'))
 
+        print("playerMap:", self.player_map)
+        print("sorted_players:", self.sorted_players)
+
         #Config Keys
         self.section = "Item Build L3"
 
 
     def on_sorted_players(self, *args):
-
+        print("sorted_players_update:", self.sorted_players)
+        print("sorted_players_update (Map):", self.player_map)
         if len(self.player_map) > 0:
             self.select_player(self.sorted_players[0][0])
 
 
     def select_player(self, player_name, *args):
-
         if player_name in self.player_map:
             self.selected_player = self.player_map[player_name]
+        print("selected_player", self.selected_player.inventory.item0)
+        print("selected_player", self.selected_player.inventory.item6)
 
 
     def can_process(self, *args):
@@ -56,7 +61,7 @@ class ItemBuildL3Sender(VizcrankSender):
         if self.selected_player is None:
             return dict()
 
-        print(self.selected_player.inventory.item6)
+        print("selected player inv", self.selected_player.inventory)
 
         #Color Bars
         field = "0001"

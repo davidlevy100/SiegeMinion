@@ -137,7 +137,6 @@ class LCUChampSelect(DataEventDispatcher):
     
     def on_reset(self, *args):
         self.active = False
-        self.reset = str(datetime.now())
         self.phase_duration = 0
         self.timer = 0
         self.timer_active = False
