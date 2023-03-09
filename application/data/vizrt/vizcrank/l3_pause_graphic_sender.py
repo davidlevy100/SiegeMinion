@@ -2,6 +2,7 @@ import kivy.properties as kp
 
 from data.vizrt.vizcrank.sender import VizcrankSender
 from data.esports.stats import convert_milliseconds_to_HMS_string
+from data.esports.stats import format_number
 
 # TODO where would be a good place to store this information?
 DRAGON_NAME_MAP = {
@@ -58,7 +59,7 @@ class L3PauseGraphicSender(VizcrankSender):
 
     def process_game_data(self, game_data, *args):
         # Turn Dots Off
-        self.safe_set_field(game_data, "0001", 0)
+        self.safe_set_field(game_data, "0001", "0")
 
         # Header
         self.safe_set_field(game_data, "0050", "Game Pause")
@@ -78,10 +79,10 @@ class L3PauseGraphicSender(VizcrankSender):
         self.safe_set_field(game_data, "0200", self.viz_logo_red)
 
         # Blue Towers
-        self.safe_set_field(game_data, "0121", self.app.livestats_history.towers.blue_turret_kill_quantity)
+        self.safe_set_field(game_data, "0121", str(self.app.livestats_history.towers.blue_turret_kill_quantity))
 
         # Red Towers
-        self.safe_set_field(game_data, "0221", self.app.livestats_history.towers.red_turret_kill_quantity)
+        self.safe_set_field(game_data, "0221", str(self.app.livestats_history.towers.red_turret_kill_quantity))
 
         # Dragons
         blue_on_off_fields = ["0150", "0160", "0170", "0180"]
@@ -95,31 +96,41 @@ class L3PauseGraphicSender(VizcrankSender):
                 blue_on_off_field = blue_on_off_fields[idx]
                 blue_image_field = blue_image_fields[idx]
                 has_blue_dragon = idx < len(blue_dragons)
-                self.safe_set_field(game_data, blue_on_off_field, 1 if has_blue_dragon else 0)
-                self.safe_set_field(game_data, blue_image_field, blue_dragons[idx] if has_blue_dragon else "_Placeholder")
+                if has_blue_dragon:
+                    self.safe_set_field(game_data, blue_on_off_field, "1")
+                    dragon_name = DRAGON_NAME_MAP[blue_dragons[idx]] if blue_dragons[idx] in DRAGON_NAME_MAP else "_Placeholder"
+                    self.safe_set_field(game_data, blue_image_field, dragon_name)
+                else:
+                    self.safe_set_field(game_data, blue_on_off_field, "0")
                 
                 red_on_off_field = red_on_off_fields[idx]
                 red_image_field = red_image_fields[idx]
                 has_red_dragon = idx < len(red_dragons)
-                self.safe_set_field(game_data, red_on_off_field, 1 if has_red_dragon else 0)
-                self.safe_set_field(game_data, red_image_field, red_dragons[idx] if has_red_dragon else "_Placeholder")
+                if has_red_dragon:
+                    self.safe_set_field(game_data, red_on_off_field, "1")
+                    dragon_name = DRAGON_NAME_MAP[red_dragons[idx]] if red_dragons[idx] in DRAGON_NAME_MAP else "_Placeholder"
+                    self.safe_set_field(game_data, red_image_field, dragon_name)
+                else:
+                    self.safe_set_field(game_data, red_on_off_field, "0")
 
         # Team data
-        if len(self.latest_stats_update["teams"]) == 2:
+        if "teams" in self.latest_stats_update and len(self.latest_stats_update["teams"]) == 2:
             blue_team = self.latest_stats_update["teams"][0]
             red_team = self.latest_stats_update["teams"][1]
 
             # Kills
             blue_kills_field = "0141"
             red_kills_field = "0241"
-            self.safe_set_field(game_data, blue_kills_field, blue_team["championKills"] if "championKills" in blue_team else 0)
-            self.safe_set_field(game_data, red_kills_field, red_team["championKills"] if "championKills" in red_team else 0)
+            if "championsKills" in blue_team and "championsKills" in red_team:
+                self.safe_set_field(game_data, blue_kills_field, str(blue_team["championsKills"]))
+                self.safe_set_field(game_data, red_kills_field, str(red_team["championsKills"]))
                 
             # Gold
-            blue_gold_field = "0221"
+            blue_gold_field = "0131"
             red_gold_field = "0231"
-            self.safe_set_field(game_data, blue_gold_field, blue_team["totalGold"] if "totalGold" in blue_team else 0)
-            self.safe_set_field(game_data, red_gold_field, red_team["totalGold"] if "totalGold" in red_team else 0)
+            if "totalGold" in blue_team and "totalGold" in red_team:
+                self.safe_set_field(game_data, blue_gold_field, format_number(blue_team["totalGold"]))
+                self.safe_set_field(game_data, red_gold_field, format_number(red_team["totalGold"]))
 
         return game_data
 
