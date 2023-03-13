@@ -1,6 +1,6 @@
 # SiegeMinion
-./application/logs/*
-./logs/*
+./application/logs/
+./logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
