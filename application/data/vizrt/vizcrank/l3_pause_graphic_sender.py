@@ -17,8 +17,12 @@ DRAGON_NAME_MAP = {
 
 class L3PauseGraphicSender(VizcrankSender):
 
+    pause_started_event = kp.DictProperty()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        self.app.live_data.bind(pause_started_event=self.setter('pause_started_event'))
 
         # Config Keys
         self.section = "L3 Pause Graphic"
@@ -44,7 +48,7 @@ class L3PauseGraphicSender(VizcrankSender):
             return True
 
     def process_game_data(self, game_data, *args):
-        if len(self.app.live_data.pause_started_event) > 0 and "gameTime" in self.app.live_data.pause_started_event:
+        if len(self.pause_started_event) > 0 and "gameTime" in self.pause_started_event:
             # Turn Dots Off
             self.safe_set_field(game_data, "0001", "0")
 
@@ -52,7 +56,7 @@ class L3PauseGraphicSender(VizcrankSender):
             self.safe_set_field(game_data, "0050", "Game Pause")
 
             # Game Time
-            game_time_ms = self.app.live_data.pause_started_event["gameTime"]
+            game_time_ms = self.pause_started_event["gameTime"]
             self.safe_set_field(game_data, "0060", convert_milliseconds_to_HMS_string(game_time_ms))
 
             # Blue Team Logo
@@ -69,7 +73,6 @@ class L3PauseGraphicSender(VizcrankSender):
         return game_data
     
     def populate_game_state(self, game_data, game_state):
-        print("gameState", game_state)
         # Blue Towers
         self.safe_set_field(game_data, "0121", str(game_state["towers"]["blue_turret_kills"]))
 
