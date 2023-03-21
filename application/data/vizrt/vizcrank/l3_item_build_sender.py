@@ -4,7 +4,7 @@ from kivy.logger import Logger
 from data.vizrt.vizcrank.sender import VizcrankSender
 
 
-class ItemBuildL3Sender(VizcrankSender):
+class L3ItemBuildSender(VizcrankSender):
 
     tricode_left = kp.StringProperty()
     tricode_right = kp.StringProperty()

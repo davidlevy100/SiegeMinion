@@ -477,7 +477,7 @@ class SiegeMinion(App):
         #Still Graphics Senders
         self.caster_runes_sender = CasterRunesSender()
         self.l3_pause_graphic_sender = L3PauseGraphicSender()
-        self.item_build_L3_sender = ItemBuildL3Sender()
+        self.l3_item_build_sender = L3ItemBuildSender()
         self.post_game_breakdown_sender = PostGameBreakdownSender()
         self.post_game_gold_sender = PostGameGoldSender()
         self.team_pick_order_sender = TeamPickOrderSender()
