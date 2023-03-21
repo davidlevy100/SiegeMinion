@@ -114,7 +114,8 @@ from data.osc.special_kill_sender import SpecialKillOSCSender
 from data.slack.slack_game_info import GameInfoSlackDispatcher
 
 from data.vizrt.vizcrank.caster_runes_sender import CasterRunesSender
-from data.vizrt.vizcrank.item_build_L3_sender import ItemBuildL3Sender
+from data.vizrt.vizcrank.l3_item_build_sender import L3ItemBuildSender
+from data.vizrt.vizcrank.l3_pause_graphic_sender import L3PauseGraphicSender
 from data.vizrt.vizcrank.post_game_breakdown_sender import PostGameBreakdownSender
 from data.vizrt.vizcrank.post_game_gold_sender import PostGameGoldSender
 from data.vizrt.vizcrank.team_pick_order_sender import TeamPickOrderSender
@@ -243,8 +244,8 @@ class SiegeMinion(App):
             'VizRT': 'vizrt.json',
             'VizRT Still Graphics': 'vizcrank.json',
             'Caster Runes': 'caster_runes.json',
-            'Item Build L3': 'item_build_L3.json',
-            'Pause L3': 'pause_L3.json',
+            'L3 Item Build': 'l3_item_build.json',
+            'L3 Pause Graphic': 'l3_pause_graphic.json',
             'Post-Game Baron': 'post_game_baron.json',
             'Post-Game Breakdown': 'post_game_breakdown.json',
             'Post-Game Gold': 'post_game_gold.json',
@@ -475,6 +476,7 @@ class SiegeMinion(App):
 
         #Still Graphics Senders
         self.caster_runes_sender = CasterRunesSender()
+        self.l3_pause_graphic_sender = L3PauseGraphicSender()
         self.item_build_L3_sender = ItemBuildL3Sender()
         self.post_game_breakdown_sender = PostGameBreakdownSender()
         self.post_game_gold_sender = PostGameGoldSender()
