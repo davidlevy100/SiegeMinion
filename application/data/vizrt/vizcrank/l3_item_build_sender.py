@@ -15,7 +15,9 @@ class L3ItemBuildSender(VizcrankSender):
     #External Properties
     player_map = kp.DictProperty({})
     sorted_players = kp.ListProperty([])
-    selected_player = kp.ObjectProperty()
+
+    sorted_player_names = kp.ListProperty([])
+    selected_player_name = kp.StringProperty("")
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -32,77 +34,50 @@ class L3ItemBuildSender(VizcrankSender):
         self.app.overlay_players.bind(player_map=self.setter('player_map'))
         self.app.overlay_players.bind(sorted_players=self.setter('sorted_players'))
 
-        print("playerMap:", self.player_map)
-        print("sorted_players:", self.sorted_players)
-
         #Config Keys
         self.section = "Item Build L3"
 
-
     def on_sorted_players(self, *args):
-        print("sorted_players_update:", self.sorted_players)
-        print("sorted_players_update (Map):", self.player_map)
-        if len(self.player_map) > 0:
-            self.select_player(self.sorted_players[0][0])
-
-
-    def select_player(self, player_name, *args):
-        if player_name in self.player_map:
-            self.selected_player = self.player_map[player_name]
-        print("selected_player", self.selected_player.inventory.item0)
-        print("selected_player", self.selected_player.inventory.item6)
-
+        print("On sorted players")
+        self.sorted_player_names.clear()
+        for player in self.sorted_players:
+            self.sorted_player_names.append(player[0])
 
     def can_process(self, *args):
-        return self.selected_player is not None
+        print("can process?")
+        return self.selected_player_name \
+            and len(self.selected_player_name) > 0 \
+            and self.selected_player_name in self.player_map
         
     def process_game_data(self, game_data, *args):
-        
-        if self.selected_player is None:
+        if not self.can_process():
             return dict()
-
-        print("selected player inv", self.selected_player.inventory)
+        
+        selected_player = self.player_map[self.selected_player_name]
 
         #Color Bars
-        field = "0001"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = 0
-
-        field = "0002"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = 0
-
+        self.safe_set_field(game_data, "0001", 0)
+        self.safe_set_field(game_data, "0002", 0)
 
         #Number of Items
-        field = "0006"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = 6 #need to add code to count items
-
+        item_count = len(selected_player.inventory.item_list)
+        self.safe_set_field(game_data, "0003", str(item_count))
         
         #Header
-        field = "0050"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = 0 #TRI PLAYER AS CHAMPION
+        self.safe_set_field(game_data, "0050", selected_player.name) #TRI PLAYER AS CHAMPION??
 
         #Champ Image
-        field = "0090"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = self.selected_player.pick_champion["internal_name"]
+        self.safe_set_field(game_data, "0090", selected_player.pick_champion["internal_name"])
 
         #Team Logo
-        field = "0100"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = "team Logo"
+        self.safe_set_field(game_data, "0100", selected_player.tricode)
 
         #Item Build
-        field = "0110"
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = "ITEM BUILD"
+        self.safe_set_field(game_data, "0110", "ITEM BUILD")
 
-        #Loop to fill out items
-
-
-        
-
+        #Items
+        item_fields = ["0121", "0122", "0123", "0124", "0125", "0126"]
+        for idx, item in enumerate(selected_player.inventory.item_list):
+            self.safe_set_field(game_data, item_fields[idx], item["internal_name"])
 
         return game_data  

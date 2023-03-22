@@ -7,10 +7,12 @@ from kivy.logger import Logger
 from kivy.uix.popup import Popup
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.image import Image
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
+from ui.siege_spinner import SiegeSpinner
 from kivy.uix.settings import SettingSpacer
 from kivy.graphics import Color, Rectangle
 from kivy.metrics import dp
@@ -86,11 +88,7 @@ class VizcrankWidget(BlackGridLayout):
         
         self.popup_content.add_widget(buttons)
 
-
-    def on_source(self, *args):
-
-        title_bar = BlackLabel(text=self.source.section)
-
+    def get_button_row(self, *args):
         preview_btn = Button(text=PREVIEW_BTN_TEXT)
         preview_btn.bind(on_release=self.get_preview)
 
@@ -103,16 +101,19 @@ class VizcrankWidget(BlackGridLayout):
         trio_page_label = BlackLabel(text=self.source.trio_page_number)
         self.source.bind(trio_page_number=trio_page_label.setter('text'))
 
-        body = GridLayout(rows=1, size_hint_y=0.5, padding=3, spacing=3)
+        button_row = GridLayout(rows=1, size_hint_y=0.5, padding=3, spacing=3)
+        button_row.add_widget(preview_btn)
+        button_row.add_widget(slack_btn)
+        button_row.add_widget(trio_btn)
+        button_row.add_widget(trio_page_label)
+        return button_row
+    
+    def get_title_row(self, *args):
+        return BlackLabel(text=self.source.section)
 
-        body.add_widget(preview_btn)
-        body.add_widget(slack_btn)
-        body.add_widget(trio_btn)
-        body.add_widget(trio_page_label)
-
-        self.add_widget(title_bar)
-        self.add_widget(body)
-
+    def on_source(self, *args):
+        self.add_widget(self.get_title_row())
+        self.add_widget(self.get_button_row())
 
     def clear_popup(self, *args):
         self.preview_layout.clear_widgets()
@@ -146,3 +147,28 @@ class VizcrankWidget(BlackGridLayout):
 
         except Exception as e:
             Logger.exception(e)
+
+
+class PlayerSelectVizcrankWidget(VizcrankWidget):
+    def on_source(self, *args):
+        spinner_row = GridLayout(rows=1, size_hint_y=0.5, padding=3, spacing=3)
+
+        spinner = SiegeSpinner(
+            text="No Players Available",
+            values=[])
+        
+        spinner.bind(text=self.update_selected_player)
+        
+        def update_values(self, values):
+            spinner.values = values
+            spinner.text = values[0]
+        self.source.bind(sorted_player_names=update_values)
+        
+        spinner_row.add_widget(spinner)
+        
+        self.add_widget(super().get_title_row())
+        self.add_widget(spinner_row)
+        self.add_widget(super().get_button_row())
+
+    def update_selected_player(self, spinner, value):
+        self.source.selected_player_name=value
