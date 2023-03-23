@@ -38,13 +38,11 @@ class L3ItemBuildSender(VizcrankSender):
         self.section = "Item Build L3"
 
     def on_sorted_players(self, *args):
-        print("On sorted players")
         self.sorted_player_names.clear()
         for player in self.sorted_players:
             self.sorted_player_names.append(player[0])
 
     def can_process(self, *args):
-        print("can process?")
         return self.selected_player_name \
             and len(self.selected_player_name) > 0 \
             and self.selected_player_name in self.player_map

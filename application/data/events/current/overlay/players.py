@@ -465,7 +465,7 @@ class Inventory(DataEventDispatcher):
             self.items = self.stats["items"]
 
             new_items = [self.default_item] * 7
-            new_items2 = []
+            item_list = []
             self.item_counts.clear()
 
             for index, this_item in enumerate(self.stats["items"]):
@@ -487,7 +487,7 @@ class Inventory(DataEventDispatcher):
 
                     if new_item is not None:
                         new_items[index] = new_item
-                        new_items2.append(new_item)
+                        item_list.append(new_item)
 
                         if (self.out_of_fountain(self.stats) and 
                             self.is_callout(new_item) and
@@ -498,9 +498,8 @@ class Inventory(DataEventDispatcher):
                             if self.is_mythic_item(new_item):
                                 self.app.mythic_item.set_mythic_item(self.team_ID, self.participant_ID, new_item, self.stat_time)
                                               
-            self.item_list = new_items2
+            self.item_list = item_list
             for index, this_item in enumerate(new_items):
-
                 this_property = self.property(f"item{index}")
                 this_property.set(self, this_item)
 
@@ -624,12 +623,3 @@ class Inventory(DataEventDispatcher):
             result = True
         
         return result
-
-    def get_item_count(self):
-        count = 0
-        for i in range(7):
-            this_property = self.property(f"item{i}")
-            print("in players", this_property)
-            if this_property != self.default_item:
-                count += 1
-        return count
