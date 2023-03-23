@@ -1,62 +1,62 @@
 [
     {
         "type": "vizcrank_options",
-        "title": "Item Build L3 Trio",
+        "title": "L3 Item Build Trio",
         "desc": "i.e. Trio_1, Trio_2",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "media_sequencer",
         "resource": "media_sequencers"
     },
     {
         "type": "vizcrank_options",
-        "title": "Item Build L3 Show",
+        "title": "L3 Item Build Show",
         "desc": "Name of Trio show to use",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "show",
         "resource": "shows"
     },
     {
         "type": "vizcrank_options",
-        "title": "Item Build L3 Template",
+        "title": "L3 Item Build Template",
         "desc": "Name/Number of template to use to create graphic",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "template",
         "resource": "templates"
     },
     {
         "type": "vizcrank_options",
-        "title": "Item Build L3 Channel",
+        "title": "L3 Item Build Channel",
         "desc": "Which Engine will this graphic go to?",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "channel",
         "resource": "channels"
     },
     {
         "type": "string",
-        "title": "Item Build L3 Page Number",
+        "title": "L3 Item Build Page Number",
         "desc": "Page Number.  If this number is used, will send to next available number",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "page"
     },
     {
         "type": "bool",
         "title": "Send to Slack Automatically",
         "desc": "If On, will automatically send to Slack at first opportunity",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "auto_slack"
     },
     {
         "type": "bool",
         "title": "Send to Trio Automatically",
         "desc": "If On, will automatically send to Trio at first opportunity",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "auto_trio"
     },
     {
         "type": "string",
         "title": "Slack Channels",
         "desc": "Post Images to these Slack Channels.  Separate with commas (i.e. channel-one, channel-two)",
-        "section": "Item Build L3",
+        "section": "L3 Item Build",
         "key": "slack_channels"
     }
 ]
