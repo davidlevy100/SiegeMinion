@@ -52,30 +52,35 @@ class L3ItemBuildSender(VizcrankSender):
             return dict()
         
         selected_player = self.player_map[self.selected_player_name]
+        # Item data
+        items = [item for item in selected_player.inventory.item_list if "Trinket" not in item["tags"]]
+        if len(items) > 6:
+            Logger.info(f"Unexpected item count for player {selected_player.name}")
+            return game_data
 
-        #Color Bars
+        # Color Bars
         self.safe_set_field(game_data, "0001", 0)
         self.safe_set_field(game_data, "0002", 0)
 
-        #Number of Items
-        item_count = len(selected_player.inventory.item_list)
-        self.safe_set_field(game_data, "0003", str(item_count))
+        # Number of Items
+        self.safe_set_field(game_data, "0003", str(len(items)))
         
-        #Header
-        self.safe_set_field(game_data, "0050", selected_player.name) #TRI PLAYER AS CHAMPION??
+        # Header
+        header = f"{selected_player.tricode} {selected_player.name} as {selected_player.pick_champion['external_name']}"
+        self.safe_set_field(game_data, "0050", header)
 
-        #Champ Image
+        # Champ Image
         self.safe_set_field(game_data, "0090", selected_player.pick_champion["internal_name"])
 
-        #Team Logo
+        # Team Logo
         self.safe_set_field(game_data, "0100", selected_player.tricode)
 
-        #Item Build
+        # Item Build
         self.safe_set_field(game_data, "0110", "ITEM BUILD")
 
-        #Items
+        # Items
         item_fields = ["0121", "0122", "0123", "0124", "0125", "0126"]
-        for idx, item in enumerate(selected_player.inventory.item_list):
+        for idx, item in enumerate(items):
             self.safe_set_field(game_data, item_fields[idx], item["internal_name"])
 
         return game_data  
