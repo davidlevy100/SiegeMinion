@@ -66,7 +66,7 @@ class L3ItemBuildSender(VizcrankSender):
         self.safe_set_field(game_data, "0003", str(len(items)))
         
         # Header
-        header = f"{selected_player.tricode} {selected_player.name} as {selected_player.pick_champion['external_name']}"
+        header = f"{selected_player.tricode.upper()} {selected_player.name.upper()} AS {selected_player.pick_champion['external_name'].upper()}"
         self.safe_set_field(game_data, "0050", header)
 
         # Champ Image
