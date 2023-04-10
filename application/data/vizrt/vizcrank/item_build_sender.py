@@ -38,9 +38,10 @@ class ItemBuildSender(VizcrankSender):
         self.section = "Item Build"
 
     def on_sorted_players(self, *args):
-        self.sorted_player_names.clear()
+        names = []
         for player in self.sorted_players:
-            self.sorted_player_names.append(player[0])
+            names.append(player[0])
+        self.sorted_player_names = names
 
     def can_process(self, *args):
         return self.selected_player_name \

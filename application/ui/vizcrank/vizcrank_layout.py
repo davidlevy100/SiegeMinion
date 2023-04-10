@@ -153,15 +153,16 @@ class PlayerSelectVizcrankWidget(VizcrankWidget):
     def on_source(self, *args):
         spinner_row = GridLayout(rows=1, size_hint_y=0.5, padding=3, spacing=3)
 
+        default_text = "No Players Available"
         spinner = SiegeSpinner(
-            text="No Players Available",
+            text=default_text,
             values=[])
         
         spinner.bind(text=self.update_selected_player)
         
         def update_values(self, values):
             spinner.values = values
-            spinner.text = values[0]
+            spinner.text = values[0] if len(values) > 0 else default_text
         self.source.bind(sorted_player_names=update_values)
         
         spinner_row.add_widget(spinner)
