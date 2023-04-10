@@ -98,7 +98,7 @@ class PlayerOSCSender(DataEventDispatcher):
         self.source.bind(ultimateCooldownMax=self.setter('ultimateCooldownMax'))
 
         self.source.bind(primary_tree=self.setter('primary_tree'))
-        self.source.bind(secondary_tree=self.setter('secondary_tree'))
+        self.source.bind(keystone=self.setter('keystone'))
 
 
     def send_name(self):
@@ -117,7 +117,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/champion": self.championName
+            f"/Overlay/Player{index}/championName": self.championName
         }
 
         self.send_data(**output)

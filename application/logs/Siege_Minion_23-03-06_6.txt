@@ -1,4 +1,4 @@
-[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-02-20_4.txt
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-03-06_6.txt
 [INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
 [INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
 [INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
@@ -26,18 +26,19 @@
 [INFO   ] Disconnected
 [INFO   ] Disconnected
 [INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
 [WARNING] stderr: Traceback (most recent call last):
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 521, in <module>
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 527, in <module>
 [WARNING] stderr:     SiegeMinion().run()
 [WARNING] stderr:   File "C:\git\SiegeMinion\env\lib\site-packages\kivy\app.py", line 954, in run
 [WARNING] stderr:     self._run_prepare()
 [WARNING] stderr:   File "C:\git\SiegeMinion\env\lib\site-packages\kivy\app.py", line 924, in _run_prepare
 [WARNING] stderr:     root = self.build()
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 217, in build
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 223, in build
 [WARNING] stderr:     self.build_data()
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 482, in build_data
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 488, in build_data
 [WARNING] stderr:     self.initialize()
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 497, in initialize
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 503, in initialize
 [WARNING] stderr:     self.game_reset = str(datetime.now())
 [WARNING] stderr:   File "kivy\properties.pyx", line 520, in kivy.properties.Property.__set__
 [WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
@@ -49,20 +50,6 @@
 [WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
 [WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
 [WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\livestats\history.py", line 133, in on_game_reset
-[WARNING] stderr:     self.current_plus_one = DEFAULT_STATS_UPDATE
-[WARNING] stderr:   File "kivy\properties.pyx", line 520, in kivy.properties.Property.__set__
-[WARNING] stderr:   File "kivy\properties.pyx", line 1049, in kivy.properties.DictProperty.set
-[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
-[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
-[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
-[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
-[WARNING] stderr:   File "kivy\_event.pyx", line 748, in kivy._event.EventDispatcher.__proxy_setter
-[WARNING] stderr:   File "kivy\properties.pyx", line 1049, in kivy.properties.DictProperty.set
-[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
-[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
-[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
-[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
-[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\events\current\overlay\players.py", line 310, in on_current_plus_one
-[WARNING] stderr:     print(self["gameTime"])
-[WARNING] stderr: TypeError: 'OverlayPlayer' object is not subscriptable
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\vizrt\overlay_runes_sender.py", line 67, in on_game_reset
+[WARNING] stderr:     self.dp_key: self.secondary_tree["long_name"]
+[WARNING] stderr: KeyError: 'long_name'

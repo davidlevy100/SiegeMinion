@@ -1,0 +1,62 @@
+[INFO   ] Logger: Record log in C:\git\SiegeMinion\application\logs\Siege_Minion_23-03-06_4.txt
+[INFO   ] deps: Successfully imported "kivy_deps.angle" 0.3.2
+[INFO   ] deps: Successfully imported "kivy_deps.glew" 0.3.1
+[INFO   ] deps: Successfully imported "kivy_deps.sdl2" 0.4.5
+[INFO   ] Kivy: v2.1.0
+[INFO   ] Kivy: Installed at "C:\git\SiegeMinion\env\lib\site-packages\kivy\__init__.py"
+[INFO   ] Python: v3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)]
+[INFO   ] Python: Interpreter at "C:\git\SiegeMinion\env\Scripts\python.exe"
+[INFO   ] Logger: Purge log fired. Processing...
+[INFO   ] Logger: Purge finished!
+[INFO   ] Factory: 189 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'4.6.0 - Build 30.0.101.1404'>
+[INFO   ] GL: OpenGL vendor <b'Intel'>
+[INFO   ] GL: OpenGL renderer <b'Intel(R) UHD Graphics'>
+[INFO   ] GL: OpenGL parsed version: 4, 6
+[INFO   ] GL: Shading version <b'4.60 - Build 30.0.101.1404'>
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <32>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Disconnected
+[INFO   ] Special Kill: has been reset
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 527, in <module>
+[WARNING] stderr:     SiegeMinion().run()
+[WARNING] stderr:   File "C:\git\SiegeMinion\env\lib\site-packages\kivy\app.py", line 954, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "C:\git\SiegeMinion\env\lib\site-packages\kivy\app.py", line 924, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 223, in build
+[WARNING] stderr:     self.build_data()
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 488, in build_data
+[WARNING] stderr:     self.initialize()
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\main.py", line 503, in initialize
+[WARNING] stderr:     self.game_reset = str(datetime.now())
+[WARNING] stderr:   File "kivy\properties.pyx", line 520, in kivy.properties.Property.__set__
+[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 748, in kivy._event.EventDispatcher.__proxy_setter
+[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "C:\git\SiegeMinion\application\data\events\current\overlay\players.py", line 254, in on_game_reset
+[WARNING] stderr:     self.secondary_tree = self.app.data_dragon.get_asset("rune", "default")
+[WARNING] stderr:   File "kivy\properties.pyx", line 520, in kivy.properties.Property.__set__
+[WARNING] stderr:   File "kivy\properties.pyx", line 1049, in kivy.properties.DictProperty.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 567, in kivy.properties.Property.set
+[WARNING] stderr:   File "kivy\properties.pyx", line 606, in kivy.properties.Property._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 1213, in kivy._event.EventObservers._dispatch
+[WARNING] stderr:   File "kivy\_event.pyx", line 747, in kivy._event.EventDispatcher.__proxy_setter
+[WARNING] stderr: KeyError: 'secondary_tree'
