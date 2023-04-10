@@ -15,7 +15,7 @@ DRAGON_NAME_MAP = {
 }
 
 
-class L3PauseGraphicSender(VizcrankSender):
+class PauseGraphicSender(VizcrankSender):
 
     pause_started_event = kp.DictProperty()
 
@@ -25,7 +25,7 @@ class L3PauseGraphicSender(VizcrankSender):
         self.app.live_data.bind(pause_started_event=self.setter('pause_started_event'))
 
         # Config Keys
-        self.section = "L3 Pause Graphic"
+        self.section = "Pause Graphic"
 
     def on_pause_started_event(self, *args):
         if not self.can_process():

@@ -4,7 +4,7 @@ from kivy.logger import Logger
 from data.vizrt.vizcrank.sender import VizcrankSender
 
 
-class L3ItemBuildSender(VizcrankSender):
+class ItemBuildSender(VizcrankSender):
 
     tricode_left = kp.StringProperty()
     tricode_right = kp.StringProperty()
@@ -35,7 +35,7 @@ class L3ItemBuildSender(VizcrankSender):
         self.app.overlay_players.bind(sorted_players=self.setter('sorted_players'))
 
         #Config Keys
-        self.section = "L3 Item Build"
+        self.section = "Item Build"
 
     def on_sorted_players(self, *args):
         self.sorted_player_names.clear()
