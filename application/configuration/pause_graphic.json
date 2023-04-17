@@ -1,0 +1,55 @@
+[
+    {
+        "type": "vizcrank_options",
+        "title": "Pause Graphic Trio",
+        "desc": "i.e. Trio_1, Trio_2",
+        "section": "Pause Graphic",
+        "key": "media_sequencer",
+        "resource": "media_sequencers"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Pause Graphic Show",
+        "desc": "Name of Trio show to use",
+        "section": "Pause Graphic",
+        "key": "show",
+        "resource": "shows"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Pause Graphic Template",
+        "desc": "Name/Number of template to use to create graphic",
+        "section": "Pause Graphic",
+        "key": "template",
+        "resource": "templates"
+    },
+    {
+        "type": "vizcrank_options",
+        "title": "Pause Graphic Channel",
+        "desc": "Which Engine will this graphic go to?",
+        "section": "Pause Graphic",
+        "key": "channel",
+        "resource": "channels"
+    },
+    {
+        "type": "string",
+        "title": "Pause Graphic Page Number",
+        "desc": "Page Number.  If this number is used, will send to next available number",
+        "section": "Pause Graphic",
+        "key": "page"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Slack Automatically",
+        "desc": "If On, will automatically send to Slack at first opportunity",
+        "section": "Pause Graphic",
+        "key": "auto_slack"
+    },
+    {
+        "type": "bool",
+        "title": "Send to Trio Automatically",
+        "desc": "If On, will automatically send to Trio at first opportunity",
+        "section": "Pause Graphic",
+        "key": "auto_trio"
+    }
+]

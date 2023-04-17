@@ -443,6 +443,7 @@ class Inventory(DataEventDispatcher):
 
         self.callouts = deque()
         self.last_callout = 0
+        self.item_list = []
 
 
     def on_game_reset(self, *args):
@@ -456,14 +457,15 @@ class Inventory(DataEventDispatcher):
         self.callout_item = None
         self.callouts.clear()
         self.last_callout = 0
+        self.item_list = []
 
 
     def on_stats(self, *args):
-
         if "items" in self.stats:
             self.items = self.stats["items"]
 
             new_items = [self.default_item] * 7
+            item_list = []
             self.item_counts.clear()
 
             for index, this_item in enumerate(self.stats["items"]):
@@ -485,6 +487,7 @@ class Inventory(DataEventDispatcher):
 
                     if new_item is not None:
                         new_items[index] = new_item
+                        item_list.append(new_item)
 
                         if (self.out_of_fountain(self.stats) and 
                             self.is_callout(new_item) and
@@ -495,9 +498,8 @@ class Inventory(DataEventDispatcher):
                             if self.is_mythic_item(new_item):
                                 self.app.mythic_item.set_mythic_item(self.team_ID, self.participant_ID, new_item, self.stat_time)
                                               
-
+            self.item_list = item_list
             for index, this_item in enumerate(new_items):
-
                 this_property = self.property(f"item{index}")
                 this_property.set(self, this_item)
 
