@@ -1,0 +1,4597 @@
+{
+    "events": [
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798042,
+            "maxCharges": 0,
+            "maxCooldown": 13953,
+            "maxRechargeTime": 0,
+            "participant": 4,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.171Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6838,
+            "skillSlot": 3,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798108,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 4,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.235Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6839,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798340,
+            "maxCharges": 0,
+            "maxCooldown": 73333,
+            "maxRechargeTime": 0,
+            "participant": 7,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.468Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6840,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798340,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 6,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.471Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6841,
+            "skillSlot": 3,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798340,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 0,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.502Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6842,
+            "skillSlot": 1,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798383,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 4,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.509Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6843,
+            "skillSlot": 1,
+            "stageID": 1
+        },
+        {
+            "assistants": [
+                2,
+                3,
+                5
+            ],
+            "bounty": 300,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798383,
+            "killStreakLength": 6,
+            "killer": 4,
+            "killerTeamID": 100,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "position": {
+                "x": 13026,
+                "z": 10653
+            },
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.514Z",
+            "rfc461Schema": "champion_kill",
+            "sequenceIndex": 6844,
+            "shutdownBounty": 0,
+            "stageID": 1,
+            "victim": 9,
+            "victimTeamID": 200
+        },
+        {
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798383,
+            "level": 17,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.515Z",
+            "rfc461Schema": "champion_level_up",
+            "sequenceIndex": 6845,
+            "stageID": 1
+        },
+        {
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798383,
+            "level": 12,
+            "participant": 5,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.515Z",
+            "rfc461Schema": "champion_level_up",
+            "sequenceIndex": 6846,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798383,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 4,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.525Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6847,
+            "skillSlot": 1,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798515,
+            "maxCharges": 0,
+            "maxCooldown": 138461,
+            "maxRechargeTime": 0,
+            "participantID": 10,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.644Z",
+            "rfc461Schema": "summoner_spell_used",
+            "sequenceIndex": 6848,
+            "stageID": 1,
+            "summonerSpellName": "SummonerDot",
+            "summonerSpellSlot": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798515,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.645Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6849,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798515,
+            "maxCharges": 0,
+            "maxCooldown": 5925,
+            "maxRechargeTime": 0,
+            "participant": 8,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.650Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6850,
+            "skillSlot": 2,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798650,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.777Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6851,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798683,
+            "maxCharges": 0,
+            "maxCooldown": 3333,
+            "maxRechargeTime": 0,
+            "participant": 6,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.811Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6852,
+            "skillSlot": 1,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798815,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:54.942Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6853,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798946,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:55.075Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6854,
+            "skillSlot": 4,
+            "stageID": 1
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1798946,
+            "maxCharges": 0,
+            "maxCooldown": 5001,
+            "maxRechargeTime": 0,
+            "participant": 1,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:55.077Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6855,
+            "skillSlot": 3,
+            "stageID": 1
+        },
+        {
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameOver": false,
+            "gameTime": 1799012,
+            "high_frequency_data": [
+                {
+                    "frames": [
+                        {
+                            "XP": 16798,
+                            "health": 2328,
+                            "primaryAbilityResource": 1140,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 2330,
+                            "primaryAbilityResource": 1141,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "health": 2317,
+                            "timestamp": 1798.07568359375
+                        },
+                        {
+                            "health": 2421,
+                            "timestamp": 1798.3399658203125
+                        },
+                        {
+                            "health": 2401,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "health": 2403,
+                            "primaryAbilityResource": 1143,
+                            "timestamp": 1798.5482177734375
+                        },
+                        {
+                            "primaryAbilityResource": 1053,
+                            "timestamp": 1798.9466552734375
+                        }
+                    ],
+                    "id": 1
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 12312,
+                            "health": 3164,
+                            "primaryAbilityResource": 600,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "primaryAbilityResource": 610,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "XP": 12510,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "primaryAbilityResource": 619,
+                            "timestamp": 1798.5482177734375
+                        }
+                    ],
+                    "id": 2
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 16327,
+                            "health": 730,
+                            "primaryAbilityResource": 1364,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 731,
+                            "primaryAbilityResource": 1366,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "XP": 16480,
+                            "health": 858,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "health": 860,
+                            "primaryAbilityResource": 1368,
+                            "timestamp": 1798.5482177734375
+                        },
+                        {
+                            "primaryAbilityResource": 1399,
+                            "timestamp": 1798.650390625
+                        }
+                    ],
+                    "id": 3
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 14732,
+                            "health": 2534,
+                            "primaryAbilityResource": 698,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "primaryAbilityResource": 630,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "XP": 14921,
+                            "primaryAbilityResource": 530,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "primaryAbilityResource": 532,
+                            "timestamp": 1798.5482177734375
+                        }
+                    ],
+                    "id": 4
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 8385,
+                            "health": 1919,
+                            "primaryAbilityResource": 1054,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "primaryAbilityResource": 1057,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "XP": 8659,
+                            "health": 2027,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "primaryAbilityResource": 1060,
+                            "timestamp": 1798.5482177734375
+                        },
+                        {
+                            "primaryAbilityResource": 1102,
+                            "timestamp": 1798.650390625
+                        },
+                        {
+                            "primaryAbilityResource": 1122,
+                            "timestamp": 1798.9466552734375
+                        }
+                    ],
+                    "id": 5
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 13160,
+                            "health": 2242,
+                            "primaryAbilityResource": 1004,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 2244,
+                            "primaryAbilityResource": 1006,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "health": 2222,
+                            "timestamp": 1798.1087646484375
+                        },
+                        {
+                            "health": 1926,
+                            "primaryAbilityResource": 951,
+                            "timestamp": 1798.3399658203125
+                        },
+                        {
+                            "health": 1928,
+                            "primaryAbilityResource": 953,
+                            "timestamp": 1798.5482177734375
+                        }
+                    ],
+                    "id": 6
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 10864,
+                            "health": 1878,
+                            "primaryAbilityResource": 752,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 1883,
+                            "primaryAbilityResource": 754,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "health": 1635,
+                            "timestamp": 1798.416015625
+                        },
+                        {
+                            "health": 1641,
+                            "primaryAbilityResource": 756,
+                            "timestamp": 1798.5482177734375
+                        }
+                    ],
+                    "id": 7
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 12861,
+                            "health": 2001,
+                            "primaryAbilityResource": 2435,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 2003,
+                            "primaryAbilityResource": 2437,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "primaryAbilityResource": 2337,
+                            "timestamp": 1798.51513671875
+                        },
+                        {
+                            "health": 2004,
+                            "primaryAbilityResource": 2339,
+                            "timestamp": 1798.5482177734375
+                        },
+                        {
+                            "health": 1989,
+                            "timestamp": 1798.650390625
+                        },
+                        {
+                            "health": 1974,
+                            "timestamp": 1798.9466552734375
+                        }
+                    ],
+                    "id": 8
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 12702,
+                            "health": 309,
+                            "primaryAbilityResource": 692,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "health": 310,
+                            "primaryAbilityResource": 696,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "health": 295,
+                            "timestamp": 1798.1087646484375
+                        },
+                        {
+                            "health": 39,
+                            "timestamp": 1798.141845703125
+                        },
+                        {
+                            "health": 23,
+                            "timestamp": 1798.2408447265625
+                        },
+                        {
+                            "health": 9,
+                            "timestamp": 1798.38330078125
+                        },
+                        {
+                            "alive": false,
+                            "health": 0,
+                            "timestamp": 1798.416015625
+                        }
+                    ],
+                    "id": 9
+                },
+                {
+                    "frames": [
+                        {
+                            "XP": 8203,
+                            "health": 2103,
+                            "primaryAbilityResource": 325,
+                            "timestamp": 1798.0096435546875
+                        },
+                        {
+                            "primaryAbilityResource": 327,
+                            "timestamp": 1798.042724609375
+                        },
+                        {
+                            "primaryAbilityResource": 329,
+                            "timestamp": 1798.5482177734375
+                        },
+                        {
+                            "health": 1905,
+                            "timestamp": 1798.9796142578125
+                        }
+                    ],
+                    "id": 10
+                }
+            ],
+            "participants": [
+                {
+                    "XP": 16798,
+                    "XPForNextLevel": 18360,
+                    "ability1CooldownRemaining": 0,
+                    "ability1Level": 4,
+                    "ability1Name": "JaxLeapStrike",
+                    "ability2CooldownRemaining": 1.049560546875,
+                    "ability2Level": 5,
+                    "ability2Name": "JaxEmpowerTwo",
+                    "ability3CooldownRemaining": 0.93408203125,
+                    "ability3Level": 5,
+                    "ability3Name": "JaxCounterStrike",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 3,
+                    "ability4Name": "JaxRApexForm",
+                    "abilityPower": 39,
+                    "accountID": 2382275899524480,
+                    "alive": true,
+                    "armor": 145,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 6,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 308,
+                    "attackSpeed": 300,
+                    "ccReduction": 41,
+                    "championName": "Jax",
+                    "cooldownReduction": 0,
+                    "currentGold": 670,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 303,
+                        "globalTeam": 300,
+                        "itemSold": 180,
+                        "itemUndo": 375,
+                        "killMinion": 5242,
+                        "killNeutralMinion": 614,
+                        "killPalisade": 612,
+                        "killStructure": 1487,
+                        "misc": 75,
+                        "starting": 500
+                    },
+                    "health": 2403,
+                    "healthMax": 2956,
+                    "healthRegen": 35,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3161
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2055,
+                            "itemStacks": 1
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1029
+                        },
+                        {
+                            "itemCooldown": 0.6580810546875,
+                            "itemID": 6632
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3091
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3111
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3340,
+                            "itemStacks": 1
+                        }
+                    ],
+                    "level": 17,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 6,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 152,
+                    "participantID": 1,
+                    "playerName": "FLY Impact",
+                    "position": {
+                        "x": 10810,
+                        "z": 10136
+                    },
+                    "primaryAbilityResource": 1053,
+                    "primaryAbilityResourceMax": 1276,
+                    "primaryAbilityResourceRegen": 37,
+                    "respawnTimer": 0,
+                    "shutdownValue": 250,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 3717278520,
+                            "stacks": 8
+                        },
+                        {
+                            "id": 968555378,
+                            "stacks": 1
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 233
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 23.999998092651367
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 8
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 0
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 4
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 15
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 3
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 33.48764419555664
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 181423.1875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 116175.65625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 56256.3359375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 8991
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 9218.9482421875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 5305.81005859375
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 3913.1376953125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 18781.677734375
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 16066.9775390625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 2088.1259765625
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 626.5897216796875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 19410.8515625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 8767.9794921875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 8767.9794921875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 38047.12109375
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 136.11734008789062
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 15.832786560058594
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 15.650291442871094
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 42
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 26
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 2
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 130.599853515625,
+                    "summonerSpell1Name": "SummonerFlash",
+                    "summonerSpell2CooldownRemaining": 0,
+                    "summonerSpell2Name": "S12_SummonerTeleportUpgrade",
+                    "teamID": 100,
+                    "totalGold": 12579,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "JaxRApexForm"
+                },
+                {
+                    "XP": 12510,
+                    "XPForNextLevel": 13020,
+                    "ability1CooldownRemaining": 0.6185302734375,
+                    "ability1Level": 5,
+                    "ability1Name": "ViQ",
+                    "ability2CooldownRemaining": 0,
+                    "ability2Level": 5,
+                    "ability2Name": "ViW",
+                    "ability3CooldownRemaining": 0,
+                    "ability3Level": 2,
+                    "ability3Name": "ViE",
+                    "ability4CooldownRemaining": 57.766357421875,
+                    "ability4Level": 2,
+                    "ability4Name": "ViR",
+                    "abilityPower": 39,
+                    "accountID": 2382278564095360,
+                    "alive": true,
+                    "armor": 215,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 178,
+                    "attackSpeed": 143,
+                    "ccReduction": 24,
+                    "championName": "Vi",
+                    "cooldownReduction": 0,
+                    "currentGold": 709,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 255,
+                        "globalTeam": 300,
+                        "itemUndo": 1200,
+                        "killChampion": 700,
+                        "killMinion": 70,
+                        "killNeutralMinion": 3842,
+                        "killPalisade": 262,
+                        "killStructure": 687,
+                        "misc": 617,
+                        "starting": 500
+                    },
+                    "health": 3164,
+                    "healthMax": 3164,
+                    "healthRegen": 26,
+                    "items": [
+                        {
+                            "itemCooldown": 80.148681640625,
+                            "itemID": 6667
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2420
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2055,
+                            "itemStacks": 1
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3047
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3071
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1031
+                        },
+                        {
+                            "itemCooldown": 30.012451171875,
+                            "itemID": 3364
+                        }
+                    ],
+                    "level": 14,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 102,
+                    "participantID": 2,
+                    "playerName": "FLY Spica",
+                    "position": {
+                        "x": 12991,
+                        "z": 10693
+                    },
+                    "primaryAbilityResource": 619,
+                    "primaryAbilityResourceMax": 1080,
+                    "primaryAbilityResourceRegen": 189,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 3805539831,
+                            "stacks": 1200
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 20
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 154.99998474121094
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 90.00003814697266
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 24.5
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 2
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 3
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 10
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 16
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 59.79218673706055
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 181323.765625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 144724.421875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 0
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 36599.046875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 3911.722900390625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 3284.311279296875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 627.4118041992188
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 20706.455078125
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 14920.5830078125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 5360.0361328125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 425.8158264160156
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 35467.83203125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 606.4874267578125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 606.4874267578125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 31157.3515625
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 342.00616455078125
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 44.95025634765625
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 1420.47412109375
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 16.889938354492188
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 122
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 5
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 234
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 17
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 15
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 8
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 10
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 2
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 6
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 0,
+                    "summonerSpell1Name": "SummonerSmiteAvatarUtility",
+                    "summonerSpell2CooldownRemaining": 0,
+                    "summonerSpell2Name": "SummonerFlash",
+                    "teamID": 100,
+                    "totalGold": 10679,
+                    "ultimateCooldownRemaining": 57.766357421875,
+                    "ultimateName": "ViR"
+                },
+                {
+                    "XP": 16480,
+                    "XPForNextLevel": 18360,
+                    "ability1CooldownRemaining": 0.7589111328125,
+                    "ability1Level": 5,
+                    "ability1Name": "AnnieQ",
+                    "ability2CooldownRemaining": 3.81494140625,
+                    "ability2Level": 5,
+                    "ability2Name": "AnnieW",
+                    "ability3CooldownRemaining": 2.579345703125,
+                    "ability3Level": 3,
+                    "ability3Name": "AnnieE",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 3,
+                    "ability4Name": "AnnieRController",
+                    "abilityPower": 450,
+                    "accountID": 2629578485687680,
+                    "alive": true,
+                    "armor": 90,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 115,
+                    "attackSpeed": 140,
+                    "ccReduction": 6,
+                    "championName": "Annie",
+                    "cooldownReduction": 0,
+                    "currentGold": 869,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 473,
+                        "globalTeam": 300,
+                        "itemSold": 230,
+                        "killChampion": 600,
+                        "killMinion": 4605,
+                        "killNeutralMinion": 90,
+                        "killStructure": 525,
+                        "misc": 625,
+                        "starting": 500
+                    },
+                    "health": 860,
+                    "healthMax": 2763,
+                    "healthRegen": 28,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3108
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2424
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3191
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3158
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 6657,
+                            "itemStacks": 10
+                        },
+                        {
+                            "itemID": 3089
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3364
+                        }
+                    ],
+                    "level": 17,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 68,
+                    "participantID": 3,
+                    "playerName": "FLY VicLa",
+                    "position": {
+                        "x": 13114,
+                        "z": 10207
+                    },
+                    "primaryAbilityResource": 1399,
+                    "primaryAbilityResourceMax": 1781,
+                    "primaryAbilityResourceRegen": 41,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 958185635,
+                            "stacks": 173
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 227
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 4
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 4
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 2
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 2
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 6
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 13
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 7
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 32.782562255859375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 114935.671875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 18383.34375
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 92392.0703125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 4159.75439453125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 12735.0673828125
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 423.1896057128906
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 11847.130859375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 464.7521667480469
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 14917.697265625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 8569.736328125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 5262.32568359375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 1085.6318359375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 13321.11328125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 1202.723876953125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 2511.694580078125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 2511.694580078125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 3409.5791015625
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 278.1014099121094
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 35.34173583984375
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 18.048538208007812
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 99
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 10
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 143
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 34
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 15
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 2
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 5
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 0,
+                    "summonerSpell1Name": "S12_SummonerTeleportUpgrade",
+                    "summonerSpell2CooldownRemaining": 228.0687255859375,
+                    "summonerSpell2Name": "SummonerFlash",
+                    "teamID": 100,
+                    "totalGold": 11164,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "AnnieRController"
+                },
+                {
+                    "XP": 14921,
+                    "XPForNextLevel": 16480,
+                    "ability1CooldownRemaining": 0.037353515625,
+                    "ability1Level": 5,
+                    "ability1Name": "ZeriQ",
+                    "ability2CooldownRemaining": 0,
+                    "ability2Level": 3,
+                    "ability2Name": "ZeriW",
+                    "ability3CooldownRemaining": 11.983642578125,
+                    "ability3Level": 5,
+                    "ability3Name": "ZeriE",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 3,
+                    "ability4Name": "ZeriR",
+                    "abilityPower": 39,
+                    "accountID": 2631381946795392,
+                    "alive": true,
+                    "armor": 120,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 278,
+                    "attackSpeed": 268,
+                    "ccReduction": 6,
+                    "championName": "Zeri",
+                    "cooldownReduction": 0,
+                    "currentGold": 817,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 200,
+                        "globalTeam": 300,
+                        "itemSold": 360,
+                        "killChampion": 2074,
+                        "killMinion": 5839,
+                        "killNeutralMinion": 381,
+                        "killStructure": 612,
+                        "misc": 840,
+                        "shutdownReward": 50,
+                        "starting": 500
+                    },
+                    "health": 2534,
+                    "healthMax": 2534,
+                    "healthRegen": 26,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3140
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3006
+                        },
+                        {
+                            "itemID": 6675
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 6673
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3072
+                        },
+                        {
+                            "itemCooldown": 29.9429931640625,
+                            "itemID": 3363
+                        }
+                    ],
+                    "level": 16,
+                    "lifeSteal": 28,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 105,
+                    "participantID": 4,
+                    "playerName": "FLY Prince",
+                    "position": {
+                        "x": 13483,
+                        "z": 10260
+                    },
+                    "primaryAbilityResource": 532,
+                    "primaryAbilityResourceMax": 901,
+                    "primaryAbilityResourceRegen": 35,
+                    "respawnTimer": 0,
+                    "shutdownValue": 700,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 3231234706,
+                            "stacks": 4
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 282
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 20.799999237060547
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 8
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 8.800000190734863
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 7
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 1
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 16
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 14
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 57.95875549316406
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 207031.859375
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 159380.265625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 27961.990234375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 19690.59375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 16546.44921875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 11513.0380859375
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 4509.84619140625
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 523.5659790039062
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 6204.33837890625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 4536.66357421875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 1380.2425537109375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 287.4316101074219
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 13920.7587890625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 4132.9853515625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 4132.9853515625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 24118.4296875
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 124.89935302734375
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 55.04534912109375
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 9.687504768371582
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 53
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 32
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 23
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 14
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 11
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 2
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 94.7535400390625,
+                    "summonerSpell1Name": "SummonerBoost",
+                    "summonerSpell2CooldownRemaining": 183.1690673828125,
+                    "summonerSpell2Name": "SummonerFlash",
+                    "teamID": 100,
+                    "totalGold": 14241,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "ZeriR"
+                },
+                {
+                    "XP": 8659,
+                    "XPForNextLevel": 9960,
+                    "ability1CooldownRemaining": 0,
+                    "ability1Level": 3,
+                    "ability1Name": "HeimerdingerQ",
+                    "ability2CooldownRemaining": 0,
+                    "ability2Level": 5,
+                    "ability2Name": "HeimerdingerW",
+                    "ability3CooldownRemaining": 6.824951171875,
+                    "ability3Level": 1,
+                    "ability3Name": "HeimerdingerE",
+                    "ability4CooldownRemaining": 64.1893310546875,
+                    "ability4Level": 2,
+                    "ability4Name": "HeimerdingerR",
+                    "abilityPower": 267,
+                    "accountID": 2686732453037216,
+                    "alive": true,
+                    "armor": 78,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 106,
+                    "attackSpeed": 122,
+                    "ccReduction": 6,
+                    "championName": "Heimerdinger",
+                    "cooldownReduction": 0,
+                    "currentGold": 747,
+                    "goldPerSecond": 30,
+                    "goldStats": {
+                        "ambient": 3917,
+                        "assist": 575,
+                        "globalTeam": 300,
+                        "killMinion": 177,
+                        "killNeutralMinion": 100,
+                        "killStructure": 787,
+                        "misc": 525,
+                        "starting": 500,
+                        "supportItem": 780
+                    },
+                    "health": 2027,
+                    "healthMax": 2027,
+                    "healthRegen": 24,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3853,
+                            "itemStacks": 3
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3802
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3116
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3108
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3020
+                        },
+                        {
+                            "itemCooldown": 35.890625,
+                            "itemID": 3364
+                        }
+                    ],
+                    "level": 12,
+                    "lifeSteal": 0,
+                    "magicPenetration": 18,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 50,
+                    "participantID": 5,
+                    "playerName": "FLY Eyla",
+                    "position": {
+                        "x": 12694,
+                        "z": 9888
+                    },
+                    "primaryAbilityResource": 1122,
+                    "primaryAbilityResourceMax": 1251,
+                    "primaryAbilityResourceRegen": 63,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 3069153691,
+                            "stacks": 1
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 21
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 0
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 0
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 3
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 5
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 45
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 15
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 109.3160629272461
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 25476.87890625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 3966.6611328125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 21054.30078125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 455.9350891113281
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 8105.37353515625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 372.1776428222656
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 7277.26123046875
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 455.9350891113281
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 8645.7197265625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 5964.76513671875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 2114.095703125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 566.8641357421875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 2951.95458984375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 2155.563720703125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 2155.563720703125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 2863.137451171875
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 140.03408813476562
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 79.093994140625
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 17.459701538085938
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 52
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 57
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 15
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 61
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 5
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 32
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 1
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 48.658203125,
+                    "summonerSpell1Name": "SummonerDot",
+                    "summonerSpell2CooldownRemaining": 60.7236328125,
+                    "summonerSpell2Name": "SummonerFlash",
+                    "teamID": 100,
+                    "totalGold": 7661,
+                    "ultimateCooldownRemaining": 64.1893310546875,
+                    "ultimateName": "HeimerdingerR"
+                },
+                {
+                    "XP": 13160,
+                    "XPForNextLevel": 14700,
+                    "ability1CooldownRemaining": 1.476806640625,
+                    "ability1Level": 5,
+                    "ability1Name": "KSanteQ",
+                    "ability2CooldownRemaining": 6.1104736328125,
+                    "ability2Level": 5,
+                    "ability2Name": "KSanteW",
+                    "ability3CooldownRemaining": 5.9940185546875,
+                    "ability3Level": 3,
+                    "ability3Name": "KSanteE",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 2,
+                    "ability4Name": "KSanteR",
+                    "abilityPower": 0,
+                    "accountID": 2686755673228448,
+                    "alive": true,
+                    "armor": 278,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 110,
+                    "attackSpeed": 143,
+                    "ccReduction": 0,
+                    "championName": "KSante",
+                    "cooldownReduction": 0,
+                    "currentGold": 765,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 77,
+                        "itemSold": 180,
+                        "itemUndo": 375,
+                        "killChampion": 300,
+                        "killMinion": 3964,
+                        "killNeutralMinion": 343,
+                        "misc": 110,
+                        "shutdownReward": 150,
+                        "starting": 500
+                    },
+                    "health": 1928,
+                    "healthMax": 3148,
+                    "healthRegen": 41,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1033
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 6665
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3047
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3075
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1029
+                        },
+                        {
+                            "itemCooldown": 98.2620849609375,
+                            "itemID": 3363
+                        }
+                    ],
+                    "level": 15,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 152,
+                    "participantID": 6,
+                    "playerName": "TSM Hauntzer",
+                    "position": {
+                        "x": 10992,
+                        "z": 10272
+                    },
+                    "primaryAbilityResource": 953,
+                    "primaryAbilityResourceMax": 1205,
+                    "primaryAbilityResourceRegen": 40,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 968555378,
+                            "stacks": 1
+                        },
+                        {
+                            "id": 3219787787,
+                            "stacks": 7
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 188
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 14
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 11
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 1
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 1
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 15
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 1
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 25.9804744720459
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 123772.0546875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 119088.53125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 4164.986328125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 518.6114501953125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 11157.462890625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 9259.1259765625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 1379.725341796875
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 518.6114501953125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 16170.619140625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 10501.884765625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 5293.298828125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 375.4483337402344
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 30492.904296875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 384.95001220703125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 2824.12451171875
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 484.6716613769531
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 40.31568145751953
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 16.895549774169922
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 8
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 12
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 7
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 66.3651123046875,
+                    "summonerSpell1Name": "SummonerFlash",
+                    "summonerSpell2CooldownRemaining": 0.8887939453125,
+                    "summonerSpell2Name": "S12_SummonerTeleportUpgrade",
+                    "teamID": 200,
+                    "totalGold": 8889,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "KSanteR"
+                },
+                {
+                    "XP": 10864,
+                    "XPForNextLevel": 11440,
+                    "ability1CooldownRemaining": 3.2613525390625,
+                    "ability1Level": 5,
+                    "ability1Name": "MonkeyKingDoubleAttack",
+                    "ability2CooldownRemaining": 3.2845458984375,
+                    "ability2Level": 5,
+                    "ability2Name": "monkeykingdecoy",
+                    "ability3CooldownRemaining": 0.9632568359375,
+                    "ability3Level": 1,
+                    "ability3Name": "MonkeyKingNimbus",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 2,
+                    "ability4Name": "MonkeyKingSpinToWinLeave",
+                    "abilityPower": 0,
+                    "accountID": 2382564149487168,
+                    "alive": true,
+                    "armor": 143,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 3,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 219,
+                    "attackSpeed": 182,
+                    "ccReduction": 44,
+                    "championName": "MonkeyKing",
+                    "cooldownReduction": 0,
+                    "currentGold": 407,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 372,
+                        "killChampion": 574,
+                        "killMinion": 517,
+                        "killNeutralMinion": 2868,
+                        "misc": 405,
+                        "shutdownReward": 50,
+                        "starting": 500
+                    },
+                    "health": 1641,
+                    "healthMax": 2394,
+                    "healthRegen": 113,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2055,
+                            "itemStacks": 1
+                        },
+                        {
+                            "itemCooldown": 0.625,
+                            "itemID": 6632
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3071
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3111
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3364
+                        }
+                    ],
+                    "level": 13,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 3,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 82,
+                    "participantID": 7,
+                    "playerName": "TSM Bugi",
+                    "position": {
+                        "x": 13297,
+                        "z": 10933
+                    },
+                    "primaryAbilityResource": 756,
+                    "primaryAbilityResourceMax": 1011,
+                    "primaryAbilityResourceRegen": 30,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 3805539831,
+                            "stacks": 1200
+                        },
+                        {
+                            "id": 4045064574,
+                            "stacks": 8
+                        },
+                        {
+                            "id": 1168953472,
+                            "stacks": 9
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 29
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 115.00001525878906
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 95.50001525878906
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 2
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 2
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 4
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 7
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 5
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 34.29420852661133
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 149169.84375
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 94181.109375
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 14031.240234375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 40957.94140625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 7716.11572265625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 6761.140625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 611.445068359375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 343.5294189453125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 23649.994140625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 14474.7373046875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 8397.087890625
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 778.15087890625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 19301.080078125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 17826.423828125
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 142.28724670410156
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 22.950790405273438
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 13.534453392028809
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 47
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 11
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 82
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 11
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 24
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 17
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 0,
+                    "summonerSpell1Name": "SummonerSmiteAvatarUtility",
+                    "summonerSpell2CooldownRemaining": 119.3280029296875,
+                    "summonerSpell2Name": "SummonerFlash",
+                    "teamID": 200,
+                    "totalGold": 8732,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "MonkeyKingSpinToWinLeave"
+                },
+                {
+                    "XP": 12861,
+                    "XPForNextLevel": 13020,
+                    "ability1CooldownRemaining": 0,
+                    "ability1Level": 5,
+                    "ability1Name": "SyndraQUpgrade",
+                    "ability2CooldownRemaining": 0,
+                    "ability2Level": 5,
+                    "ability2Name": "SyndraWCast",
+                    "ability3CooldownRemaining": 2.0816650390625,
+                    "ability3Level": 2,
+                    "ability3Name": "SyndraE5",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 2,
+                    "ability4Name": "SyndraR",
+                    "abilityPower": 264,
+                    "accountID": 2418992251078016,
+                    "alive": true,
+                    "armor": 87,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 89,
+                    "attackSpeed": 134,
+                    "ccReduction": 0,
+                    "championName": "Syndra",
+                    "cooldownReduction": 0,
+                    "currentGold": 660,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 70,
+                        "itemSold": 230,
+                        "killChampion": 300,
+                        "killMinion": 4825,
+                        "killNeutralMinion": 109,
+                        "misc": 745,
+                        "starting": 500
+                    },
+                    "health": 1974,
+                    "healthMax": 2020,
+                    "healthRegen": 27,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3040
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 6653
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3020
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1026
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 1052
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3363
+                        }
+                    ],
+                    "level": 14,
+                    "lifeSteal": 0,
+                    "magicPenetration": 18,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 58,
+                    "participantID": 8,
+                    "playerName": "TSM Maple",
+                    "position": {
+                        "x": 12398,
+                        "z": 10733
+                    },
+                    "primaryAbilityResource": 2339,
+                    "primaryAbilityResourceMax": 2793,
+                    "primaryAbilityResourceRegen": 35,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 2681101066,
+                            "stacks": 103
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 239
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 4
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 2.5
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 1
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 4
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 18
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 6
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 38.918697357177734
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 137475.984375
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 11746.0166015625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 122165.8828125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 3564.115478515625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 10517.7197265625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 49.02151870727539
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 9588.1279296875
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 880.5724487304688
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 10692.3134765625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 4340.4189453125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 5975.58642578125
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 376.3054504394531
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 9632.27734375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 3420.147216796875
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 370.4618835449219
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 89.32215881347656
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 29.68920135498047
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 50
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 26
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 4
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 63
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 1
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 13
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 2
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 0,
+                    "summonerSpell1Name": "SummonerFlash",
+                    "summonerSpell2CooldownRemaining": 0,
+                    "summonerSpell2Name": "S12_SummonerTeleportUpgrade",
+                    "teamID": 200,
+                    "totalGold": 9994,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "SyndraR"
+                },
+                {
+                    "XP": 12702,
+                    "XPForNextLevel": 13020,
+                    "ability1CooldownRemaining": 0,
+                    "ability1Level": 5,
+                    "ability1Name": "JinxQ",
+                    "ability2CooldownRemaining": 0,
+                    "ability2Level": 5,
+                    "ability2Name": "JinxW",
+                    "ability3CooldownRemaining": 14.697509765625,
+                    "ability3Level": 2,
+                    "ability3Name": "JinxE",
+                    "ability4CooldownRemaining": 0,
+                    "ability4Level": 2,
+                    "ability4Name": "JinxR",
+                    "abilityPower": 0,
+                    "accountID": 2382278912747072,
+                    "alive": false,
+                    "armor": 90,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 274,
+                    "attackSpeed": 218,
+                    "ccReduction": 0,
+                    "championName": "Jinx",
+                    "cooldownReduction": 0,
+                    "currentGold": 355,
+                    "goldPerSecond": 0,
+                    "goldStats": {
+                        "ambient": 3445,
+                        "assist": 122,
+                        "itemSold": 20,
+                        "killChampion": 600,
+                        "killMinion": 5885,
+                        "killNeutralMinion": 381,
+                        "killPalisade": 175,
+                        "misc": 261,
+                        "starting": 500
+                    },
+                    "health": 0,
+                    "healthMax": 1939,
+                    "healthRegen": 19,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 6672
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3006
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3046
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3031
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3363
+                        }
+                    ],
+                    "level": 14,
+                    "lifeSteal": 6,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 58,
+                    "participantID": 9,
+                    "playerName": "TSM WildTurtle",
+                    "position": {
+                        "x": 13026,
+                        "z": 10653
+                    },
+                    "primaryAbilityResource": 696,
+                    "primaryAbilityResourceMax": 864,
+                    "primaryAbilityResourceRegen": 37,
+                    "respawnTimer": 47.27967071533203,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 778073302,
+                            "stacks": 3
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 279
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 18.799997329711914
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 18.799997329711914
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 2
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 3
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 2
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 11
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 9
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 36.20913314819336
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 215673.390625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 198161.53125
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 642.9803466796875
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 16868.744140625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 12156.814453125
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 11161.8701171875
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 233.32553100585938
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 761.6198120117188
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 13960.2587890625
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 7775.0927734375
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 5821.1904296875
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 363.97247314453125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 8782.2861328125
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 823.049072265625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 823.049072265625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 13425.0673828125
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 111.16885375976562
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 27.74371337890625
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 10.510584831237793
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 4
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 3
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 9
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 2
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 8
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 2
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 5
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 54.802978515625,
+                    "summonerSpell1Name": "SummonerFlash",
+                    "summonerSpell2CooldownRemaining": 72.9957275390625,
+                    "summonerSpell2Name": "SummonerBoost",
+                    "teamID": 200,
+                    "totalGold": 11369,
+                    "ultimateCooldownRemaining": 0,
+                    "ultimateName": "JinxR"
+                },
+                {
+                    "XP": 8203,
+                    "XPForNextLevel": 8580,
+                    "ability1CooldownRemaining": 4.456787109375,
+                    "ability1Level": 5,
+                    "ability1Name": "ThreshQ",
+                    "ability2CooldownRemaining": 10.0621337890625,
+                    "ability2Level": 3,
+                    "ability2Name": "ThreshW",
+                    "ability3CooldownRemaining": 4.221923828125,
+                    "ability3Level": 1,
+                    "ability3Name": "ThreshE",
+                    "ability4CooldownRemaining": 81.557373046875,
+                    "ability4Level": 2,
+                    "ability4Name": "ThreshRPenta",
+                    "abilityPower": 46,
+                    "accountID": 2686748691711136,
+                    "alive": true,
+                    "armor": 118,
+                    "armorPenetration": 0,
+                    "armorPenetrationPercent": 0,
+                    "armorPenetrationPercentBonus": 0,
+                    "attackDamage": 90,
+                    "attackSpeed": 140,
+                    "ccReduction": 5,
+                    "championName": "Thresh",
+                    "cooldownReduction": 0,
+                    "currentGold": 219,
+                    "goldPerSecond": 30,
+                    "goldStats": {
+                        "ambient": 3910,
+                        "assist": 337,
+                        "killMinion": 110,
+                        "misc": 420,
+                        "starting": 500,
+                        "supportItem": 782
+                    },
+                    "health": 1905,
+                    "healthMax": 2103,
+                    "healthRegen": 47,
+                    "items": [
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 2031,
+                            "itemStacks": 1
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3001
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3114
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3158
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3857
+                        },
+                        {
+                            "itemCooldown": 0,
+                            "itemID": 3364
+                        }
+                    ],
+                    "level": 11,
+                    "lifeSteal": 0,
+                    "magicPenetration": 0,
+                    "magicPenetrationPercent": 0,
+                    "magicPenetrationPercentBonus": 0,
+                    "magicResist": 100,
+                    "participantID": 10,
+                    "playerName": "TSM Chime",
+                    "position": {
+                        "x": 12695,
+                        "z": 11186
+                    },
+                    "primaryAbilityResource": 329,
+                    "primaryAbilityResourceMax": 660,
+                    "primaryAbilityResourceRegen": 39,
+                    "respawnTimer": 0,
+                    "shutdownValue": 0,
+                    "spellVamp": 0,
+                    "stackingBuffs": [
+                        {
+                            "id": 1606401811,
+                            "stacks": 46
+                        },
+                        {
+                            "id": 1594003430,
+                            "stacks": 3
+                        }
+                    ],
+                    "stats": [
+                        {
+                            "name": "MINIONS_KILLED",
+                            "value": 29
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED",
+                            "value": 0
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE",
+                            "value": 0
+                        },
+                        {
+                            "name": "CHAMPIONS_KILLED",
+                            "value": 0
+                        },
+                        {
+                            "name": "NUM_DEATHS",
+                            "value": 1
+                        },
+                        {
+                            "name": "ASSISTS",
+                            "value": 4
+                        },
+                        {
+                            "name": "PERK0",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK0_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK1_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK2_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK3_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK4_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR1",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR2",
+                            "value": 0
+                        },
+                        {
+                            "name": "PERK5_VAR3",
+                            "value": 0
+                        },
+                        {
+                            "name": "WARD_PLACED",
+                            "value": 49
+                        },
+                        {
+                            "name": "WARD_KILLED",
+                            "value": 9
+                        },
+                        {
+                            "name": "VISION_SCORE",
+                            "value": 77.44381713867188
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT",
+                            "value": 22722.203125
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_PLAYER",
+                            "value": 7181.0322265625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_PLAYER",
+                            "value": 8141.58740234375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_PLAYER",
+                            "value": 7399.5810546875
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 2925.210205078125
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 284.3706970214844
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 2152.839599609375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_DEALT_TO_CHAMPIONS",
+                            "value": 488
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_TAKEN",
+                            "value": 8301.6669921875
+                        },
+                        {
+                            "name": "PHYSICAL_DAMAGE_TAKEN",
+                            "value": 3303.894775390625
+                        },
+                        {
+                            "name": "MAGIC_DAMAGE_TAKEN",
+                            "value": 4819.990234375
+                        },
+                        {
+                            "name": "TRUE_DAMAGE_TAKEN",
+                            "value": 177.7880401611328
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SELF_MITIGATED",
+                            "value": 7184.07666015625
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES",
+                            "value": 1001.5999755859375
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_BUILDINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_TURRETS",
+                            "value": 0
+                        },
+                        {
+                            "name": "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES",
+                            "value": 958.977294921875
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT",
+                            "value": 206.59747314453125
+                        },
+                        {
+                            "name": "TOTAL_TIME_CROWD_CONTROL_DEALT_TO_CHAMPIONS",
+                            "value": 72.85455322265625
+                        },
+                        {
+                            "name": "TOTAL_HEAL_ON_TEAMMATES",
+                            "value": 0
+                        },
+                        {
+                            "name": "TIME_CCING_OTHERS",
+                            "value": 18.29494857788086
+                        },
+                        {
+                            "name": "BASIC_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "COMMAND_PINGS",
+                            "value": 14
+                        },
+                        {
+                            "name": "DANGER_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "GET_BACK_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "RETREAT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ON_MY_WAY_PINGS",
+                            "value": 40
+                        },
+                        {
+                            "name": "ASSIST_ME_PINGS",
+                            "value": 17
+                        },
+                        {
+                            "name": "ENEMY_MISSING_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "PUSH_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ALL_IN_PINGS",
+                            "value": 7
+                        },
+                        {
+                            "name": "HOLD_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "BAIT_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "VISION_CLEARED_PINGS",
+                            "value": 0
+                        },
+                        {
+                            "name": "ENEMY_VISION_PINGS",
+                            "value": 6
+                        },
+                        {
+                            "name": "NEED_VISION_PINGS",
+                            "value": 0
+                        }
+                    ],
+                    "summonerSpell1CooldownRemaining": 137.964111328125,
+                    "summonerSpell1Name": "SummonerDot",
+                    "summonerSpell2CooldownRemaining": 7.6263427734375,
+                    "summonerSpell2Name": "SummonerFlashPerksHextechFlashtraptionV2",
+                    "teamID": 200,
+                    "totalGold": 6059,
+                    "ultimateCooldownRemaining": 81.557373046875,
+                    "ultimateName": "ThreshRPenta"
+                }
+            ],
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:55.143Z",
+            "rfc461Schema": "stats_update",
+            "sequenceIndex": 6856,
+            "stageID": 1,
+            "teams": [
+                {
+                    "assists": 19,
+                    "baronKills": 1,
+                    "championsKills": 11,
+                    "deaths": 6,
+                    "dragonKills": 4,
+                    "inhibKills": 0,
+                    "teamID": 100,
+                    "totalGold": 56324,
+                    "towerKills": 7
+                },
+                {
+                    "assists": 11,
+                    "baronKills": 0,
+                    "championsKills": 6,
+                    "deaths": 11,
+                    "dragonKills": 1,
+                    "inhibKills": 0,
+                    "teamID": 200,
+                    "totalGold": 45043,
+                    "towerKills": 0
+                }
+            ]
+        },
+        {
+            "chargesRemaining": 0,
+            "gameID": 3325749,
+            "gameName": "109517090067785432|game1",
+            "gameTime": 1799045,
+            "maxCharges": 0,
+            "maxCooldown": 0,
+            "maxRechargeTime": 0,
+            "participant": 3,
+            "platformID": "ESPORTSTMNT01",
+            "playbackID": 1,
+            "rfc001Scope": "riot.lol.mgs.sx",
+            "rfc190Scope": "test.unk1.unk.lolgame.legs",
+            "rfc460Hostname": "0.0.0.0",
+            "rfc460Timestamp": "2023-03-17T22:42:55.173Z",
+            "rfc461Schema": "skill_used",
+            "sequenceIndex": 6857,
+            "skillSlot": 4,
+            "stageID": 1
+        }
+    ],
+    "nextPageToken": "eyJnYW1lSWQiOiJFU1BPUlRTVE1OVDAxOjMzMjU3NDkiLCJhZnRlciI6eyJwbGF5YmFja0lkIjoxLCJzZXF1ZW5jZUlkIjo2ODU3fX0="
+}
