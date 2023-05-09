@@ -3,23 +3,23 @@ from kivy.logger import Logger
 
 GOLD_DIFF_THRESHOLD = 100
 
-def find_stats(key_list, stats):
 
+    
+def find_stat(key, stats):
+    for this_stat in stats:
+        if this_stat["name"] == key:
+            return this_stat["value"]
+
+    return None
+
+
+def find_stats(key_list, stats):
     """
     Expects 'stats' from a livestats stats_update participant
     and a 'key_list' of the stats to search for
     returns dict if successful, None if none are found
     any key not found will have a value of None
     """
-
-    def find_stat(key, stats):
-
-        for this_stat in stats:
-            if this_stat["name"] == key:
-                return this_stat["value"]
-
-        return None
-
     return_dict = {}
 
     for thisKey in key_list:
@@ -30,7 +30,6 @@ def find_stats(key_list, stats):
 
     if len(return_dict) > 0:
         return return_dict
-
     else:
         return None
 
@@ -111,9 +110,8 @@ def convert_MS_string_to_milliseconds(string_time):
 def calculate_teams_damage(participants, *args):
 
     """
-    Sums TOTAL_DAMAGE_DEALT_TO_CHAMPIONS
+    returns list of TOTAL_DAMAGE_DEALT_TO_CHAMPIONS
     for all given participants
-    returns a list of integers
     """
 
     this_damage_list = []
@@ -136,9 +134,8 @@ def calculate_teams_damage(participants, *args):
 def calculate_teams_damage_per_team(participants, *args):
 
     """
-    Sums TOTAL_DAMAGE_DEALT_TO_CHAMPIONS
-    for all given participants
-    returns 2 lists of integers
+    Returns 2 lists of ints representing TOTAL_DAMAGE_DEALT_TO_CHAMPIONS
+    One for team 100 and one for team 200
     """
 
     blue_damage = []
@@ -166,6 +163,27 @@ def calculate_teams_damage_per_team(participants, *args):
         red_result = red_damage
 
     return blue_result, red_result
+
+
+def calculate_sum_of_team_damage(participants, *args):
+    """
+    Sums TOTAL_DAMAGE_DEALT_TO_CHAMPIONS
+    for all given participants, returns 2 values 
+    one for team 100 and one for team 200
+    """
+    blue_damage = 0
+    red_damage = 0
+
+    for this_participant in participants:
+        if "stats" in this_participant:
+            dmg = find_stat("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS", this_participant["stats"])
+            
+            if this_participant["teamID"] == 100:
+                blue_damage += dmg
+            elif this_participant["teamID"] == 200:
+                red_damage += dmg
+
+    return blue_damage, red_damage
 
 
 def calculate_teams_gold(participants, *args):
@@ -339,6 +357,15 @@ def calculate_DMG_D(player, opponent, *args):
         result = player_dmg - opponent_dmg
 
     return result
+
+
+def calculate_DMG_percent(player, team_dmg, *args):
+    """ Given a player and that players team damage, 
+        return the percent of the teams damage coming from the player """
+    dmg = find_stat("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS", player["stats"])
+    if team_dmg > 0:
+        return dmg / team_dmg
+    return 0
 
 
 def calculate_total_gold(participant, *args):
