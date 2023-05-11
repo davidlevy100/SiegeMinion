@@ -3,7 +3,7 @@ from datetime import datetime
 import kivy.properties as kp
 
 from data.events.data_event_dispatch import DataEventDispatcher
-from data.esports.stats import calculate_KDA, calculate_CSD, calculate_XPD, calculate_GD, calculate_VSM, calculate_KP, calculate_sum_of_team_damage, calculate_DMG_percent
+from data.esports.stats import calculate_KDA, calculate_CSD, calculate_XPD, calculate_GD, string_VSM, string_KP, calculate_sum_of_team_damage, string_DMG_percent
 
 
 class StatsUnderPlayerSender(DataEventDispatcher):
@@ -36,6 +36,7 @@ class StatsUnderPlayerSender(DataEventDispatcher):
             
             game_time_ms = self.current_stats_update["gameTime"]
 
+            print("GAME_TIME:", game_time_ms)
             participant_map_8_14 = self.get_8_14_participant_map(game_time_ms)
 
             blue_kills = 0
@@ -43,8 +44,10 @@ class StatsUnderPlayerSender(DataEventDispatcher):
             if "teams" in self.current_stats_update and len(self.current_stats_update["teams"]) == 2:
                 blue = self.current_stats_update["teams"][0]
                 red = self.current_stats_update["teams"][1]
-                blue_kills = blue["championKills"] if "championKills" in blue else 0
-                red_kills = red["championKills"] if "championKills" in blue else 0
+                blue_kills = blue["championsKills"] if "championsKills" in blue else 0
+                red_kills = red["championsKills"] if "championsKills" in blue else 0
+
+            print(f"blue kills: {blue_kills}, red kills: {red_kills}")
 
             blue_dmg, red_dmg = calculate_sum_of_team_damage(participant_list)
             
@@ -68,12 +71,14 @@ class StatsUnderPlayerSender(DataEventDispatcher):
             result is empty between 0-8 minutes, 8 minute state between 8 and 14 minutes
             and 14 minute state from minute 14 on """
         game_state_idx = None
-        if game_time_ms >= (14 * 60000):
+        game_time_8 = 8 * 60000
+        game_time_14 = 14 * 60000
+        if game_time_ms >= game_time_14:
             # Beyond minute 14
-            game_state_idx = self.app.livestats_history.get_history_index(14000)
-        elif game_time_ms >= (8 * 60000):
+            game_state_idx = self.app.livestats_history.get_history_index(game_time_14)
+        elif game_time_ms >= game_time_8:
             # Between 8 and 14
-            game_state_idx = self.app.livestats_history.get_history_index(8000)
+            game_state_idx = self.app.livestats_history.get_history_index(game_time_8)
 
         participant_map = {}
         if game_state_idx is not None:
@@ -112,7 +117,7 @@ class StatsUnderPlayerSender(DataEventDispatcher):
 
         stat3 = 0
         if team_dmg > 0:
-            stat3 = calculate_DMG_percent(current_participant, team_dmg)
+            stat3 = string_DMG_percent(current_participant, team_dmg)
 
         return self.format_output(participant_id, stat1, stat2, stat3)
     
@@ -127,7 +132,7 @@ class StatsUnderPlayerSender(DataEventDispatcher):
             stat2 = calculate_GD(key_time_participant, key_time_opponent)
 
         # TODO CJ% if >= 10%, else kill participation   
-        stat3 = calculate_KP(current_participant, team_kills)  
+        stat3 = string_KP(current_participant, team_kills)  
 
         return self.format_output(participant_id, stat1, stat2, stat3)
     
@@ -144,14 +149,14 @@ class StatsUnderPlayerSender(DataEventDispatcher):
 
         stat3 = 0
         if team_dmg > 0:
-            stat3 = calculate_DMG_percent(current_participant, team_dmg)
+            stat3 = string_DMG_percent(current_participant, team_dmg)
 
         return self.format_output(participant_id, stat1, stat2, stat3)
     
 
     def get_support_stats(self, participant_id, opponent_id, participant_map, participant_map_8_14, game_time_ms, team_kills):
         current_participant = participant_map[participant_id]
-        stat1 = calculate_VSM(current_participant, game_time_ms)
+        stat1 = string_VSM(current_participant, game_time_ms)
 
         stat2 = 0
         if len(participant_map_8_14) == 10:
@@ -159,7 +164,7 @@ class StatsUnderPlayerSender(DataEventDispatcher):
             key_time_opponent = participant_map_8_14[opponent_id]
             stat2 = calculate_GD(key_time_participant, key_time_opponent)
 
-        stat3 = calculate_KP(current_participant, team_kills)  
+        stat3 = string_KP(current_participant, team_kills)  
 
         return self.format_output(participant_id, stat1, stat2, stat3)
     
