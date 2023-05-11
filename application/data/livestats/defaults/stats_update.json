@@ -44,6 +44,7 @@
         "killStreakLength": 0,
         "sequenceIndex": 0
     },
+    "champion_kills": [],
     "lastDragonKiller": 0,
     "gameID": 0,
     "gameName": "",

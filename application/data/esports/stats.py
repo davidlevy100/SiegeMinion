@@ -582,6 +582,16 @@ def calculate_vision(participant, *args):
     return result
 
 
+def calculate_VSM(participant, game_time_ms, *args):
+    """ Return vision score per minute for the given participant 
+        Expected the participant and game_time in ms """
+    vs = calculate_vision(participant)
+    minutes = game_time_ms / 60000
+    if minutes > 0:
+        return vs / minutes
+    return 0
+
+
 def calculate_XP(participant, *args):
 
     """ Given a participant, returns XP
