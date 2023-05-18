@@ -100,6 +100,7 @@ from data.vizrt.dragon_soul_sender import DragonSoulVizSender
 from data.vizrt.mythic_item_sender import MythicItemVizSender
 from data.vizrt.special_baron_announce_sender import SpecialBaronAnnounceVizSender
 from data.vizrt.stats_under_player_sender import StatsUnderPlayerSender
+from data.vizrt.stacks_sender import StacksSender
 
 
 from data.osc.sender import OSCSender
@@ -377,6 +378,7 @@ class SiegeMinion(App):
         self.elder_viz_sender = ElderVizSender()
         self.next_dragon_viz_sender = NextDragonVizSender()
         self.stats_under_player_sender = StatsUnderPlayerSender()
+        self.stacks_sender = StacksSender()
 
         self.inhib_left_viz_sender = InhibitorVizSender(
             side="blue",
