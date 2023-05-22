@@ -3,7 +3,7 @@ from datetime import datetime
 import kivy.properties as kp
 
 from data.events.data_event_dispatch import DataEventDispatcher
-from data.esports.stats import calculate_KDA, calculate_CSD, calculate_XPD, calculate_GD, string_VSM, string_KP, calculate_sum_of_team_damage, string_DMG_percent
+from data.esports.stats import string_KDA, string_CSD, string_XPD, string_GD, string_VSM, string_KP, calculate_sum_of_team_damage, string_DMG_percent
 
 
 class StatsUnderPlayerSender(DataEventDispatcher):
@@ -135,45 +135,46 @@ class StatsUnderPlayerSender(DataEventDispatcher):
         return self.format_output(participant_id, stat1, stat2, stat3)
 
     def vision_score_per_minute(self, participant, game_time_ms):
-        return f"VS/M {string_VSM(participant, game_time_ms)}"
+        return ("VS/M", string_VSM(participant, game_time_ms))
 
     def gold_diff_8_14(self, participant_map, participant_id, opponent_id, time):
         if participant_map is not None:
             participant = participant_map[participant_id]
             opponent = participant_map[opponent_id]
-            return f"GD@{time} {calculate_GD(participant, opponent)}"
-        return "-1"
+            return (f"GD@{time}", string_GD(participant, opponent))
+        return ("", "-1")
     
     def creep_score_diff_8_14(self, participant_map, participant_id, opponent_id, time):
         if participant_map is not None:
             participant = participant_map[participant_id]
             opponent = participant_map[opponent_id]
-            return f"GD@{time} {calculate_CSD(participant, opponent)}"
-        return "-1"
+            return (f"GD@{time}", string_CSD(participant, opponent))
+        return ("", "-1")
     
     def xp_diff_8_14(self, participant_map, participant_id, opponent_id, time):
         if participant_map is not None:
             participant = participant_map[participant_id]
             opponent = participant_map[opponent_id]
-            return f"XPD@{time} {calculate_XPD(participant, opponent)}"
-        return "-1"
+            return (f"XPD@{time}", string_XPD(participant, opponent))
+        return ("", "-1")
     
     def damage_percent(self, participant, team_dmg):
         if team_dmg > 0:
-            return f"DMG% {string_DMG_percent(participant, team_dmg)}"
-        return "-1"
+            return ("DMG%", string_DMG_percent(participant, team_dmg))
+        return ("", "-1")
 
     def kill_participation(self, participant, team_kills):
-        return f"KP {string_KP(participant, team_kills)}"
+        return ("KP", string_KP(participant, team_kills))
     
     def kda(self, participant):
-        return f"KDA {calculate_KDA(participant)}"
+        return ("KDA", string_KDA(participant))
     
     def solo_kills(self, solo_kills):
-        return f"SOLO K {solo_kills}"
+        return ("SOLO K", f"{solo_kills}")
 
     def format_output(self, participant_id, *args):
         output = {}
         for idx, stat in enumerate(args):
-            output[f"stats{participant_id}/{idx + 1}"] = stat
+            output[f"stats{participant_id}/{idx + 1}/cat"] = stat[0]
+            output[f"stats{participant_id}/{idx + 1}/val"] = stat[1]
         return output
