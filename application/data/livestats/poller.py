@@ -113,9 +113,15 @@ class PlaybackPollingDispatcher(PollingDispatcher):
             file_path = TEST_LIVESTATS_DATA.joinpath(f"{self.index}.json")
 
             if file_path.exists():
-                data = json.loads(file_path.read_text())
-                self.output = data
-                self.index = self.index + 1
+
+                try:
+
+                    data = json.loads(file_path.read_text())
+                    self.output = data
+                    self.index = self.index + 1
+
+                except json.decoder.JSONDecodeError as e:
+                    print(self.index, e)
 
             else:
                 self.connected = False

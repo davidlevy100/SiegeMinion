@@ -15,7 +15,7 @@ DRAGON_NAME_MAP = {
 }
 
 
-class L3PauseGraphicSender(VizcrankSender):
+class PauseGraphicSender(VizcrankSender):
 
     pause_started_event = kp.DictProperty()
 
@@ -25,7 +25,7 @@ class L3PauseGraphicSender(VizcrankSender):
         self.app.live_data.bind(pause_started_event=self.setter('pause_started_event'))
 
         # Config Keys
-        self.section = "L3 Pause Graphic"
+        self.section = "Pause Graphic"
 
     def on_pause_started_event(self, *args):
         if not self.can_process():
@@ -41,14 +41,10 @@ class L3PauseGraphicSender(VizcrankSender):
             self.send_to_trio()
 
     def can_process(self, *args):
-        if len(self.pause_started_event) == 0:
-            return False
-
-        else:
-            return True
+        return len(self.pause_started_event) > 0 and "gameTime" in self.pause_started_event
 
     def process_game_data(self, game_data, *args):
-        if len(self.pause_started_event) > 0 and "gameTime" in self.pause_started_event:
+        if self.can_process():
             # Turn Dots Off
             self.safe_set_field(game_data, "0001", "0")
 
@@ -126,8 +122,3 @@ class L3PauseGraphicSender(VizcrankSender):
 
     def get_dragon_name(self, dragon):
         return DRAGON_NAME_MAP[dragon] if dragon in DRAGON_NAME_MAP else "_Placeholder"
-    
-    def safe_set_field(self, game_data, field, value):
-        """ helper function to verify the field is present and then set the value in it """
-        if self.has_field(field=field, fields=game_data["fields"], key="value"):
-            game_data["fields"][field]["value"] = value
