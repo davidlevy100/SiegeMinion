@@ -31,6 +31,21 @@ DRAGON_CODES = {
     "elder": 7,
 }
 
+PASSIVES = {
+    "AurelionSol": "AurelionSolPassive",
+    "Bard": "BardPassive",
+    "ChoGath": "ChoGathFeast",
+    "Draven": "DravenPassive",
+    "Kindred": "KindredPassive",
+    "Nasus": "NasusSiphon",
+    "Senna": "SennaPassive",
+    "Sion": "SionSoulFurnace",
+    "Syndra": "SyndraPassive",
+    "Syndra2": "SyndraPassive2",
+    "Veigar": "VeigarPassive",
+    "Viktor": "ViktorPassive"
+}
+
 def get_dragon_code(dragon_name):
 
     if dragon_name in DRAGON_CODES:
@@ -200,3 +215,7 @@ def sanitize_number(value):
 
 def two_line(value):
     return value
+
+
+def get_passive_image(champ_name: str) -> str:
+    return PASSIVES.get(champ_name, "_blank")

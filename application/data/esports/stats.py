@@ -179,10 +179,8 @@ def calculate_sum_of_team_damage(participants, *args):
             dmg = find_stat("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS", this_participant["stats"])
             
             if this_participant["teamID"] == 100:
-                print(f"adding {dmg} to blue")
                 blue_damage += dmg
             elif this_participant["teamID"] == 200:
-                print(f"adding {dmg} to red")
                 red_damage += dmg
 
     return blue_damage, red_damage

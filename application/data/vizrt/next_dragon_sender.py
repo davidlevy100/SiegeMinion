@@ -1,9 +1,7 @@
-from datetime import datetime
-
 import kivy.properties as kp
 
 from data.events.data_event_dispatch import DataEventDispatcher
-from data.vizrt.viz_helper import DRAGON_CODES
+from data.vizrt.viz_helper import get_dragon_code
 
 STATES = {
     "alive": 1,
@@ -51,7 +49,7 @@ class NextDragonVizSender(DataEventDispatcher):
     def on_next_dragon_name(self, *args):
 
         output = {
-            "dragon/type": DRAGON_CODES[self.next_dragon_name]
+            "dragon/type": get_dragon_code(self.next_dragon_name)
         }
 
         self.send_data(**output)
@@ -70,7 +68,7 @@ class NextDragonVizSender(DataEventDispatcher):
     def on_state(self, *args):
 
         output = {
-            "dragon/anim": STATES[self.state]
+            "dragon/anim": STATES.get(self.state, 0)
         }
 
         self.send_data(**output)
