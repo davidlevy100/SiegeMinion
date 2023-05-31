@@ -164,7 +164,7 @@ class OverlayPlayer(DataEventDispatcher):
     rune5 = kp.DictProperty()
 
     stacks = kp.NumericProperty(-1)
-
+    didStack = kp.BooleanProperty(False)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -233,6 +233,7 @@ class OverlayPlayer(DataEventDispatcher):
         self.rune5 = self.app.data_dragon.get_asset("rune", "default")
 
         self.stacks = -1
+        self.didStack = False
 
 
     def on_game_info_event(self, *args):
@@ -314,6 +315,7 @@ class OverlayPlayer(DataEventDispatcher):
                     for buff in this_participant["stackingBuffs"]:
                         if buff["id"] in RelevantBuffs:
                             self.stacks = buff["stacks"]
+                            self.didStack = True
                 else:
                     self.stacks = -1
 

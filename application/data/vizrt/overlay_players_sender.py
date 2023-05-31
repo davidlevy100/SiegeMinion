@@ -31,6 +31,7 @@ class PlayerVizSender(DataEventDispatcher):
 
     source = kp.ObjectProperty()
     stacks = kp.NumericProperty(-1)
+    didStack = kp.BooleanProperty(False)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -40,6 +41,7 @@ class PlayerVizSender(DataEventDispatcher):
         self.stacks = self.source.stacks
         self.source.bind(stacks=self.setter('stacks'))
         self.source.bind(pick_champion=self.setter('pick_champion'))
+        self.source.bind(didStack=self.setter('didStack'))
 
     
     def on_stacks(self, *args):
@@ -48,9 +50,12 @@ class PlayerVizSender(DataEventDispatcher):
         passive = get_passive_image(champ)
         stacks = self.stacks
 
-        if champ == "Syndra" and self.stacks > 119:
+        if (champ == "Syndra" and
+            self.didStack and 
+            self.stacks == -1
+            ):
             passive = get_passive_image("Syndra2")
-            stacks = 0
+            stacks = " "
 
         output = {
             f"players/p{self.participant_ID}/stacks": stacks,
