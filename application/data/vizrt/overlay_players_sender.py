@@ -13,7 +13,7 @@ class AllPlayersVizSender(DataEventDispatcher):
 
         self.player1 = PlayerVizSender(source=self.app.overlay_players.player1, participant_ID=1)
         self.player2 = PlayerVizSender(source=self.app.overlay_players.player2, participant_ID=2)
-        self.player3 = PlayerVizSender(source=self.app.overlay_players.player3, participant_ID=2)
+        self.player3 = PlayerVizSender(source=self.app.overlay_players.player3, participant_ID=3)
         self.player4 = PlayerVizSender(source=self.app.overlay_players.player4, participant_ID=4)
         self.player5 = PlayerVizSender(source=self.app.overlay_players.player5, participant_ID=5)
         self.player6 = PlayerVizSender(source=self.app.overlay_players.player6, participant_ID=6)
@@ -50,7 +50,7 @@ class PlayerVizSender(DataEventDispatcher):
 
         if champ == "Syndra" and self.stacks > 119:
             passive = get_passive_image("Syndra2")
-            stacks = ""
+            stacks = 0
 
         output = {
             f"players/p{self.participant_ID}/stacks": stacks,

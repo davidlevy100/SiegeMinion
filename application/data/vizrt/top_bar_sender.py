@@ -217,10 +217,10 @@ class TopBarVizSender(DataEventDispatcher):
 
         output = {
             "ov/dragonsKilledL": self.dragon_kills_left,
-            "ov/dragon1L": get_dragon_code(self.dragon_left_1, 0),
-            "ov/dragon2L": get_dragon_code(self.dragon_left_2, 0),
-            "ov/dragon3L": get_dragon_code(self.dragon_left_3, 0),
-            "ov/dragon4L": get_dragon_code(self.dragon_left_4, 0)
+            "ov/dragon1L": get_dragon_code(self.dragon_left_1),
+            "ov/dragon2L": get_dragon_code(self.dragon_left_2),
+            "ov/dragon3L": get_dragon_code(self.dragon_left_3),
+            "ov/dragon4L": get_dragon_code(self.dragon_left_4)
         }
 
         self.send_data(**output)
@@ -230,10 +230,10 @@ class TopBarVizSender(DataEventDispatcher):
 
         output = {
             "ov/dragonsKilledR": self.dragon_kills_right,
-            "ov/dragon1R": get_dragon_code(self.dragon_right_1, 0),
-            "ov/dragon2R": get_dragon_code(self.dragon_right_2, 0),
-            "ov/dragon3R": get_dragon_code(self.dragon_right_3, 0),
-            "ov/dragon4R": get_dragon_code(self.dragon_right_4, 0),
+            "ov/dragon1R": get_dragon_code(self.dragon_right_1),
+            "ov/dragon2R": get_dragon_code(self.dragon_right_2),
+            "ov/dragon3R": get_dragon_code(self.dragon_right_3),
+            "ov/dragon4R": get_dragon_code(self.dragon_right_4),
         }
 
         self.send_data(**output)
