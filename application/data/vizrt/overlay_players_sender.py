@@ -57,6 +57,12 @@ class PlayerVizSender(DataEventDispatcher):
             passive = get_passive_image("Syndra2")
             stacks = " "
 
+        if (champ == "Draven" and
+            self.didStack and 
+            self.stacks == -1
+            ):
+            stacks = 0
+
         output = {
             f"players/p{self.participant_ID}/stacks": stacks,
             f"players/p{self.participant_ID}/passive": passive

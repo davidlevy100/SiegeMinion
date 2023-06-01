@@ -32,18 +32,18 @@ DRAGON_CODES = {
 }
 
 PASSIVES = {
-    "AurelionSol": "AurelionSolPassive",
-    "Bard": "BardPassive",
-    "ChoGath": "ChoGathFeast",
-    "Draven": "DravenPassive",
-    "Kindred": "KindredPassive",
-    "Nasus": "NasusSiphon",
-    "Senna": "SennaPassive",
-    "Sion": "SionSoulFurnace",
-    "Syndra": "SyndraPassive",
-    "Syndra2": "SyndraPassive2",
-    "Veigar": "VeigarPassive",
-    "Viktor": "ViktorPassive"
+    "aurelionsol": "AurelionSolPassive",
+    "bard": "BardPassive",
+    "chogath": "ChoGathFeast",
+    "draven": "DravenPassive",
+    "kindred": "KindredPassive",
+    "nasus": "NasusSiphoningStrike",
+    "senna": "SennaPassive",
+    "sion": "SionSoulFurnace",
+    "syndra": "SyndraPassive",
+    "syndra2": "SyndraPassive2",
+    "veigar": "VeigarPassive",
+    "viktor": "ViktorPassive"
 }
 
 def get_dragon_code(dragon_name):
@@ -218,4 +218,4 @@ def two_line(value):
 
 
 def get_passive_image(champ_name: str) -> str:
-    return PASSIVES.get(champ_name, "_blank")
+    return PASSIVES.get(champ_name.lower(), "_blank")
