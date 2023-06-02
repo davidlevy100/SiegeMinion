@@ -2,22 +2,7 @@ import kivy.properties as kp
 from kivy.logger import Logger
 
 from data.events.data_event_dispatch import DataEventDispatcher
-
-
-DRAGON_CODES = {
-    "": 0,
-    None: 0,
-    "default": 0,
-    "air": 1,
-    "cloud": 1,
-    "fire": 2,
-    "infernal": 2,
-    "earth": 3,
-    "mountain": 3,
-    "water": 4,
-    "ocean": 4,
-    "elder": 5
-}
+from data.vizrt.viz_helper import get_dragon_code
 
 class NextDragonOSCSender(DataEventDispatcher):
 
@@ -39,7 +24,7 @@ class NextDragonOSCSender(DataEventDispatcher):
     def on_next_dragon_name(self, *args):
 
         output = {
-            "/NextDragon/Type": DRAGON_CODES.get(self.next_dragon_name, 0),
+            "/NextDragon/Type": get_dragon_code(self.next_dragon_name),
             "/NextDragon/SequenceIndex": self.app.next_dragon.sequence_index
         }
 

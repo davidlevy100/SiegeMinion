@@ -3,7 +3,7 @@ from datetime import datetime
 import kivy.properties as kp
 
 from data.events.data_event_dispatch import DataEventDispatcher
-from data.vizrt.viz_helper import DRAGON_CODES
+from data.vizrt.viz_helper import get_dragon_code
 
 from data.esports.stats import GOLD_DIFF_THRESHOLD
 from data.esports.stats import format_signed_number
@@ -153,15 +153,15 @@ class TopBarVizSender(DataEventDispatcher):
             "ov/show": int(bool(self.visible)),
             "ov/clock": self.clock,
             "ov/dragonsKilledL": self.dragon_kills_left,
-            "ov/dragon1L": DRAGON_CODES[self.dragon_left_1],
-            "ov/dragon2L": DRAGON_CODES[self.dragon_left_2],
-            "ov/dragon3L": DRAGON_CODES[self.dragon_left_3],
-            "ov/dragon4L": DRAGON_CODES[self.dragon_left_4],
+            "ov/dragon1L": get_dragon_code(self.dragon_left_1),
+            "ov/dragon2L": get_dragon_code(self.dragon_left_2),
+            "ov/dragon3L": get_dragon_code(self.dragon_left_3),
+            "ov/dragon4L": get_dragon_code(self.dragon_left_4),
             "ov/dragonsKilledR": self.dragon_kills_right,
-            "ov/dragon1R": DRAGON_CODES[self.dragon_right_1],
-            "ov/dragon2R": DRAGON_CODES[self.dragon_right_2],
-            "ov/dragon3R": DRAGON_CODES[self.dragon_right_3],
-            "ov/dragon4R": DRAGON_CODES[self.dragon_right_4],
+            "ov/dragon1R": get_dragon_code(self.dragon_right_1),
+            "ov/dragon2R": get_dragon_code(self.dragon_right_2),
+            "ov/dragon3R": get_dragon_code(self.dragon_right_3),
+            "ov/dragon4R": get_dragon_code(self.dragon_right_4),
             "ov/goldL": self.gold_left,
             "ov/goldDiffL":  0,
             "ov/goldDiffActiveL":  int(self.gold_diff_active_left),
@@ -217,10 +217,10 @@ class TopBarVizSender(DataEventDispatcher):
 
         output = {
             "ov/dragonsKilledL": self.dragon_kills_left,
-            "ov/dragon1L": DRAGON_CODES[self.dragon_left_1],
-            "ov/dragon2L": DRAGON_CODES[self.dragon_left_2],
-            "ov/dragon3L": DRAGON_CODES[self.dragon_left_3],
-            "ov/dragon4L": DRAGON_CODES[self.dragon_left_4]
+            "ov/dragon1L": get_dragon_code(self.dragon_left_1),
+            "ov/dragon2L": get_dragon_code(self.dragon_left_2),
+            "ov/dragon3L": get_dragon_code(self.dragon_left_3),
+            "ov/dragon4L": get_dragon_code(self.dragon_left_4)
         }
 
         self.send_data(**output)
@@ -230,10 +230,10 @@ class TopBarVizSender(DataEventDispatcher):
 
         output = {
             "ov/dragonsKilledR": self.dragon_kills_right,
-            "ov/dragon1R": DRAGON_CODES[self.dragon_right_1],
-            "ov/dragon2R": DRAGON_CODES[self.dragon_right_2],
-            "ov/dragon3R": DRAGON_CODES[self.dragon_right_3],
-            "ov/dragon4R": DRAGON_CODES[self.dragon_right_4]
+            "ov/dragon1R": get_dragon_code(self.dragon_right_1),
+            "ov/dragon2R": get_dragon_code(self.dragon_right_2),
+            "ov/dragon3R": get_dragon_code(self.dragon_right_3),
+            "ov/dragon4R": get_dragon_code(self.dragon_right_4),
         }
 
         self.send_data(**output)

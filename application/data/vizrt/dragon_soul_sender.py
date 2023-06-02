@@ -1,7 +1,7 @@
 import kivy.properties as kp
 
 from data.events.data_event_dispatch import DataEventDispatcher
-from data.vizrt.viz_helper import DRAGON_CODES
+from data.vizrt.viz_helper import get_dragon_code
 
 
 class DragonSoulVizSender(DataEventDispatcher):
@@ -22,7 +22,7 @@ class DragonSoulVizSender(DataEventDispatcher):
 
         output = {
             "dragonSoul/anim": int(self.active),
-            "dragonSoul/type": DRAGON_CODES[self.dragon_soul]
+            "dragonSoul/type": get_dragon_code(self.dragon_soul)
         }
 
         self.send_data(**output)

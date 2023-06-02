@@ -8,6 +8,20 @@ from kivy.logger import Logger
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
 
+RelevantBuffs = {
+    1680409346, # Kindred
+    1467230133, # Draven
+    3901057272, # Senna
+    1960866709, # Veigar
+    454914885, # Nasus
+    2256731136, # Cho
+    1721135316, # Bard
+    3375836267, # Asol
+    1911847746, # Sion
+    2681101066, # Syndra
+    2197950930, # Viktor
+}
+
 class OverlayPlayers(DataEventDispatcher):
 
     game_info_event = kp.DictProperty()
@@ -149,6 +163,8 @@ class OverlayPlayer(DataEventDispatcher):
     rune4 = kp.DictProperty()
     rune5 = kp.DictProperty()
 
+    stacks = kp.NumericProperty(-1)
+    didStack = kp.BooleanProperty(False)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -215,6 +231,9 @@ class OverlayPlayer(DataEventDispatcher):
         self.rune3 = self.app.data_dragon.get_asset("rune", "default")
         self.rune4 = self.app.data_dragon.get_asset("rune", "default")
         self.rune5 = self.app.data_dragon.get_asset("rune", "default")
+
+        self.stacks = -1
+        self.didStack = False
 
 
     def on_game_info_event(self, *args):
@@ -291,6 +310,14 @@ class OverlayPlayer(DataEventDispatcher):
                     self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))                
                 
                 self.stats = this_participant
+
+                if "stackingBuffs" in this_participant:
+                    for buff in this_participant["stackingBuffs"]:
+                        if buff["id"] in RelevantBuffs:
+                            self.stacks = buff["stacks"]
+                            self.didStack = True
+                else:
+                    self.stacks = -1
 
 
     def get_my_participant(self, participants, *args):

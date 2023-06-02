@@ -99,7 +99,7 @@ from data.vizrt.player_runes_l3_sender import PlayerRunesL3VizSender
 from data.vizrt.dragon_soul_sender import DragonSoulVizSender
 from data.vizrt.mythic_item_sender import MythicItemVizSender
 from data.vizrt.special_baron_announce_sender import SpecialBaronAnnounceVizSender
-
+from data.vizrt.overlay_players_sender import AllPlayersVizSender
 
 from data.osc.sender import OSCSender
 from data.osc.champ_select_sender import LCUOSCSender
@@ -122,7 +122,6 @@ from data.vizrt.vizcrank.team_pick_order_sender import TeamPickOrderSender
 from data.vizrt.vizcrank.post_game_summary_sender import PostGameSummarySender
 from data.vizrt.vizcrank.post_game_baron_sender import PostGameBaronSender
 from data.vizrt.vizcrank.post_game_objectives_sender import PostGameObjectivesSender
-
 
 from ui.screens.main_screen_manager import MainScreenManager
 from ui.screens.overlay_screen_manager import OverlayScreenManager
@@ -439,6 +438,7 @@ class SiegeMinion(App):
         self.dragon_soul_viz_sender = DragonSoulVizSender()
         self.mythic_item_viz_sender = MythicItemVizSender()
         self.special_baron_announce_viz_sender = SpecialBaronAnnounceVizSender()
+        self.all_players_viz_sender = AllPlayersVizSender()
 
 
         # OSC Senders

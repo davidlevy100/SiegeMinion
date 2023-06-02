@@ -48,6 +48,7 @@ class LivestatsEventDispatcher(EventDispatcher):
     pause_started_event = kp.DictProperty()
     stats_sequence_id = kp.NumericProperty()
     special_kill_event = kp.DictProperty()
+    champion_kill_event = kp.DictProperty()
 
     item_destroyed_event = kp.DictProperty()
     item_purchased_event = kp.DictProperty()
@@ -162,6 +163,14 @@ class LivestatsEventDispatcher(EventDispatcher):
                     self.special_kill_event = this_event
 
 
+                ## Champion Kill
+                elif is_desired_event(
+                    event = this_event,
+                    rfc461Schema="champion_kill",
+                ):
+                    self.champion_kill_event = this_event
+
+
                 ## Rift Herald
                 elif is_desired_event(
                     event = this_event,
@@ -242,3 +251,4 @@ class LivestatsEventDispatcher(EventDispatcher):
         self.pause_started_event.clear()
         self.stats_sequence_id = 0
         self.special_kill_event.clear()
+        self.champion_kill_event.clear()
