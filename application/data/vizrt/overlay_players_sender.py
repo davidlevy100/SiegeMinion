@@ -33,6 +33,8 @@ class PlayerVizSender(DataEventDispatcher):
     stacks = kp.NumericProperty(-1)
     didStack = kp.BooleanProperty(False)
 
+    stats_under_player = kp.DictProperty()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -68,5 +70,13 @@ class PlayerVizSender(DataEventDispatcher):
             f"players/p{self.participant_ID}/passive": passive
         }
 
+        self.send_data(**output)
+
+    def on_stats_under_player(self, *args):
+        output = {}
+        for category, stat_value in self.stats_under_player:
+            output[f"players/p{self.participant_ID}/stats/cat"] = category
+            output[f"players/p{self.participant_ID}/stats/val"] = stat_value
+        
         self.send_data(**output)
         

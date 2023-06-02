@@ -7,20 +7,22 @@ from kivy.logger import Logger
 
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
+from data.esports.stats import string_KDA, string_CSD, string_XPD, string_GD, string_VSM, string_KP, calculate_sum_of_team_damage, string_DMG_percent
 
 RelevantBuffs = {
-    1680409346, # Kindred
-    1467230133, # Draven
-    3901057272, # Senna
-    1960866709, # Veigar
-    454914885, # Nasus
-    2256731136, # Cho
-    1721135316, # Bard
-    3375836267, # Asol
-    1911847746, # Sion
-    2681101066, # Syndra
-    2197950930, # Viktor
+    1680409346,  # Kindred
+    1467230133,  # Draven
+    3901057272,  # Senna
+    1960866709,  # Veigar
+    454914885,  # Nasus
+    2256731136,  # Cho
+    1721135316,  # Bard
+    3375836267,  # Asol
+    1911847746,  # Sion
+    2681101066,  # Syndra
+    2197950930,  # Viktor
 }
+
 
 class OverlayPlayers(DataEventDispatcher):
 
@@ -57,12 +59,10 @@ class OverlayPlayers(DataEventDispatcher):
         self.sorted_players = []
         self.runes_available = False
 
-
     def on_game_info_event(self, *args):
 
         if "participants" in self.game_info_event:
             self.runes_available = True
-
 
     def update_player_map(self, player_name, player, *args):
 
@@ -92,7 +92,6 @@ class OverlayPlayers(DataEventDispatcher):
                 result = this_player
 
         return result
-
 
     def find_player_by_id(self, id, *args):
 
@@ -132,7 +131,7 @@ class OverlayPlayer(DataEventDispatcher):
     pick_champion = kp.DictProperty()
 
     alive = kp.BooleanProperty(True)
-    status_color = kp.ListProperty([1,1,1,1])
+    status_color = kp.ListProperty([1, 1, 1, 1])
 
     level = kp.NumericProperty(0)
 
@@ -150,8 +149,7 @@ class OverlayPlayer(DataEventDispatcher):
     stats = kp.DictProperty()
     stat_time = kp.NumericProperty(0)
 
-
-    #Runes
+    # Runes
     primary_tree = kp.DictProperty()
     secondary_tree = kp.DictProperty()
 
@@ -165,6 +163,8 @@ class OverlayPlayer(DataEventDispatcher):
 
     stacks = kp.NumericProperty(-1)
     didStack = kp.BooleanProperty(False)
+
+    stats_under_player = kp.DictProperty()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -190,19 +190,16 @@ class OverlayPlayer(DataEventDispatcher):
         self.lcu_source.bind(spell1=self.setter('spell1'))
         self.lcu_source.bind(spell2=self.setter('spell2'))
 
-    
     def on_alive(self, *args):
 
         if self.alive:
-            self.status_color = [1,1,1,1]
+            self.status_color = [1, 1, 1, 1]
 
         else:
-            self.status_color = [1,0,0,1]
+            self.status_color = [1, 0, 0, 1]
 
-    
     def on_champion(self, *args):
         pass
-
 
     def on_game_reset(self, *args):
 
@@ -235,6 +232,7 @@ class OverlayPlayer(DataEventDispatcher):
         self.stacks = -1
         self.didStack = False
 
+        self.stats_under_player = {}
 
     def on_game_info_event(self, *args):
 
@@ -247,7 +245,6 @@ class OverlayPlayer(DataEventDispatcher):
             if this_participant is not None:
                 self.get_name_and_champ(this_participant)
                 self.get_runes(this_participant)
-
 
     def on_current_stats_update(self, *args):
 
@@ -272,7 +269,6 @@ class OverlayPlayer(DataEventDispatcher):
                     if spell1 is not None:
                         self.spell1 = spell1
 
-
                 if "summonerSpell2Name" in this_participant:
 
                     spell2 = self.app.data_dragon.get_asset(
@@ -283,10 +279,7 @@ class OverlayPlayer(DataEventDispatcher):
                     if spell2 is not None:
                         self.spell2 = spell2
         
-
-                if (len(self.name) == 0 or 
-                    len(self.pick_champion) == 0
-                ):
+                if (len(self.name) == 0 or len(self.pick_champion) == 0):
                     self.get_name_and_champ(this_participant)
 
                 if "alive" in this_participant:
@@ -318,7 +311,161 @@ class OverlayPlayer(DataEventDispatcher):
                             self.didStack = True
                 else:
                     self.stacks = -1
+                
+                participants = self.current_stats_update["participants"]
+                game_time_ms = self.stat_time
+                champion_kills = self.current_stats_update["champion_kills"]
+                self.stats_under_player = self.get_stats_under_player(
+                    this_participant, participants, game_time_ms, champion_kills)
 
+    def get_stats_under_player(self, participant, participant_list, game_time_ms, champion_kills):
+        participant_map = self.map_participants(participant_list)
+
+        time_8_14, participant_map_8_14 = self.get_8_14_participant_data(game_time_ms)
+        blue_kills, red_kills = self.get_team_kills()
+        blue_dmg, red_dmg = calculate_sum_of_team_damage(participant_list)
+
+        match participant["participantID"]:
+            case "1": return self.get_top_stats(1, 6, participant_map, participant_map_8_14, time_8_14, blue_dmg, champion_kills)
+            case "2": return self.get_jungle_stats(2, 7, participant_map, participant_map_8_14, time_8_14, blue_kills)
+            case "3": return self.get_mid_bot_stats(3, 8, participant_map, participant_map_8_14, time_8_14, blue_dmg)
+            case "4": return self.get_mid_bot_stats(4, 9, participant_map, participant_map_8_14, time_8_14, blue_dmg)
+            case "5": return self.get_support_stats(5, 10, participant_map, participant_map_8_14, time_8_14, game_time_ms, blue_kills)
+            case "6": return self.get_top_stats(6, 1, participant_map, participant_map_8_14, time_8_14, red_dmg, champion_kills)
+            case "7": return self.get_jungle_stats(7, 2, participant_map, participant_map_8_14, time_8_14, red_kills)
+            case "8": return self.get_mid_bot_stats(8, 3, participant_map, participant_map_8_14, time_8_14, red_dmg)
+            case "9": return self.get_mid_bot_stats(9, 4, participant_map, participant_map_8_14, time_8_14, red_dmg)
+            case "10": return self.get_support_stats(10, 5, participant_map, participant_map_8_14, time_8_14, game_time_ms, red_kills)
+
+    def get_8_14_participant_data(self, game_time_ms):
+        """ returns a time and a map of participants at either game time 8 minutes, or 14 minutes
+            result is empty between 0-8 minutes, 8 minute state between 8 and 14 minutes
+            and 14 minute state from minute 14 on """
+        game_state_idx = None
+        game_time_8 = 8 * 60000
+        game_time_14 = 14 * 60000
+        time = ""
+        if game_time_ms >= game_time_14:
+            # Beyond minute 14
+            game_state_idx = self.app.livestats_history.get_history_index(game_time_14)
+            time = "14"
+        elif game_time_ms >= game_time_8:
+            # Between 8 and 14
+            game_state_idx = self.app.livestats_history.get_history_index(game_time_8)
+            time = "8"
+        else:
+            return "", None
+
+        participant_map = {}
+        if game_state_idx is not None:
+            game_state = self.app.livestats_history.stats_update_history.values()[game_state_idx]
+
+            if "participants" in game_state:
+                participant_list = game_state["participants"]
+                participant_map = self.map_participants(participant_list)
+
+        if len(participant_map) != 10:
+            return "", None
+
+        return time, participant_map
+
+    def get_team_kills(self):
+        blue_kills = 0
+        red_kills = 0
+        if "teams" in self.current_stats_update and len(self.current_stats_update["teams"]) == 2:
+            blue = self.current_stats_update["teams"][0]
+            red = self.current_stats_update["teams"][1]
+            blue_kills = blue["championsKills"] if "championsKills" in blue else 0
+            red_kills = red["championsKills"] if "championsKills" in blue else 0
+        return blue_kills, red_kills
+
+    def map_participants(self, participants):
+        m = {}
+        for participant in participants:
+            if "participantID" in participant and participant["participantID"] <= 10 and participant["participantID"] > 0:
+                m[participant["participantID"]] = participant
+
+        return None if len(m) != 10 else m
+
+    def get_top_stats(self, participant_id, opponent_id, participant_map, participant_map_8_14, time_8_14, team_dmg, champ_kill_list):
+        current_participant = participant_map[participant_id]
+
+        solo_kills = 0
+        for champ_kill in champ_kill_list:
+            if "killer" in champ_kill and champ_kill["killer"] == participant_id:
+                if "assistants" in champ_kill and len(champ_kill["assistants"]) == 0:
+                    solo_kills += 1
+
+        stat1 = self.solo_kills(solo_kills) if solo_kills > 0 else self.kda(current_participant)
+        stat2 = self.creep_score_diff_8_14(participant_map_8_14, participant_id, opponent_id, time_8_14)
+        stat3 = self.damage_percent(current_participant, team_dmg)
+        return self.stats_to_dict(stat1, stat2, stat3)
+
+    def get_jungle_stats(self, participant_id, opponent_id, participant_map, participant_map_8_14, time_8_14, team_kills):
+        current_participant = participant_map[participant_id]
+        stat1 = self.gold_diff_8_14(participant_map_8_14, participant_id, opponent_id, time_8_14)
+        stat2 = self.xp_diff_8_14(participant_map_8_14, participant_id, opponent_id, time_8_14)
+        # TODO Stat3 CJ% if >= 10%, else kill participation
+        stat3 = self.kill_participation(current_participant, team_kills)
+        return self.stats_to_dict(stat1, stat2, stat3)
+
+    def get_mid_bot_stats(self, participant_id, opponent_id, participant_map, participant_map_8_14, time_8_14, team_dmg):
+        current_participant = participant_map[participant_id]
+        stat1 = self.kda(current_participant)
+        stat2 = self.creep_score_diff_8_14(participant_map_8_14, participant_id, opponent_id, time_8_14)
+        stat3 = self.damage_percent(current_participant, team_dmg)
+        return self.stats_to_dict(stat1, stat2, stat3)
+
+    def get_support_stats(self, participant_id, opponent_id, participant_map, participant_map_8_14, time_8_14, game_time_ms, team_kills):
+        current_participant = participant_map[participant_id]
+        stat1 = self.vision_score_per_minute(current_participant, game_time_ms)
+        stat2 = self.gold_diff_8_14(participant_map_8_14, participant_id, opponent_id, time_8_14)
+        stat3 = self.kill_participation(current_participant, team_kills)
+        return self.stats_to_dict(stat1, stat2, stat3)
+
+    def vision_score_per_minute(self, participant, game_time_ms):
+        return ("VS/M", string_VSM(participant, game_time_ms))
+
+    def gold_diff_8_14(self, participant_map, participant_id, opponent_id, time):
+        if participant_map is not None:
+            participant = participant_map[participant_id]
+            opponent = participant_map[opponent_id]
+            return (f"GD@{time}", string_GD(participant, opponent))
+        return ("", "-1")
+
+    def creep_score_diff_8_14(self, participant_map, participant_id, opponent_id, time):
+        if participant_map is not None:
+            participant = participant_map[participant_id]
+            opponent = participant_map[opponent_id]
+            return (f"GD@{time}", string_CSD(participant, opponent))
+        return ("", "-1")
+
+    def xp_diff_8_14(self, participant_map, participant_id, opponent_id, time):
+        if participant_map is not None:
+            participant = participant_map[participant_id]
+            opponent = participant_map[opponent_id]
+            return (f"XPD@{time}", string_XPD(participant, opponent))
+        return ("", "-1")
+
+    def damage_percent(self, participant, team_dmg):
+        if team_dmg > 0:
+            return ("DMG%", string_DMG_percent(participant, team_dmg))
+        return ("", "-1")
+
+    def kill_participation(self, participant, team_kills):
+        return ("KP", string_KP(participant, team_kills))
+
+    def kda(self, participant):
+        return ("KDA", string_KDA(participant))
+
+    def solo_kills(self, solo_kills):
+        return ("SOLO K", f"{solo_kills}")
+
+    def stats_to_dict(self, *args):
+        output = {}
+        for stat in args:
+            output[stat[0]] = stat[1]
+        return output
 
     def get_my_participant(self, participants, *args):
 
@@ -332,7 +479,6 @@ class OverlayPlayer(DataEventDispatcher):
 
         return result
 
-
     def get_name_and_champ(self, participant, *args):
 
         raw_name = ""
@@ -341,11 +487,9 @@ class OverlayPlayer(DataEventDispatcher):
 
             raw_name = participant["summonerName"]
 
-
         elif "playerName" in participant:
 
             raw_name = participant["playerName"]
-
 
         if len(raw_name) > 0:
 
@@ -358,8 +502,6 @@ class OverlayPlayer(DataEventDispatcher):
 
             self.app.overlay_players.update_player_map(self.name, self)
 
-
-        
         if "championName" in participant:
 
             champ = self.app.data_dragon.get_asset(
@@ -369,7 +511,6 @@ class OverlayPlayer(DataEventDispatcher):
 
             if champ is not None:
                 self.pick_champion = champ
-
 
     def get_runes(self, participant, *args):
 
@@ -381,7 +522,7 @@ class OverlayPlayer(DataEventDispatcher):
             )
 
             if keystone is not None:
-                self.keystone = keystone 
+                self.keystone = keystone
 
         if ("perks" in participant and
             len(participant["perks"]) > 0 and
@@ -472,7 +613,6 @@ class Inventory(DataEventDispatcher):
         self.last_callout = 0
         self.item_list = []
 
-
     def on_game_reset(self, *args):
 
         for i in range(7):
@@ -485,7 +625,6 @@ class Inventory(DataEventDispatcher):
         self.callouts.clear()
         self.last_callout = 0
         self.item_list = []
-
 
     def on_stats(self, *args):
         if "items" in self.stats:
@@ -530,7 +669,6 @@ class Inventory(DataEventDispatcher):
                 this_property = self.property(f"item{index}")
                 this_property.set(self, this_item)
 
-
     def on_local_time(self, *args):
 
         if (len(self.callouts) > 0 and
@@ -547,7 +685,6 @@ class Inventory(DataEventDispatcher):
                 LogMessage = f'Item Callout: Siege Minion announced '
                 LogMessage += f'{this_callout["external_name"]} at gametime: {self.clock}'
                 Logger.info(LogMessage)
-
 
     def out_of_fountain(self, stats, *args):
 
@@ -576,7 +713,6 @@ class Inventory(DataEventDispatcher):
                     return True
 
         return False
-
 
     def is_callout(self, item, *args):
 
@@ -613,9 +749,7 @@ class Inventory(DataEventDispatcher):
 
         return False
 
-    
     def no_viego_issues(self, item):
-
         """ This function screens out issues caused by Viego
             inheriting his victim's items.
 
@@ -638,7 +772,6 @@ class Inventory(DataEventDispatcher):
             result = self.store_tracker.did_purchase(self.participant_ID, item_code)
 
         return result
-
 
     def is_mythic_item(self, item):
 
