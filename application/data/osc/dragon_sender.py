@@ -2,21 +2,7 @@ import kivy.properties as kp
 from kivy.logger import Logger
 
 from data.events.data_event_dispatch import DataEventDispatcher
-
-
-DRAGON_CODES = {
-    "": 0,
-    None: 0,
-    "default": 0,
-    "air": 1,
-    "cloud": 1,
-    "fire": 2,
-    "infernal": 2,
-    "earth": 3,
-    "mountain": 3,
-    "water": 4,
-    "ocean": 4
-}
+from data.vizrt.viz_helper import get_dragon_code
 
 
 class DragonOSCSender(DataEventDispatcher):
@@ -99,29 +85,27 @@ class DragonOSCSender(DataEventDispatcher):
 
     def on_dragon_left_1(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_left_1]
+        self.dragon_killed = get_dragon_code(self.dragon_left_1)
         self.send_dragon_state()
 
 
     def on_dragon_left_2(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_left_2]
+        self.dragon_killed = get_dragon_code(self.dragon_left_2)
         self.send_dragon_state()
 
 
     def on_dragon_left_3(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_left_3]
+        self.dragon_killed = get_dragon_code(self.dragon_left_3)
         self.send_dragon_state()
 
 
     def on_dragon_left_4(self, *args):
 
-        this_dragon = DRAGON_CODES[self.dragon_left_4]
-
-        self.dragon_killed = this_dragon
+        self.dragon_killed = get_dragon_code(self.dragon_left_4)
         self.dragon_soul_team = 1
-        self.dragon_soul = this_dragon
+        self.dragon_soul = self.dragon_killed
 
         self.send_dragon_state()
         self.send_dragon_soul_state()
@@ -129,29 +113,28 @@ class DragonOSCSender(DataEventDispatcher):
 
     def on_dragon_right_1(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_right_1]
+        self.dragon_killed = get_dragon_code(self.dragon_right_1)    
         self.send_dragon_state()
 
 
     def on_dragon_right_2(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_right_2]
+        self.dragon_killed = get_dragon_code(self.dragon_right_2)
         self.send_dragon_state()
 
 
     def on_dragon_right_3(self, *args):
 
-        self.dragon_killed = DRAGON_CODES[self.dragon_right_3]
+        self.dragon_killed = get_dragon_code(self.dragon_right_3)
         self.send_dragon_state()
 
 
     def on_dragon_right_4(self, *args):
 
-        this_dragon = DRAGON_CODES[self.dragon_right_4]
+        self.dragon_killed = get_dragon_code(self.dragon_right_4)
 
-        self.dragon_killed = this_dragon
         self.dragon_soul_team = 2
-        self.dragon_soul = this_dragon
+        self.dragon_soul = self.dragon_killed
 
         self.send_dragon_state()
         self.send_dragon_soul_state()
