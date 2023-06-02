@@ -27,11 +27,7 @@ pyz = PYZ(a.pure, a.zipped_data,
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=True,
-<<<<<<< HEAD
-          name='SiegeMinion 6.2.5',
-=======
-          name='SiegeMinion 6.2.8',
->>>>>>> stacks
+          name='SiegeMinion 6.2.9',
           debug=False,
           strip=False,
           upx=True,
