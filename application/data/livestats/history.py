@@ -16,6 +16,7 @@ from data.livestats.dragon import DragonDispatcher
 from data.livestats.timed_objectives import InhibitorsDispatcher
 from data.livestats.turrets import TurretDispatcher
 from data.livestats.champion_kill_special import SpecialKillDispatcher
+from data.livestats.champion_kill import ChampionKillsDispatcher
 
 DEFAULT_STATS_UPDATE = get_default_stats_update()
 
@@ -64,6 +65,8 @@ class LivestatsHistory(DataEventDispatcher):
     inhibs_output = kp.DictProperty()
 
     special_kills_output = kp.DictProperty()
+
+    champion_kills_output = kp.ListProperty()
 
     run_event = None
 
@@ -114,6 +117,10 @@ class LivestatsHistory(DataEventDispatcher):
 
         self.special_kills = SpecialKillDispatcher()
         self.special_kills.bind(output=self.setter('special_kills_output'))
+
+
+        self.champion_kills = ChampionKillsDispatcher()
+        self.champion_kills.bind(champion_kills=self.setter("champion_kills_output"))
 
         self.towers.bind(blue_turret_kill_quantity=self.baron.blue_baron_team.setter("total_turret_kill_quantity"))
         self.towers.bind(red_turret_kill_quantity=self.baron.red_baron_team.setter("total_turret_kill_quantity"))
@@ -168,6 +175,9 @@ class LivestatsHistory(DataEventDispatcher):
 
             #Special Kills
             new_update["champion_kill_special"] = self.special_kills_output
+
+            #Champion Kill List
+            new_update["champion_kills"] = self.champion_kills_output
 
             game_time = self.latest_stats_update["gameTime"]
 

@@ -81,6 +81,11 @@ class VizcrankSender(EventDispatcher):
                     return_value = True
 
         return return_value
+    
+    def safe_set_field(self, game_data, field, value):
+        """ helper function to verify the field is present and then set the value in it """
+        if self.has_field(field=field, fields=game_data["fields"], key="value"):
+            game_data["fields"][field]["value"] = value
 
     # REST Functions
 

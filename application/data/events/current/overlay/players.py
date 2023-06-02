@@ -10,6 +10,20 @@ from kivy.clock import Clock
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
 
+RelevantBuffs = {
+    1680409346, # Kindred
+    1467230133, # Draven
+    3901057272, # Senna
+    1960866709, # Veigar
+    454914885, # Nasus
+    2256731136, # Cho
+    1721135316, # Bard
+    3375836267, # Asol
+    1911847746, # Sion
+    2681101066, # Syndra
+    2197950930, # Viktor
+}
+
 class OverlayPlayers(DataEventDispatcher):
 
     """ OverlayPlayers constructs 10 player classes
@@ -179,6 +193,8 @@ class OverlayPlayer(DataEventDispatcher):
     rune4 = kp.DictProperty()
     rune5 = kp.DictProperty()
 
+    stacks = kp.NumericProperty(-1)
+    didStack = kp.BooleanProperty(False)
 
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
@@ -264,6 +280,9 @@ class OverlayPlayer(DataEventDispatcher):
         self.ultimateCooldownRemaining = 0
         self.ultimateCooldownMax = 1
         self.ultimateCooldownPercent = 0
+        self.stacks = -1
+        self.didStack = False
+
 
 
     def on_game_info_event(self, *args) -> None:
@@ -375,6 +394,14 @@ class OverlayPlayer(DataEventDispatcher):
                     self.XP = this_participant["XP"]
     
                 self.stats = this_participant
+
+                if "stackingBuffs" in this_participant:
+                    for buff in this_participant["stackingBuffs"]:
+                        if buff["id"] in RelevantBuffs:
+                            self.stacks = buff["stacks"]
+                            self.didStack = True
+                else:
+                    self.stacks = -1
 
 
     def on_current_plus_one(self, *args) -> None:
@@ -559,6 +586,7 @@ class Inventory(DataEventDispatcher):
 
         self.callouts = deque()
         self.last_callout = 0
+        self.item_list = []
 
 
     def on_game_reset(self, *args):
@@ -572,14 +600,15 @@ class Inventory(DataEventDispatcher):
         self.callout_item = None
         self.callouts.clear()
         self.last_callout = 0
+        self.item_list = []
 
 
     def on_stats(self, *args):
-
         if "items" in self.stats:
             self.items = self.stats["items"]
 
             new_items = [self.default_item] * 7
+            item_list = []
             self.item_counts.clear()
 
             for index, this_item in enumerate(self.stats["items"]):
@@ -601,6 +630,7 @@ class Inventory(DataEventDispatcher):
 
                     if new_item is not None:
                         new_items[index] = new_item
+                        item_list.append(new_item)
 
                         if (self.out_of_fountain(self.stats) and 
                             self.is_callout(new_item) and
@@ -611,9 +641,8 @@ class Inventory(DataEventDispatcher):
                             if self.is_mythic_item(new_item):
                                 self.app.mythic_item.set_mythic_item(self.team_ID, self.participant_ID, new_item, self.stat_time)
                                               
-
+            self.item_list = item_list
             for index, this_item in enumerate(new_items):
-
                 this_property = self.property(f"item{index}")
                 this_property.set(self, this_item)
 

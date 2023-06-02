@@ -99,7 +99,7 @@ from data.vizrt.player_runes_l3_sender import PlayerRunesL3VizSender
 from data.vizrt.dragon_soul_sender import DragonSoulVizSender
 from data.vizrt.mythic_item_sender import MythicItemVizSender
 from data.vizrt.special_baron_announce_sender import SpecialBaronAnnounceVizSender
-
+from data.vizrt.overlay_players_sender import AllPlayersVizSender
 
 from data.osc.sender import OSCSender
 from data.osc.champ_select_sender import LCUOSCSender
@@ -114,13 +114,14 @@ from data.osc.special_kill_sender import SpecialKillOSCSender
 from data.slack.slack_game_info import GameInfoSlackDispatcher
 
 from data.vizrt.vizcrank.caster_runes_sender import CasterRunesSender
+from data.vizrt.vizcrank.item_build_sender import ItemBuildSender
+from data.vizrt.vizcrank.pause_graphic_sender import PauseGraphicSender
 from data.vizrt.vizcrank.post_game_breakdown_sender import PostGameBreakdownSender
 from data.vizrt.vizcrank.post_game_gold_sender import PostGameGoldSender
 from data.vizrt.vizcrank.team_pick_order_sender import TeamPickOrderSender
 from data.vizrt.vizcrank.post_game_summary_sender import PostGameSummarySender
 from data.vizrt.vizcrank.post_game_baron_sender import PostGameBaronSender
 from data.vizrt.vizcrank.post_game_objectives_sender import PostGameObjectivesSender
-
 
 from ui.screens.main_screen_manager import MainScreenManager
 from ui.screens.overlay_screen_manager import OverlayScreenManager
@@ -248,6 +249,8 @@ class SiegeMinion(App):
             'VizRT': 'vizrt.json',
             'VizRT Still Graphics': 'vizcrank.json',
             'Caster Runes': 'caster_runes.json',
+            'Item Build': 'item_build.json',
+            'Pause Graphic': 'pause_graphic.json',
             'Post-Game Baron': 'post_game_baron.json',
             'Post-Game Breakdown': 'post_game_breakdown.json',
             'Post-Game Gold': 'post_game_gold.json',
@@ -441,6 +444,7 @@ class SiegeMinion(App):
         self.dragon_soul_viz_sender = DragonSoulVizSender()
         self.mythic_item_viz_sender = MythicItemVizSender()
         self.special_baron_announce_viz_sender = SpecialBaronAnnounceVizSender()
+        self.all_players_viz_sender = AllPlayersVizSender()
 
 
         # OSC Senders
@@ -478,6 +482,8 @@ class SiegeMinion(App):
 
         #Still Graphics Senders
         self.caster_runes_sender = CasterRunesSender()
+        self.pause_graphic_sender = PauseGraphicSender()
+        self.item_build_sender = ItemBuildSender()
         self.post_game_breakdown_sender = PostGameBreakdownSender()
         self.post_game_gold_sender = PostGameGoldSender()
         self.team_pick_order_sender = TeamPickOrderSender()
