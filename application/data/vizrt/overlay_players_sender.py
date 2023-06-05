@@ -44,6 +44,7 @@ class PlayerVizSender(DataEventDispatcher):
         self.source.bind(stacks=self.setter('stacks'))
         self.source.bind(pick_champion=self.setter('pick_champion'))
         self.source.bind(didStack=self.setter('didStack'))
+        self.source.bind(stats_under_player=self.setter('stats_under_player'))
 
     
     def on_stacks(self, *args):
@@ -74,7 +75,7 @@ class PlayerVizSender(DataEventDispatcher):
 
     def on_stats_under_player(self, *args):
         output = {}
-        for category, stat_value in self.stats_under_player:
+        for category, stat_value in self.stats_under_player.items():
             output[f"players/p{self.participant_ID}/stats/cat"] = category
             output[f"players/p{self.participant_ID}/stats/val"] = stat_value
         

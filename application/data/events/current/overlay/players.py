@@ -325,17 +325,19 @@ class OverlayPlayer(DataEventDispatcher):
         blue_kills, red_kills = self.get_team_kills()
         blue_dmg, red_dmg = calculate_sum_of_team_damage(participant_list)
 
-        match participant["participantID"]:
-            case "1": return self.get_top_stats(1, 6, participant_map, participant_map_8_14, time_8_14, blue_dmg, champion_kills)
-            case "2": return self.get_jungle_stats(2, 7, participant_map, participant_map_8_14, time_8_14, blue_kills)
-            case "3": return self.get_mid_bot_stats(3, 8, participant_map, participant_map_8_14, time_8_14, blue_dmg)
-            case "4": return self.get_mid_bot_stats(4, 9, participant_map, participant_map_8_14, time_8_14, blue_dmg)
-            case "5": return self.get_support_stats(5, 10, participant_map, participant_map_8_14, time_8_14, game_time_ms, blue_kills)
-            case "6": return self.get_top_stats(6, 1, participant_map, participant_map_8_14, time_8_14, red_dmg, champion_kills)
-            case "7": return self.get_jungle_stats(7, 2, participant_map, participant_map_8_14, time_8_14, red_kills)
-            case "8": return self.get_mid_bot_stats(8, 3, participant_map, participant_map_8_14, time_8_14, red_dmg)
-            case "9": return self.get_mid_bot_stats(9, 4, participant_map, participant_map_8_14, time_8_14, red_dmg)
-            case "10": return self.get_support_stats(10, 5, participant_map, participant_map_8_14, time_8_14, game_time_ms, red_kills)
+        id = participant["participantID"]
+        if id == 1: return self.get_top_stats(1, 6, participant_map, participant_map_8_14, time_8_14, blue_dmg, champion_kills)
+        elif id == 2: return self.get_jungle_stats(2, 7, participant_map, participant_map_8_14, time_8_14, blue_kills)
+        elif id == 3: return self.get_mid_bot_stats(3, 8, participant_map, participant_map_8_14, time_8_14, blue_dmg)
+        elif id == 4: return self.get_mid_bot_stats(4, 9, participant_map, participant_map_8_14, time_8_14, blue_dmg)
+        elif id == 5: return self.get_support_stats(5, 10, participant_map, participant_map_8_14, time_8_14, game_time_ms, blue_kills)
+        elif id == 6: return self.get_top_stats(6, 1, participant_map, participant_map_8_14, time_8_14, red_dmg, champion_kills)
+        elif id == 7: return self.get_jungle_stats(7, 2, participant_map, participant_map_8_14, time_8_14, red_kills)
+        elif id == 8: return self.get_mid_bot_stats(8, 3, participant_map, participant_map_8_14, time_8_14, red_dmg)
+        elif id == 9: return self.get_mid_bot_stats(9, 4, participant_map, participant_map_8_14, time_8_14, red_dmg)
+        elif id == 10: return self.get_support_stats(10, 5, participant_map, participant_map_8_14, time_8_14, game_time_ms, red_kills)
+        else: return {}
+
 
     def get_8_14_participant_data(self, game_time_ms):
         """ returns a time and a map of participants at either game time 8 minutes, or 14 minutes
