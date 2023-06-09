@@ -311,12 +311,14 @@ class OverlayPlayer(DataEventDispatcher):
                 
                 self.stats = this_participant
 
+                foundStack = False
                 if "stackingBuffs" in this_participant:
                     for buff in this_participant["stackingBuffs"]:
                         if buff["id"] in RelevantBuffs:
                             self.stacks = buff["stacks"]
                             self.didStack = True
-                else:
+                            foundStack = True
+                if not foundStack:
                     self.stacks = -1
 
 
