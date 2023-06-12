@@ -29,7 +29,6 @@ class PlayerOSCSender(DataEventDispatcher):
     tricode = kp.StringProperty("")
     name = kp.StringProperty("")
     pick_champion = kp.DictProperty()
-    championName = kp.StringProperty("")
 
     alive = kp.BooleanProperty(True)
     respawnTimer = kp.NumericProperty(0)
@@ -112,12 +111,13 @@ class PlayerOSCSender(DataEventDispatcher):
         self.send_data(**output)
 
 
-    def on_championName(self, *args):
+    def on_pick_champion(self, *args):
 
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/championName": self.championName
+            f"/Overlay/Player{index}/championName": self.pick_champion["internal_name"],
+            f"/Overlay/Player{index}/championID": self.pick_champion["code"]
         }
 
         self.send_data(**output)
@@ -140,7 +140,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/respawnTimer": self.respawnTimer
+            f"/Overlay/Player{index}/respawnTimer": float(self.respawnTimer)
         }
 
         self.send_data(**output)
@@ -162,7 +162,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/health": self.health
+            f"/Overlay/Player{index}/health": float(self.health)
         }
 
         self.send_data(**output)
@@ -173,7 +173,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/healthMax": self.health_max
+            f"/Overlay/Player{index}/healthMax": float(self.health_max)
         }
 
         self.send_data(**output)
@@ -184,7 +184,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/primaryAbilityResource": self.primary_ability_resource
+            f"/Overlay/Player{index}/primaryAbilityResource": float(self.primary_ability_resource)
         }
 
         self.send_data(**output)
@@ -195,7 +195,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/primaryAbilityResourceMax": self.primary_ability_resource_max
+            f"/Overlay/Player{index}/primaryAbilityResourceMax": float(self.primary_ability_resource_max)
         }
 
         self.send_data(**output)
@@ -217,7 +217,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/summonerSpell1CooldownRemaining": self.summonerSpell1CooldownRemaining
+            f"/Overlay/Player{index}/summonerSpell1CooldownRemaining": float(self.summonerSpell1CooldownRemaining)
         }
 
         self.send_data(**output)
@@ -228,7 +228,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/summonerSpell1CooldownMax": self.summonerSpell1CooldownMax
+            f"/Overlay/Player{index}/summonerSpell1CooldownMax": float(self.summonerSpell1CooldownMax)
         }
 
         self.send_data(**output)
@@ -250,7 +250,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/summonerSpell2CooldownRemaining": self.summonerSpell2CooldownRemaining
+            f"/Overlay/Player{index}/summonerSpell2CooldownRemaining": float(self.summonerSpell2CooldownRemaining)
         }
 
         self.send_data(**output)
@@ -261,7 +261,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/summonerSpell2CooldownMax": self.summonerSpell2CooldownMax
+            f"/Overlay/Player{index}/summonerSpell2CooldownMax": float(self.summonerSpell2CooldownMax)
         }
 
         self.send_data(**output)
@@ -283,7 +283,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/ultimateCooldownRemaining": self.ultimateCooldownRemaining
+            f"/Overlay/Player{index}/ultimateCooldownRemaining": float(self.ultimateCooldownRemaining)
         }
 
         self.send_data(**output)
@@ -294,7 +294,7 @@ class PlayerOSCSender(DataEventDispatcher):
         index = self.participant_ID
 
         output = {
-            f"/Overlay/Player{index}/ultimateCooldownMax": self.ultimateCooldownMax
+            f"/Overlay/Player{index}/ultimateCooldownMax": float(self.ultimateCooldownMax)
         }
 
         self.send_data(**output)
@@ -325,7 +325,7 @@ class PlayerOSCSender(DataEventDispatcher):
     def on_local_time(self, *args):
         
         self.send_name()
-        self.on_championName()
+        self.on_pick_champion()
         self.on_alive()
         self.on_respawnTimer()
         self.on_level()

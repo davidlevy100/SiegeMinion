@@ -328,29 +328,37 @@ class OverlayPlayer(DataEventDispatcher):
                 if "championName" in this_participant:
                     self.set_champ(this_participant["championName"])
 
-                if "alive" in this_participant:
-                    self.alive = this_participant["alive"]
-
                 if "respawnTimer" in this_participant:
                     self.respawnTimer = this_participant["respawnTimer"]
 
                 if "level" in this_participant:
                     self.level = this_participant["level"]
 
-                if ("health" in this_participant and
-                    "healthMax" in this_participant
+                if ("alive" in this_participant and
+                    "health" in this_participant and
+                    "healthMax" in this_participant and
+                    "primaryAbilityResource" in this_participant and
+                    "primaryAbilityResourceMax" in this_participant
                 ):
                     
-                    self.health = this_participant["health"]
+                    isAlive = this_participant["alive"]
+                    health = this_participant["health"]
+                    mana = this_participant["primaryAbilityResource"]
+
+                    self.alive = isAlive
+                    
+                    if not isAlive:
+                        health = 0
+                        mana = 0
+                    
+                    self.health = health
                     self.health_max = this_participant["healthMax"]
                     self.health_percent = min(1.0, (self.health / max(1, self.health_max)))
 
-                if ("primaryAbilityResource" in this_participant and
-                    "primaryAbilityResourceMax" in this_participant
-                ):
-                    self.primary_ability_resource = this_participant["primaryAbilityResource"]
+                    self.primary_ability_resource = mana
                     self.primary_ability_resource_max = this_participant["primaryAbilityResourceMax"]
-                    self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))
+                    self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1, self.primary_ability_resource_max)))
+
 
                 if "summonerSpell1Name" in this_participant:
 
@@ -371,6 +379,38 @@ class OverlayPlayer(DataEventDispatcher):
 
                     if spell2 is not None:
                         self.spell2 = spell2
+
+                if "summonerSpell1CooldownRemaining" in this_participant:
+
+                    if this_participant["summonerSpell1CooldownRemaining"] == 0:
+                        self.summonerSpell1CooldownMax = 1
+                        self.summonerSpell1CooldownRemaining = 0
+                        self.summonerSpell1CooldownPercent = 1
+
+                    else:
+                        
+                        if this_participant["summonerSpell1CooldownRemaining"] > self.summonerSpell1CooldownMax:
+                            self.summonerSpell1CooldownMax = this_participant["summonerSpell1CooldownRemaining"]
+
+                        self.summonerSpell1CooldownRemaining = this_participant["summonerSpell1CooldownRemaining"]
+                        self.summonerSpell1CooldownPercent = self.summonerSpell1CooldownRemaining / self.summonerSpell1CooldownMax
+        
+
+                if "summonerSpell2CooldownRemaining" in this_participant:
+
+                    if this_participant["summonerSpell2CooldownRemaining"] == 0:
+                        self.summonerSpell2CooldownMax = 1
+                        self.summonerSpell2CooldownRemaining = 0
+                        self.summonerSpell2CooldownPercent = 1
+
+                    else:
+                        
+                        if this_participant["summonerSpell2CooldownRemaining"] > self.summonerSpell2CooldownMax:
+                            self.summonerSpell2CooldownMax = this_participant["summonerSpell2CooldownRemaining"]
+
+                        self.summonerSpell2CooldownRemaining = this_participant["summonerSpell2CooldownRemaining"]
+                        self.summonerSpell2CooldownPercent = self.summonerSpell2CooldownRemaining / self.summonerSpell2CooldownMax
+
 
                 if "ultimateName" in this_participant:
                     self.ultimateName = this_participant["ultimateName"]
@@ -442,18 +482,31 @@ class OverlayPlayer(DataEventDispatcher):
 
         if self.resetting:
             pass
-            #print(self.resetting)
-            #return False
+
+        if "alive" in frame:
+            self.alive = frame["alive"]
 
         if "XP" in frame:
             self.XP = frame["XP"]
 
         if "health" in frame:
-            self.health = frame["health"]
+
+            health = frame["health"]
+
+            if not self.alive:
+                health = 0
+
+            self.health = health
             self.health_percent = min(1.0, (self.health / max(1, self.health_max)))
 
         if "primaryAbilityResource" in frame:
-            self.primary_ability_resource = frame["primaryAbilityResource"]
+
+            mana = frame["primaryAbilityResource"]
+
+            if not self.alive:
+                mana = 0
+
+            self.primary_ability_resource = mana
             self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))
 
 
