@@ -30,13 +30,13 @@ VSVersionInfo(
       StringTable(
         u'040904b0',
         [StringStruct(u'FileDescription', u'Siege Minion'),
-        StringStruct(u'FileVersion', u'6.2.8.0'),
+        StringStruct(u'FileVersion', u'6.2.9.0'),
         StringStruct(u'', u''),
         StringStruct(u'InternalName', u'Siege Minion'),
         StringStruct(u'LegalCopyright', u'Copyright (C) 2023'),
         StringStruct(u'OriginalFilename', u'SiegeMinion.exe'),
         StringStruct(u'ProductName', u'Siege Minion'),
-        StringStruct(u'ProductVersion', u'6.2.8.0'),
+        StringStruct(u'ProductVersion', u'6.2.9.0'),
         StringStruct(u'', u'')])
       ]), 
     VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
