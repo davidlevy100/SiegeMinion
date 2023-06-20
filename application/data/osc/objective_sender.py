@@ -5,7 +5,7 @@ from data.events.data_event_dispatch import DataEventDispatcher
 
 class ObjectiveOSCSender(DataEventDispatcher):
 
-    active = kp.BooleanProperty(True)
+    #active = kp.BooleanProperty(True)
 
     teamID = kp.NumericProperty(0)
     buff_timer = kp.NumericProperty(0)
@@ -29,7 +29,7 @@ class ObjectiveOSCSender(DataEventDispatcher):
 
     def on_source(self, *args):
 
-        self.source.bind(active=self.setter('active'))
+        #self.source.bind(active=self.setter('active'))
         self.source.bind(buff_timer=self.setter('buff_timer'))
         self.source.bind(teamID=self.setter('teamID'))
         self.source.bind(killer=self.setter('killer'))

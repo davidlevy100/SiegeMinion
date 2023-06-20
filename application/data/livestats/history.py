@@ -36,6 +36,7 @@ class LivestatsHistory(DataEventDispatcher):
 
     latest_stats_update = kp.DictProperty()
     current_stats_update = kp.DictProperty()
+    current_plus_one = kp.DictProperty()
 
     server_time = kp.NumericProperty(0)
     local_time = kp.NumericProperty(0)
@@ -136,6 +137,7 @@ class LivestatsHistory(DataEventDispatcher):
         self.stats_update_history.clear()
         self.stats_update_history[0] = DEFAULT_STATS_UPDATE
         self.current_stats_update = DEFAULT_STATS_UPDATE
+        self.current_plus_one = DEFAULT_STATS_UPDATE
 
         self.server_time = 0
         self.local_time = 0
@@ -209,13 +211,20 @@ class LivestatsHistory(DataEventDispatcher):
     def update_current_stats(self, milliseconds, *args):
 
         time_index = self.stats_update_history.bisect_left(milliseconds)
+        plus_one = time_index + 1
 
         if time_index < len(self.stats_update_history):
-            key, value = self.stats_update_history.peekitem(time_index)
+            _, value = self.stats_update_history.peekitem(time_index)
         else:
-            key, value = self.stats_update_history.peekitem(-1)
+            _, value = self.stats_update_history.peekitem(-1)
+
+        if plus_one < len(self.stats_update_history):
+            _, value2 = self.stats_update_history.peekitem(plus_one)
+        else:
+            _, value2 = self.stats_update_history.peekitem(-1)
 
         self.current_stats_update = value
+        self.current_plus_one = value2
 
 
     def set_delay(self, milliseconds, *args):

@@ -1,9 +1,11 @@
 from math import sqrt
+from functools import partial
 
 from collections import deque
 
 import kivy.properties as kp
 from kivy.logger import Logger
+from kivy.clock import Clock
 
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
@@ -26,6 +28,11 @@ RelevantBuffs = {
 
 class OverlayPlayers(DataEventDispatcher):
 
+    """ OverlayPlayers constructs 10 player classes
+        and binds them to LCU Champ Select events
+        and Livestats events
+    """
+
     game_info_event = kp.DictProperty()
 
     runes_available = kp.BooleanProperty(False)
@@ -33,7 +40,7 @@ class OverlayPlayers(DataEventDispatcher):
     player_map = kp.DictProperty({})
     sorted_players = kp.ListProperty([])
     
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
 
         self.app.live_data.bind(game_info_event=self.setter('game_info_event'))
@@ -53,18 +60,24 @@ class OverlayPlayers(DataEventDispatcher):
         self.player10 = OverlayPlayer(team_ID=200, participant_ID=10, lcu_source=self.app.lcu_champ_select.participant10)
 
 
-    def on_game_reset(self, *args):
+    def on_game_reset(self, *args) -> None:
 
         self.player_map = {}
         self.sorted_players = []
         self.runes_available = False
 
-    def on_game_info_event(self, *args):
+
+    def on_game_info_event(self, *args) -> None:
+
+        """ sets a flag that alerts the operator 
+            that runes are available to show
+        """
 
         if "participants" in self.game_info_event:
             self.runes_available = True
 
-    def update_player_map(self, player_name, player, *args):
+
+    def update_player_map(self, player_name, player, *args) -> None:
 
         self.player_map[player_name] = player
 
@@ -72,7 +85,7 @@ class OverlayPlayers(DataEventDispatcher):
             self.sorted_players = sorted(self.player_map.items(), key=lambda item: item[1].participant_ID)
 
 
-    def find_player_by_name(self, name, *args):
+    def find_player_by_name(self, name: str = "", *args):
 
         result = None
 
@@ -93,7 +106,8 @@ class OverlayPlayers(DataEventDispatcher):
 
         return result
 
-    def find_player_by_id(self, id, *args):
+
+    def find_player_by_id(self, id: int, *args):
 
         result = None
 
@@ -117,6 +131,8 @@ class OverlayPlayers(DataEventDispatcher):
 
 class OverlayPlayer(DataEventDispatcher):
 
+    resetting = kp.BooleanProperty(False)
+
     lcu_source = kp.ObjectProperty()
 
     team_ID = kp.NumericProperty()
@@ -124,16 +140,21 @@ class OverlayPlayer(DataEventDispatcher):
 
     game_info_event = kp.DictProperty()
     current_stats_update = kp.DictProperty()
+    current_plus_one = kp.DictProperty()
 
     # Variables to Initialize
     tricode = kp.StringProperty("")
     name = kp.StringProperty("")
     pick_champion = kp.DictProperty()
+    championName = kp.StringProperty("")
 
     alive = kp.BooleanProperty(True)
-    status_color = kp.ListProperty([1, 1, 1, 1])
+    respawnTimer = kp.NumericProperty(0)
+
+    status_color = kp.ListProperty([1,1,1,1])
 
     level = kp.NumericProperty(0)
+    XP = kp.NumericProperty(0)
 
     health = kp.NumericProperty(0)
     health_max = kp.NumericProperty(1)
@@ -144,12 +165,25 @@ class OverlayPlayer(DataEventDispatcher):
     primary_ability_resource_percent = kp.NumericProperty(0)
 
     spell1 = kp.DictProperty()
+    summonerSpell1CooldownRemaining = kp.NumericProperty(0)
+    summonerSpell1CooldownMax = kp.NumericProperty(1)
+    summonerSpell1CooldownPercent = kp.NumericProperty(0)
+
     spell2 = kp.DictProperty()
+    summonerSpell2CooldownRemaining = kp.NumericProperty(0)
+    summonerSpell2CooldownMax = kp.NumericProperty(1)
+    summonerSpell2CooldownPercent = kp.NumericProperty(0)
 
     stats = kp.DictProperty()
     stat_time = kp.NumericProperty(0)
 
-    # Runes
+    ultimateName = kp.StringProperty("")
+    ultimateCooldownRemaining = kp.NumericProperty(0)
+    ultimateCooldownMax = kp.NumericProperty(1)
+    ultimateCooldownPercent = kp.NumericProperty(0)
+
+
+    #Runes
     primary_tree = kp.DictProperty()
     secondary_tree = kp.DictProperty()
 
@@ -164,10 +198,10 @@ class OverlayPlayer(DataEventDispatcher):
     stacks = kp.NumericProperty(-1)
     didStack = kp.BooleanProperty(False)
 
-    stats_under_player = kp.DictProperty()
-
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
+
+        self.app.bind(resetting=self.setter('resetting'))
 
         self.app.live_data.bind(
             game_info_event=self.setter('game_info_event')
@@ -176,7 +210,10 @@ class OverlayPlayer(DataEventDispatcher):
         self.app.livestats_history.bind(
             current_stats_update=self.setter('current_stats_update')
         )
-
+        self.app.livestats_history.bind(
+            current_plus_one=self.setter('current_plus_one')
+        )
+        
         self.inventory = Inventory(
             team_ID=self.team_ID,
             participant_ID=self.participant_ID,
@@ -190,7 +227,8 @@ class OverlayPlayer(DataEventDispatcher):
         self.lcu_source.bind(spell1=self.setter('spell1'))
         self.lcu_source.bind(spell2=self.setter('spell2'))
 
-    def on_alive(self, *args):
+    
+    def on_alive(self, *args) -> None:
 
         if self.alive:
             self.status_color = [1, 1, 1, 1]
@@ -198,18 +236,29 @@ class OverlayPlayer(DataEventDispatcher):
         else:
             self.status_color = [1, 0, 0, 1]
 
-    def on_champion(self, *args):
-        pass
 
-    def on_game_reset(self, *args):
+    def on_game_reset(self, *args) -> None:
 
         self.tricode = ""
         self.name = ""
         self.pick_champion = self.app.data_dragon.get_asset("champion", "default")
+        self.championName = self.pick_champion["internal_name"]
         self.alive = True
+        self.respawnTimer = 0
+        
         self.spell1 = self.app.data_dragon.get_asset("summoner_spell", "default")
+        self.summonerSpell1CooldownRemaining = 0
+        self.summonerSpell1CooldownMax = 1
+        self.summonerSpell1CooldownPercent = 0
+
+        
         self.spell2 = self.app.data_dragon.get_asset("summoner_spell", "default")
+        self.summonerSpell2CooldownRemaining = 0
+        self.summonerSpell2CooldownMax = 1
+        self.summonerSpell2CooldownPercent = 0
+
         self.level = 0
+        self.XP = 0
 
         self.health = 0
         self.health_max = 1
@@ -229,35 +278,90 @@ class OverlayPlayer(DataEventDispatcher):
         self.rune4 = self.app.data_dragon.get_asset("rune", "default")
         self.rune5 = self.app.data_dragon.get_asset("rune", "default")
 
+        self.ultimateName = ""
+        self.ultimateCooldownRemaining = 0
+        self.ultimateCooldownMax = 1
+        self.ultimateCooldownPercent = 0
         self.stacks = -1
         self.didStack = False
 
         self.stats_under_player = {}
 
-    def on_game_info_event(self, *args):
 
-        if "participants" in self.game_info_event:
+    def on_game_info_event(self, *args) -> None:
+
+        data = args[1]
+
+        if "participants" in data:
 
             this_participant = self.get_my_participant(
-                self.game_info_event["participants"]
+                data["participants"]
             )
 
             if this_participant is not None:
-                self.get_name_and_champ(this_participant)
-                self.get_runes(this_participant)
+
+                if "summonerName" in this_participant:
+                    self.set_name(this_participant["summonerName"])
+
+                if "championName" in this_participant:
+                    self.set_champ(this_participant["championName"])
+
+                self.set_runes(this_participant)
+                
 
     def on_current_stats_update(self, *args):
 
-        if "gameTime" in self.current_stats_update:
-            self.stat_time = self.current_stats_update["gameTime"]
+        data = args[1]
 
-        if "participants" in self.current_stats_update:
+        if "gameTime" in data:
+            self.stat_time = data["gameTime"]
 
+        if "participants" in data:
             this_participant = self.get_my_participant(
-                self.current_stats_update["participants"]
+                data["participants"]
             )
 
             if this_participant is not None:
+
+                if (len(self.name) == 0 and 
+                    "playerName" in this_participant
+                ):
+                    self.set_name(this_participant["playerName"])
+
+                if "championName" in this_participant:
+                    self.set_champ(this_participant["championName"])
+
+                if "respawnTimer" in this_participant:
+                    self.respawnTimer = this_participant["respawnTimer"]
+
+                if "level" in this_participant:
+                    self.level = this_participant["level"]
+
+                if ("alive" in this_participant and
+                    "health" in this_participant and
+                    "healthMax" in this_participant and
+                    "primaryAbilityResource" in this_participant and
+                    "primaryAbilityResourceMax" in this_participant
+                ):
+                    
+                    isAlive = this_participant["alive"]
+                    health = this_participant["health"]
+                    mana = this_participant["primaryAbilityResource"]
+
+                    self.alive = isAlive
+                    
+                    if not isAlive:
+                        health = 0
+                        mana = 0
+                    
+                    self.health = health
+                    self.health_max = this_participant["healthMax"]
+                    self.health_percent = min(1.0, (self.health / max(1, self.health_max)))
+
+                    self.primary_ability_resource = mana
+                    self.primary_ability_resource_max = this_participant["primaryAbilityResourceMax"]
+                    self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1, self.primary_ability_resource_max)))
+
 
                 if "summonerSpell1Name" in this_participant:
 
@@ -278,38 +382,70 @@ class OverlayPlayer(DataEventDispatcher):
 
                     if spell2 is not None:
                         self.spell2 = spell2
+
+                if "summonerSpell1CooldownRemaining" in this_participant:
+
+                    if this_participant["summonerSpell1CooldownRemaining"] == 0:
+                        self.summonerSpell1CooldownMax = 1
+                        self.summonerSpell1CooldownRemaining = 0
+                        self.summonerSpell1CooldownPercent = 1
+
+                    else:
+                        
+                        if this_participant["summonerSpell1CooldownRemaining"] > self.summonerSpell1CooldownMax:
+                            self.summonerSpell1CooldownMax = this_participant["summonerSpell1CooldownRemaining"]
+
+                        self.summonerSpell1CooldownRemaining = this_participant["summonerSpell1CooldownRemaining"]
+                        self.summonerSpell1CooldownPercent = self.summonerSpell1CooldownRemaining / self.summonerSpell1CooldownMax
         
-                if (len(self.name) == 0 or len(self.pick_champion) == 0):
-                    self.get_name_and_champ(this_participant)
 
-                if "alive" in this_participant:
-                    self.alive = this_participant["alive"]
+                if "summonerSpell2CooldownRemaining" in this_participant:
 
-                if "level" in this_participant:
-                    self.level = this_participant["level"]
+                    if this_participant["summonerSpell2CooldownRemaining"] == 0:
+                        self.summonerSpell2CooldownMax = 1
+                        self.summonerSpell2CooldownRemaining = 0
+                        self.summonerSpell2CooldownPercent = 1
 
-                if ("health" in this_participant and
-                    "healthMax" in this_participant and
-                    "primaryAbilityResource" in this_participant and
-                    "primaryAbilityResourceMax" in this_participant
-                ):
-                    
-                    self.health = this_participant["health"]
-                    self.health_max = this_participant["healthMax"]
-                    self.health_percent = min(1.0, (self.health / max(1, self.health_max)))
+                    else:
+                        
+                        if this_participant["summonerSpell2CooldownRemaining"] > self.summonerSpell2CooldownMax:
+                            self.summonerSpell2CooldownMax = this_participant["summonerSpell2CooldownRemaining"]
 
-                    self.primary_ability_resource = this_participant["primaryAbilityResource"]
-                    self.primary_ability_resource_max = this_participant["primaryAbilityResourceMax"]
-                    self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))                
-                
+                        self.summonerSpell2CooldownRemaining = this_participant["summonerSpell2CooldownRemaining"]
+                        self.summonerSpell2CooldownPercent = self.summonerSpell2CooldownRemaining / self.summonerSpell2CooldownMax
+
+
+                if "ultimateName" in this_participant:
+                    self.ultimateName = this_participant["ultimateName"]
+
+                if "ultimateCooldownRemaining" in this_participant:
+
+                    if this_participant["ultimateCooldownRemaining"] == 0:
+                        self.ultimateCooldownMax = 1
+                        self.ultimateCooldownRemaining = 0
+                        self.ultimateCooldownPercent = 1
+
+                    else:
+                        
+                        if this_participant["ultimateCooldownRemaining"] > self.ultimateCooldownMax:
+                            self.ultimateCooldownMax = this_participant["ultimateCooldownRemaining"]
+
+                        self.ultimateCooldownRemaining = this_participant["ultimateCooldownRemaining"]
+                        self.ultimateCooldownPercent = self.ultimateCooldownRemaining / self.ultimateCooldownMax
+        
+                if "XP" in this_participant:
+                    self.XP = this_participant["XP"]
+    
                 self.stats = this_participant
 
+                foundStack = False
                 if "stackingBuffs" in this_participant:
                     for buff in this_participant["stackingBuffs"]:
                         if buff["id"] in RelevantBuffs:
                             self.stacks = buff["stacks"]
                             self.didStack = True
-                else:
+                            foundStack = True
+                if not foundStack:
                     self.stacks = -1
                 
                 participants = self.current_stats_update["participants"]
@@ -469,52 +605,103 @@ class OverlayPlayer(DataEventDispatcher):
             output[stat[0]] = stat[1]
         return output
 
-    def get_my_participant(self, participants, *args):
+    def on_current_plus_one(self, *args) -> None:
+
+        data = args[1]
+
+        if "high_frequency_data" in data:
+            my_frames = self.get_my_frames(data["high_frequency_data"])
+            self.schedule_frames(my_frames)
+
+
+    def schedule_frames(self, frames: list[dict[str, float]]) -> None:
+        
+        for thisFrame in frames:
+
+            if ("timestamp" in thisFrame and
+                thisFrame["timestamp"] > (self.stat_time / 1000)
+            ):
+                timedelta = thisFrame["timestamp"] - (self.stat_time / 1000)
+                if timedelta < 1.0:
+                    Clock.schedule_once(partial(self.frame_update, thisFrame), timedelta)
+
+
+    def get_my_frames(self, high_frequency_data: list[dict]) -> list[dict]:
 
         result = None
+
+        for thisObject in high_frequency_data:
+            if (thisObject["id"] == self.participant_ID and 
+                "frames" in thisObject
+            ):
+                return thisObject["frames"]
+            
+        return result
+    
+
+    def frame_update(self, frame: dict[str, float], *largs) -> None:
+
+        if self.resetting:
+            pass
+
+        if "alive" in frame:
+            self.alive = frame["alive"]
+
+        if "XP" in frame:
+            self.XP = frame["XP"]
+
+        if "health" in frame:
+
+            health = frame["health"]
+
+            if not self.alive:
+                health = 0
+
+            self.health = health
+            self.health_percent = min(1.0, (self.health / max(1, self.health_max)))
+
+        if "primaryAbilityResource" in frame:
+
+            mana = frame["primaryAbilityResource"]
+
+            if not self.alive:
+                mana = 0
+
+            self.primary_ability_resource = mana
+            self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))
+
+
+    def get_my_participant(self, participants: list[dict]) -> dict:
+
+        result = {}
 
         for this_participant in participants:
             if ("participantID" in this_participant and
                 this_participant["participantID"] == self.participant_ID
             ):
-                return this_participant
+                result = this_participant
 
         return result
 
-    def get_name_and_champ(self, participant, *args):
 
-        raw_name = ""
+    def set_name(self, raw_name:str) -> None:
 
-        if "summonerName" in participant:
+        self.tricode, self.name = parse_name(raw_name)
+        self.app.overlay_players.update_player_map(self.name, self)
 
-            raw_name = participant["summonerName"]
 
-        elif "playerName" in participant:
+    def set_champ(self, championName: str = "") -> None:
 
-            raw_name = participant["playerName"]
+        champ = self.app.data_dragon.get_asset(
+            "champion",
+            championName
+        )
 
-        if len(raw_name) > 0:
+        if champ is not None:
+            self.pick_champion = champ
 
-            tricode, name = parse_name(raw_name)
 
-            if tricode is not None:
-                self.tricode = tricode
-
-            self.name = str(name)
-
-            self.app.overlay_players.update_player_map(self.name, self)
-
-        if "championName" in participant:
-
-            champ = self.app.data_dragon.get_asset(
-                "champion",
-                participant["championName"]
-            )
-
-            if champ is not None:
-                self.pick_champion = champ
-
-    def get_runes(self, participant, *args):
+    def set_runes(self, participant: dict = {}) -> None:
 
         if "keystoneID" in participant:
 
