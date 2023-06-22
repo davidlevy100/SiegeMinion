@@ -149,6 +149,7 @@ class JungleTracker(DataEventDispatcher):
         elif y <= (x * .937 + 1430):
             region = "Bot Jungle"
 
+
         #River Test
         if (region == "Top Jungle" or region == "Bot Jungle") and (
             (y < (x * -.83 + 15000)) and (y > (x * -.85 + 12600))
@@ -162,7 +163,7 @@ class JungleTracker(DataEventDispatcher):
             #In Red Jungle?
             if y >= (x * -.85 + 13500):
                 #Blue Jungler in Red Jungle?
-                if ID == 1:
+                if ID == 2:
                     return True
                 else:
                     return False
@@ -170,7 +171,7 @@ class JungleTracker(DataEventDispatcher):
             #In Blue Jungle
             else:
                 #Red Jungler in Blue Jungle?
-                if ID == 6:
+                if ID == 7:
                     return True
                 else:
                     return False
