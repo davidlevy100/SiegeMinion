@@ -196,6 +196,16 @@ class OverlayPlayer(DataEventDispatcher):
     stacks = kp.NumericProperty(-1)
     didStack = kp.BooleanProperty(False)
 
+    #stats for stats_under_players
+
+    cat1 = kp.StringProperty("")
+    cat2 = kp.StringProperty("")
+    cat3 = kp.StringProperty("")
+
+    stat1 = kp.StringProperty("")
+    stat2 = kp.StringProperty("")
+    stat3 = kp.StringProperty("")
+
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
 
@@ -282,6 +292,14 @@ class OverlayPlayer(DataEventDispatcher):
         self.ultimateCooldownPercent = 0
         self.stacks = -1
         self.didStack = False
+
+        self.cat1 = ""
+        self.cat2 = ""
+        self.cat3 = ""
+
+        self.stat1 = ""
+        self.stat2 = ""
+        self.stat3 = ""
 
 
 

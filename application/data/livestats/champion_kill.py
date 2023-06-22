@@ -9,6 +9,7 @@ class ChampionKillsDispatcher(DataEventDispatcher):
 
     champion_kill_event = kp.DictProperty()
     champion_kills = kp.ListProperty()
+    solo_kills = kp.ListProperty([0]*10)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -18,6 +19,7 @@ class ChampionKillsDispatcher(DataEventDispatcher):
 
     def on_game_reset(self, *args):
         self.champion_kills.clear()
+        self.solo_kills = [0]*10
         Logger.info("Champion kills: has been reset")
 
 
@@ -42,3 +44,8 @@ class ChampionKillsDispatcher(DataEventDispatcher):
                 "assistants": assistants
             }
             self.champion_kills.append(data)
+
+            index = killer-1
+
+            if len(assistants) == 0:
+                self.solo_kills[index] = self.solo_kills[index]+1

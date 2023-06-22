@@ -44,7 +44,8 @@
         "killStreakLength": 0,
         "sequenceIndex": 0
     },
-    "champion_kills": [],
+    "champion_kills": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "counter_jungle_pct": [0.0, 0.0],
     "lastDragonKiller": 0,
     "gameID": 0,
     "gameName": "",
@@ -2700,6 +2701,7 @@
     "rfc460Timestamp": "2020-03-08T23:12:06.908Z",
     "rfc461Schema": "stats_update",
     "sequenceIndex": -1,
+    "solo_kills": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "teams": [
         {
             "assists": 0,

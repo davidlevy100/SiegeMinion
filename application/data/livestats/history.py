@@ -17,6 +17,7 @@ from data.livestats.timed_objectives import InhibitorsDispatcher
 from data.livestats.turrets import TurretDispatcher
 from data.livestats.champion_kill_special import SpecialKillDispatcher
 from data.livestats.champion_kill import ChampionKillsDispatcher
+from data.livestats.jungle_tracker import JungleTracker
 
 DEFAULT_STATS_UPDATE = get_default_stats_update()
 
@@ -67,11 +68,14 @@ class LivestatsHistory(DataEventDispatcher):
     special_kills_output = kp.DictProperty()
 
     champion_kills_output = kp.ListProperty()
+    solo_kills = kp.ListProperty([0]*10)
 
     run_event = None
 
     sync_server_enabled = kp.BooleanProperty(False)
     sync_server_time = kp.NumericProperty(0)
+
+    counter_jungle_stats = kp.ListProperty()
 
 
     def __init__(self, **kwargs):
@@ -121,9 +125,15 @@ class LivestatsHistory(DataEventDispatcher):
 
         self.champion_kills = ChampionKillsDispatcher()
         self.champion_kills.bind(champion_kills=self.setter("champion_kills_output"))
+        self.champion_kills.bind(solo_kills=self.setter("solo_kills"))
+        
 
         self.towers.bind(blue_turret_kill_quantity=self.baron.blue_baron_team.setter("total_turret_kill_quantity"))
         self.towers.bind(red_turret_kill_quantity=self.baron.red_baron_team.setter("total_turret_kill_quantity"))
+
+        self.jungle_tracker = JungleTracker()
+        self.counter_jungle_stats = self.jungle_tracker.counter_jungle_stats
+        self.jungle_tracker.bind(counter_jungle_stats=self.setter('counter_jungle_stats'))
 
 
     def on_game_reset(self, *args):
@@ -178,6 +188,10 @@ class LivestatsHistory(DataEventDispatcher):
 
             #Champion Kill List
             new_update["champion_kills"] = self.champion_kills_output
+            new_update["solo_kills"] = self.solo_kills
+
+            #Jungle Tracker
+            new_update["counter_jungle_pct"] = self.counter_jungle_stats
 
             game_time = self.latest_stats_update["gameTime"]
 
