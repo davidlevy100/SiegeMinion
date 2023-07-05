@@ -99,12 +99,12 @@ class PlayerVizSender(DataEventDispatcher):
     def update_stats(self, *args):
 
         output = {
-            f"statbox/p{self.participant_ID}/cat1": self.cat1,
-            f"statbox/p{self.participant_ID}/stat1": self.stat1,
-            f"statbox/p{self.participant_ID}/cat2": self.cat2,
-            f"statbox/p{self.participant_ID}/stat2": self.stat2,
-            f"statbox/p{self.participant_ID}/cat3": self.cat3,
-            f"statbox/p{self.participant_ID}/stat3": self.stat3
+            f"pos/p{self.participant_ID}/cat1": self.cat1,
+            f"pos/p{self.participant_ID}/stat1": self.stat1,
+            f"pos/p{self.participant_ID}/cat2": self.cat2,
+            f"pos/p{self.participant_ID}/stat2": self.stat2,
+            f"pos/p{self.participant_ID}/cat3": self.cat3,
+            f"pos/p{self.participant_ID}/stat3": self.stat3
         }
 
         self.send_data(**output)

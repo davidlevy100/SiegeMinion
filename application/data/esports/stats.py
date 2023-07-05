@@ -397,8 +397,6 @@ def calculate_current_gold(participant, *args):
 
 def string_GOLD(participant, *args):
 
-    
-
     result = ""
 
     current_gold, total_gold = calculate_GOLD(participant)
@@ -698,3 +696,43 @@ STRING_STAT_MAP = {
     "VS": string_VISION,
     "": string_default
 }
+
+def get_participant(participants: list[dict], id: int) -> dict:
+
+    result = {}
+
+    for this_participant in participants:
+        if ("participantID" in this_participant and
+            this_participant["participantID"] == id
+        ):
+            result = this_participant
+
+    return result
+
+def get_DMG_pct(participants: list[dict], id: int) -> float:
+
+    my_data = get_participant(participants, id)
+
+    dmg = calculate_DMG(my_data)
+
+    sum = 0
+    start, end = 1, 5
+
+    if id > 5:
+        start, end = 6, 10
+
+    for this_participant in participants:
+        if ("participantID" in this_participant and
+            start <= this_participant["participantID"] <= end
+        ):
+            sum =+ calculate_DMG(this_participant)
+
+    if sum > 0:
+        return dmg/sum
+    else:
+        return 0
+    
+def string_dmg_pct(participants: list[dict], id: int) -> str:
+
+    value = get_DMG_pct(participants, id)
+    return f"{value:.1%}"

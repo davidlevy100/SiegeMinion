@@ -1,5 +1,6 @@
 from math import sqrt
 from functools import partial
+from typing import list, tuple
 
 from collections import deque
 
@@ -9,6 +10,13 @@ from kivy.clock import Clock
 
 from data.events.data_event_dispatch import DataEventDispatcher
 from data.livestats.tools import parse_name
+from data.esports.stats import get_participant
+from data.esports.stats import string_KDA
+from data.esports.stats import string_CSD
+from data.esports.stats import string_dmg_pct
+
+MINS8 = 8 * 60000
+MINS14 = 14 * 60000
 
 RelevantBuffs = {
     1680409346, # Kindred
@@ -44,18 +52,18 @@ class OverlayPlayers(DataEventDispatcher):
         self.app.live_data.bind(game_info_event=self.setter('game_info_event'))
 
         # Left Team Players
-        self.player1 = OverlayPlayer(team_ID=100, participant_ID=1, lcu_source=self.app.lcu_champ_select.participant1)
-        self.player2 = OverlayPlayer(team_ID=100, participant_ID=2, lcu_source=self.app.lcu_champ_select.participant2)
-        self.player3 = OverlayPlayer(team_ID=100, participant_ID=3, lcu_source=self.app.lcu_champ_select.participant3)
-        self.player4 = OverlayPlayer(team_ID=100, participant_ID=4, lcu_source=self.app.lcu_champ_select.participant4)
-        self.player5 = OverlayPlayer(team_ID=100, participant_ID=5, lcu_source=self.app.lcu_champ_select.participant5)
+        self.player1 = OverlayPlayer(team_ID=100, participant_ID=1, opponent_ID=6, lcu_source=self.app.lcu_champ_select.participant1)
+        self.player2 = OverlayPlayer(team_ID=100, participant_ID=2, opponent_ID=7, lcu_source=self.app.lcu_champ_select.participant2)
+        self.player3 = OverlayPlayer(team_ID=100, participant_ID=3, opponent_ID=8, lcu_source=self.app.lcu_champ_select.participant3)
+        self.player4 = OverlayPlayer(team_ID=100, participant_ID=4, opponent_ID=9, lcu_source=self.app.lcu_champ_select.participant4)
+        self.player5 = OverlayPlayer(team_ID=100, participant_ID=5, opponent_ID=10, lcu_source=self.app.lcu_champ_select.participant5)
 
         # Right Team Players
-        self.player6 = OverlayPlayer(team_ID=200, participant_ID=6, lcu_source=self.app.lcu_champ_select.participant6)
-        self.player7 = OverlayPlayer(team_ID=200, participant_ID=7, lcu_source=self.app.lcu_champ_select.participant7)
-        self.player8 = OverlayPlayer(team_ID=200, participant_ID=8, lcu_source=self.app.lcu_champ_select.participant8)
-        self.player9 = OverlayPlayer(team_ID=200, participant_ID=9, lcu_source=self.app.lcu_champ_select.participant9)
-        self.player10 = OverlayPlayer(team_ID=200, participant_ID=10, lcu_source=self.app.lcu_champ_select.participant10)
+        self.player6 = OverlayPlayer(team_ID=200, participant_ID=6, opponent_ID=1, lcu_source=self.app.lcu_champ_select.participant6)
+        self.player7 = OverlayPlayer(team_ID=200, participant_ID=7, opponent_ID=2, lcu_source=self.app.lcu_champ_select.participant7)
+        self.player8 = OverlayPlayer(team_ID=200, participant_ID=8, opponent_ID=3, lcu_source=self.app.lcu_champ_select.participant8)
+        self.player9 = OverlayPlayer(team_ID=200, participant_ID=9, opponent_ID=4, lcu_source=self.app.lcu_champ_select.participant9)
+        self.player10 = OverlayPlayer(team_ID=200, participant_ID=10, opponent_ID=5, lcu_source=self.app.lcu_champ_select.participant10)
 
 
     def on_game_reset(self, *args) -> None:
@@ -135,6 +143,7 @@ class OverlayPlayer(DataEventDispatcher):
 
     team_ID = kp.NumericProperty()
     participant_ID = kp.NumericProperty()
+    opponent_ID = kp.NumericProperty()
 
     game_info_event = kp.DictProperty()
     current_stats_update = kp.DictProperty()
@@ -309,11 +318,9 @@ class OverlayPlayer(DataEventDispatcher):
 
         if "participants" in data:
 
-            this_participant = self.get_my_participant(
-                data["participants"]
-            )
+            this_participant = get_participant(data["participants"], self.participant_ID)
 
-            if this_participant is not None:
+            if len(this_participant) > 0:
 
                 if "summonerName" in this_participant:
                     self.set_name(this_participant["summonerName"])
@@ -332,11 +339,9 @@ class OverlayPlayer(DataEventDispatcher):
             self.stat_time = data["gameTime"]
 
         if "participants" in data:
-            this_participant = self.get_my_participant(
-                data["participants"]
-            )
+            this_participant = get_participant(data["participants"], self.participant_ID)
 
-            if this_participant is not None:
+            if len(this_participant) > 0:
 
                 if (len(self.name) == 0 and 
                     "playerName" in this_participant
@@ -530,19 +535,6 @@ class OverlayPlayer(DataEventDispatcher):
             self.primary_ability_resource_percent = min(1.0, (self.primary_ability_resource / max(1.0, self.primary_ability_resource_max)))
 
 
-    def get_my_participant(self, participants: list[dict]) -> dict:
-
-        result = {}
-
-        for this_participant in participants:
-            if ("participantID" in this_participant and
-                this_participant["participantID"] == self.participant_ID
-            ):
-                result = this_participant
-
-        return result
-
-
     def set_name(self, raw_name:str) -> None:
 
         self.tricode, self.name = parse_name(raw_name)
@@ -605,6 +597,73 @@ class OverlayPlayer(DataEventDispatcher):
                 if this_rune is not None:
                     this_property = self.property(f"rune{i}")
                     this_property.set(self, this_rune)
+                    
+
+    def get_top_stats(self, stats_update: dict) -> list(tuple(str, str)):
+
+        """ Returns
+            SOLO K / KDA    --if 0 SOLO K, then show KDA
+            CSD@8/14        --CSD before 8, CSD@8 between 8 and 14, and CSD@14 after 14 mins 
+            DMG%
+        """
+
+        cat1, cat2, cat3, stat1, stat2, stat3 = "", "", "", "", "", ""
+
+        if ("participants" in stats_update and 
+            "gameTime" in stats_update and
+            "solo_kills" in stats_update
+        ):
+            my_data = get_participant(stats_update["participants"], self.participant_ID)
+            opp_data = get_participant(stats_update["participants"], self.opponent_ID)
+
+            game_time = stats_update["gameTime"]
+
+            solo_kills = stats_update["solo_kills"][self.participant_ID-1]
+
+            #CAT1 / STAT1
+            #SOLO K / KDA    --if 0 SOLO K, then show KDA
+            if solo_kills > 0:
+                cat1 = "SOLO K"
+                stat1 = f"{solo_kills}"
+            else:
+                cat1 = "KDA"
+                stat1 = string_KDA(my_data)
+
+            #CAT2 / STAT2
+            #CSD@8/14        -- CSD before 8, 
+            #                   CSD@8 between 8 and 14, 
+            #                   and CSD@14 after 14 mins
+            if game_time < MINS8:
+                cat2 = "CSD"
+                stat2 = string_CSD(my_data, opp_data)
+
+            elif MINS8 <= game_time < MINS14:
+                cat2 = "CSD@8"
+                stats8 = self.app.livestats_history.get_history_index(MINS8)
+
+                if "participants" in stats8:
+                    my_data_8 = get_participant(stats8["participants"], self.participant_ID)
+                    opp_data_8 = get_participant(stats8["participants"], self.opponent_ID)
+                    stat2 = string_CSD(my_data_8, opp_data_8)
+            else:
+                cat2 = "CSD@14"
+                stats14 = self.app.livestats_history.get_history_index(MINS14)
+
+                if "participants" in stats8:
+                    my_data_14 = get_participant(stats14["participants"], self.participant_ID)
+                    opp_data_14 = get_participant(stats14["participants"], self.opponent_ID)
+                    stat2 = string_CSD(my_data_14, opp_data_14)
+
+            #CAT3 / STAT3
+            #DMG%
+            cat3 = "DMG%"
+            stat3 = string_dmg_pct(stats_update["participants"], self.participant_ID)
+
+
+
+
+        return [(cat1, stat1), (cat2, stat2), (cat3, stat3)]
+
 
 
 class Inventory(DataEventDispatcher):
