@@ -21,6 +21,9 @@ from data.livestats.jungle_tracker import JungleTracker
 
 DEFAULT_STATS_UPDATE = get_default_stats_update()
 
+MINS8 = 8 * 60000
+MINS14 = 14 * 60000
+
 
 from kivy.config import ConfigParser
 
@@ -76,6 +79,9 @@ class LivestatsHistory(DataEventDispatcher):
     sync_server_time = kp.NumericProperty(0)
 
     counter_jungle_stats = kp.ListProperty()
+
+    stats8 = kp.DictProperty({})
+    stats14 = kp.DictProperty({})
 
 
     def __init__(self, **kwargs):
@@ -152,12 +158,28 @@ class LivestatsHistory(DataEventDispatcher):
         self.server_time = 0
         self.local_time = 0
 
+        self.stats8.clear()
+        self.stats14.clear()
+
 
     def on_latest_stats_update(self, *args):
 
         if ("gameTime" in self.latest_stats_update and
             "teams" in self.latest_stats_update
         ):
+            
+            game_time = self.latest_stats_update["gameTime"]
+            
+            if (game_time >= MINS8 and
+                len(self.stats8) == 0
+            ):
+                self.stats8 = args[1]
+            
+            elif (game_time >= MINS14 and
+                len(self.stats14) == 0
+            ):
+                self.stats14 = args[1]
+
             new_update = self.latest_stats_update.copy()
 
             # Dragons
@@ -193,7 +215,7 @@ class LivestatsHistory(DataEventDispatcher):
             #Jungle Tracker
             new_update["counter_jungle_pct"] = self.counter_jungle_stats
 
-            game_time = self.latest_stats_update["gameTime"]
+            
 
             self.server_time = game_time
             self.stats_update_history[game_time] = new_update
@@ -272,7 +294,7 @@ class LivestatsHistory(DataEventDispatcher):
 
     def get_history_index(self, time, *args):
 
-        """ given 'time' in milliseconds (int), will return and index
+        """ given 'time' in milliseconds (int), will return an index
             to use in self.stats_update_history
             returns None if not found or time is not an integer
         """

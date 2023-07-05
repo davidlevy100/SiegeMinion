@@ -206,6 +206,9 @@ class OverlayPlayer(DataEventDispatcher):
 
     #stats for stats_under_players
 
+    stats8 = kp.DictProperty({})
+    stats14 = kp.DictProperty({})
+
     cat1 = kp.StringProperty("")
     cat2 = kp.StringProperty("")
     cat3 = kp.StringProperty("")
@@ -228,6 +231,14 @@ class OverlayPlayer(DataEventDispatcher):
         )
         self.app.livestats_history.bind(
             current_plus_one=self.setter('current_plus_one')
+        )
+
+        self.app.livestats_history.bind(
+            stats8=self.setter('stats8')
+        )
+
+        self.app.livestats_history.bind(
+            stats14=self.setter('stats14')
         )
         
         self.inventory = Inventory(
@@ -478,6 +489,8 @@ class OverlayPlayer(DataEventDispatcher):
         elif self.participant_ID == 5 or self.participant_ID == 10:
             self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_sup_stats(self.current_stats_update)
 
+        #print(self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3)
+
 
     def on_current_plus_one(self, *args) -> None:
 
@@ -636,7 +649,7 @@ class OverlayPlayer(DataEventDispatcher):
                 cat1 = "SOLO K"
                 stat1 = f"{solo_kills}"
             else:
-                cat1 = "KDA"
+                cat1 = "K/D/A"
                 stat1 = string_KDA(my_data)
 
             #CAT2 / STAT2
@@ -649,19 +662,17 @@ class OverlayPlayer(DataEventDispatcher):
 
             elif MINS8 <= game_time < MINS14:
                 cat2 = "CSD@8"
-                stats8 = self.app.livestats_history.get_history_index(MINS8)
 
-                if "participants" in stats8:
-                    my_data_8 = get_participant(stats8["participants"], self.participant_ID)
-                    opp_data_8 = get_participant(stats8["participants"], self.opponent_ID)
+                if "participants" in self.stats8:
+                    my_data_8 = get_participant(self.stats8["participants"], self.participant_ID)
+                    opp_data_8 = get_participant(self.stats8["participants"], self.opponent_ID)
                     stat2 = string_CSD(my_data_8, opp_data_8)
             else:
                 cat2 = "CSD@14"
-                stats14 = self.app.livestats_history.get_history_index(MINS14)
 
-                if "participants" in stats8:
-                    my_data_14 = get_participant(stats14["participants"], self.participant_ID)
-                    opp_data_14 = get_participant(stats14["participants"], self.opponent_ID)
+                if "participants" in self.stats14:
+                    my_data_14 = get_participant(self.stats14["participants"], self.participant_ID)
+                    opp_data_14 = get_participant(self.stats14["participants"], self.opponent_ID)
                     stat2 = string_CSD(my_data_14, opp_data_14)
 
             #CAT3 / STAT3

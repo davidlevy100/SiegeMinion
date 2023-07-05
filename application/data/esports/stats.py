@@ -725,7 +725,7 @@ def get_DMG_pct(participants: list[dict], id: int) -> float:
         if ("participantID" in this_participant and
             start <= this_participant["participantID"] <= end
         ):
-            sum =+ calculate_DMG(this_participant)
+            sum += calculate_DMG(this_participant)
 
     if sum > 0:
         return dmg/sum
