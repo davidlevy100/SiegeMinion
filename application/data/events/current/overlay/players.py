@@ -1,6 +1,5 @@
 from math import sqrt
 from functools import partial
-from typing import list, tuple
 
 from collections import deque
 
@@ -468,6 +467,17 @@ class OverlayPlayer(DataEventDispatcher):
                 if not foundStack:
                     self.stacks = -1
 
+        if self.participant_ID == 1 or self.participant_ID == 6:
+            self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_top_stats(self.current_stats_update)
+        elif self.participant_ID == 2 or self.participant_ID == 7:
+            self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_jng_stats(self.current_stats_update)
+        elif self.participant_ID == 3 or self.participant_ID == 8:
+            self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_mid_stats(self.current_stats_update)
+        elif self.participant_ID == 4 or self.participant_ID == 9:
+            self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_bot_stats(self.current_stats_update)
+        elif self.participant_ID == 5 or self.participant_ID == 10:
+            self.cat1, self.stat1, self.cat2, self.stat2, self.cat3, self.stat3 = self.get_sup_stats(self.current_stats_update)
+
 
     def on_current_plus_one(self, *args) -> None:
 
@@ -599,7 +609,7 @@ class OverlayPlayer(DataEventDispatcher):
                     this_property.set(self, this_rune)
                     
 
-    def get_top_stats(self, stats_update: dict) -> list(tuple(str, str)):
+    def get_top_stats(self, stats_update: dict) -> list[str]:
 
         """ Returns
             SOLO K / KDA    --if 0 SOLO K, then show KDA
@@ -607,7 +617,7 @@ class OverlayPlayer(DataEventDispatcher):
             DMG%
         """
 
-        cat1, cat2, cat3, stat1, stat2, stat3 = "", "", "", "", "", ""
+        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
 
         if ("participants" in stats_update and 
             "gameTime" in stats_update and
@@ -659,8 +669,64 @@ class OverlayPlayer(DataEventDispatcher):
             cat3 = "DMG%"
             stat3 = string_dmg_pct(stats_update["participants"], self.participant_ID)
 
-        return [(cat1, stat1), (cat2, stat2), (cat3, stat3)]
+        return [cat1, stat1, cat2, stat2, cat3, stat3]
+    
 
+    def get_jng_stats(self, stats_update: dict) -> list[str]:
+
+        """ Returns
+            XPD before 8, XPD@8, XPD@14
+            GD before 8, GD@8, GD@14
+            CJ% or KP   If a Jungler has less than 10% CJ%, we show KP instead
+        """
+        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
+
+        #TODO
+
+        return [cat1, stat1, cat2, stat2, cat3, stat3]
+    
+
+    def get_mid_stats(self, stats_update: dict) -> list[str]:
+
+        """ Returns
+            KDA
+            CSD, CSD@8, or CSD@14
+            DMG%
+        """
+        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
+
+        #TODO
+
+        return [cat1, stat1, cat2, stat2, cat3, stat3]
+    
+
+    def get_bot_stats(self, stats_update: dict) -> list[str]:
+
+        """ Returns
+            KDA
+            CSD, CSD@8, or CSD@14
+            DMG%
+        """
+        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
+
+        #TODO
+
+        return [cat1, stat1, cat2, stat2, cat3, stat3]
+    
+
+    def get_sup_stats(self, stats_update: dict) -> list[str]:
+
+        """ Returns
+            VS/M
+            GD, GD@8, or GD@14
+            KP
+        """
+        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
+
+        #TODO
+
+        return [cat1, stat1, cat2, stat2, cat3, stat3]
+    
 
 
 class Inventory(DataEventDispatcher):
