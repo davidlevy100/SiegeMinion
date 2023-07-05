@@ -659,9 +659,6 @@ class OverlayPlayer(DataEventDispatcher):
             cat3 = "DMG%"
             stat3 = string_dmg_pct(stats_update["participants"], self.participant_ID)
 
-
-
-
         return [(cat1, stat1), (cat2, stat2), (cat3, stat3)]
 
 
