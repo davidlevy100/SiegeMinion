@@ -13,6 +13,7 @@ from data.esports.stats import get_participant
 from data.esports.stats import string_KDA
 from data.esports.stats import string_CSD
 from data.esports.stats import string_dmg_pct
+from data.esports.stats import string_XPD
 
 MINS8 = 8 * 60000
 MINS14 = 14 * 60000
@@ -692,7 +693,32 @@ class OverlayPlayer(DataEventDispatcher):
         """
         cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
 
-        #TODO
+        if ("participants" in stats_update and 
+            "gameTime" in stats_update
+        ):
+            
+            my_data = get_participant(stats_update["participants"], self.participant_ID)
+            opp_data = get_participant(stats_update["participants"], self.opponent_ID)
+
+            game_time = stats_update["gameTime"]
+
+            #Cat1, Stat1
+            #XPD before 8, XPD@8, XPD@14
+            if game_time < MINS8:
+                cat1 = "XPD"
+                stat1 = string_XPD(my_data, opp_data)
+            elif MINS8 <= game_time < MINS14:
+                cat1 = "XPD@8"
+                if "participants" in self.stats8:
+                    my_data_8 = get_participant(self.stats8["participants"], self.participant_ID)
+                    opp_data_8 = get_participant(self.stats8["participants"], self.opponent_ID)
+                    stat1 = string_XPD(my_data_8, opp_data_8)
+            else:
+                cat1 = "XPD@14"
+                if "participants" in self.stats14:
+                    my_data_14 = get_participant(self.stats14["participants"], self.participant_ID)
+                    opp_data_14 = get_participant(self.stats14["participants"], self.opponent_ID)
+                    stat1 = string_XPD(my_data_14, opp_data_14)
 
         return [cat1, stat1, cat2, stat2, cat3, stat3]
     
