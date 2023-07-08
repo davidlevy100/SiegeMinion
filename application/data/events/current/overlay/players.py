@@ -776,7 +776,47 @@ class OverlayPlayer(DataEventDispatcher):
         """
         cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
 
-        #TODO
+        if ("participants" in stats_update and 
+            "gameTime" in stats_update
+        ):
+            my_data = get_participant(stats_update["participants"], self.participant_ID)
+            opp_data = get_participant(stats_update["participants"], self.opponent_ID)
+
+            game_time = stats_update["gameTime"]
+
+            #Stat1 / Cat1
+            #KDA
+            cat1 = "K/D/A"
+            stat1 = string_KDA(my_data)
+
+
+            #CAT2 / STAT2
+            #CSD@8/14        -- CSD before 8, 
+            #                   CSD@8 between 8 and 14, 
+            #                   and CSD@14 after 14 mins
+            if game_time < MINS8:
+                cat2 = "CSD"
+                stat2 = string_CSD(my_data, opp_data)
+
+            elif MINS8 <= game_time < MINS14:
+                cat2 = "CSD@8"
+
+                if "participants" in self.stats8:
+                    my_data_8 = get_participant(self.stats8["participants"], self.participant_ID)
+                    opp_data_8 = get_participant(self.stats8["participants"], self.opponent_ID)
+                    stat2 = string_CSD(my_data_8, opp_data_8)
+            else:
+                cat2 = "CSD@14"
+
+                if "participants" in self.stats14:
+                    my_data_14 = get_participant(self.stats14["participants"], self.participant_ID)
+                    opp_data_14 = get_participant(self.stats14["participants"], self.opponent_ID)
+                    stat2 = string_CSD(my_data_14, opp_data_14)
+
+            #CAT3 / STAT3
+            #DMG%
+            cat3 = "DMG%"
+            stat3 = string_dmg_pct(stats_update["participants"], self.participant_ID)
 
         return [cat1, stat1, cat2, stat2, cat3, stat3]
     
@@ -788,11 +828,8 @@ class OverlayPlayer(DataEventDispatcher):
             CSD, CSD@8, or CSD@14
             DMG%
         """
-        cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
-
-        #TODO
-
-        return [cat1, stat1, cat2, stat2, cat3, stat3]
+        # same as mid stats for now, so just use mid function
+        return self.get_mid_stats(stats_update)
     
 
     def get_sup_stats(self, stats_update: dict) -> list[str]:
