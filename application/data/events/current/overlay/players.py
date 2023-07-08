@@ -17,6 +17,7 @@ from data.esports.stats import string_XPD
 from data.esports.stats import string_GD
 from data.esports.stats import string_KP
 from data.esports.stats import format_pct
+from data.esports.stats import string_VSM
 
 MINS8 = 8 * 60000
 MINS14 = 14 * 60000
@@ -841,7 +842,48 @@ class OverlayPlayer(DataEventDispatcher):
         """
         cat1, cat2, cat3, stat1, stat2, stat3 = [""]*6
 
-        #TODO
+        if ("participants" in stats_update and 
+            "gameTime" in stats_update and
+            "teams" in stats_update and
+            len(stats_update["teams"]) > 1
+        ):
+            my_data = get_participant(stats_update["participants"], self.participant_ID)
+            opp_data = get_participant(stats_update["participants"], self.opponent_ID)
+
+            game_time = stats_update["gameTime"]
+
+            #CAT1 / STAT1
+            #VS/M
+            cat1 = "VS/M"
+            stat1 = string_VSM(my_data, game_time)
+
+            #Cat2 / Stat2
+            #GD before 8, GD@8, GD@14
+            if game_time < MINS8:
+                cat2 = "GD"
+                stat2 = string_GD(my_data, opp_data)
+            elif MINS8 <= game_time < MINS14:
+                cat2 = "GD@8"
+                if "participants" in self.stats8:
+                    my_data_8 = get_participant(self.stats8["participants"], self.participant_ID)
+                    opp_data_8 = get_participant(self.stats8["participants"], self.opponent_ID)
+                    stat2 = string_GD(my_data_8, opp_data_8)
+            else:
+                cat2 = "GD@14"
+                if "participants" in self.stats14:
+                    my_data_14 = get_participant(self.stats14["participants"], self.participant_ID)
+                    opp_data_14 = get_participant(self.stats14["participants"], self.opponent_ID)
+                    stat2 = string_GD(my_data_14, opp_data_14)
+
+            #Cat3 / Stat3
+            #KP
+            myTeamKills = stats_update["teams"][0]["championsKills"]
+
+            if self.participant_ID == 10:
+                myTeamKills = stats_update["teams"][1]["championsKills"]
+        
+            cat3 = "KP"
+            stat3 = string_KP(my_data, myTeamKills)
 
         return [cat1, stat1, cat2, stat2, cat3, stat3]
     
