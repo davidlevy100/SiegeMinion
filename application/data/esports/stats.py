@@ -736,3 +736,8 @@ def string_dmg_pct(participants: list[dict], id: int) -> str:
 
     value = get_DMG_pct(participants, id)
     return f"{value:.1%}"
+
+
+def format_pct(value: float) -> str:
+
+    return f"{value:.1%}"
